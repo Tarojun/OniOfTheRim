@@ -1,4 +1,0 @@
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\OniLatest\Source\OniMolting\obj\Debug\OniMolting.csprojAssemblyReference.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\OniLatest\Source\OniMolting\obj\Debug\OniMolting.csproj.CoreCompileInputs.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\OniLatest\Assemblies\OniMolting.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\OniLatest\Source\OniMolting\obj\Debug\OniMolting.dll
