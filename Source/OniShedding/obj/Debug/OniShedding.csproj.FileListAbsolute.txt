@@ -1,0 +1,16 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\OniLatest\Source\OniMolting\obj\Debug\OniShedding.csprojAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\OniLatest\Source\OniMolting\obj\Debug\OniShedding.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\OniLatest\Assemblies\OniShedding.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\OniLatest\Source\OniMolting\obj\Debug\OniShedding.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\OniTesting\Assemblies\OniShedding.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\OniTesting\Source\OniShedding\obj\Debug\OniShedding.csprojAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\OniTesting\Source\OniShedding\obj\Debug\OniShedding.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\OniTesting\Source\OniShedding\obj\Debug\OniShedding.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\OniTestold\Source\OniShedding\obj\Debug\OniShedding.csprojAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\OniTestold\Source\OniShedding\obj\Debug\OniShedding.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\OniTestold\Source\OniShedding\obj\Debug\OniShedding.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\OniTestold\Assemblies\OniShedding.dll
+R:\Steam\steamapps\common\RimWorld\Mods\Oni of the Rim\Assemblies\OniShedding.dll
+R:\Steam\steamapps\common\RimWorld\Mods\Oni of the Rim\Source\OniShedding\obj\Debug\OniShedding.csprojAssemblyReference.cache
+R:\Steam\steamapps\common\RimWorld\Mods\Oni of the Rim\Source\OniShedding\obj\Debug\OniShedding.csproj.CoreCompileInputs.cache
+R:\Steam\steamapps\common\RimWorld\Mods\Oni of the Rim\Source\OniShedding\obj\Debug\OniShedding.dll
