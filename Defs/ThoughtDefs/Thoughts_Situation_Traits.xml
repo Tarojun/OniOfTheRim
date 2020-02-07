@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThoughtDef>
+	<defName>NudistOniWrapThoughtGrand</defName>
+	<workerClass>OniShedding.ThoughtWorker_OniNudistWrapGrand</workerClass>
+	<validWhileDespawned>true</validWhileDespawned>
+	<requiredTraits>
+		<li>Nudist</li>
+	</requiredTraits>
+	<stages>
+		<li>
+			<label>Oni grand wrap is tolerable</label>
+			<description>This large splendid display of feathers are a heavy extension of myself. Not so free feeling, but I can deal with it.</description>
+			<baseMoodEffect>3</baseMoodEffect>
+		</li>
+		</stages>
+</ThoughtDef>
+
+<ThoughtDef>
+	<defName>NudistOniWrapThought</defName>
+	<workerClass>OniShedding.ThoughtWorker_OniNudistWrap</workerClass>
+	<validWhileDespawned>true</validWhileDespawned>
+	<requiredTraits>
+		<li>Nudist</li>
+	</requiredTraits>
+	<stages>
+		<li>
+			<label>Oni wraps are okay</label>
+			<description>These feathers are an extension of myself. I still feel free and unconstrained, in a different way.</description>
+			<baseMoodEffect>8</baseMoodEffect>
+		</li>
+	</stages>
+</ThoughtDef>
+
+</Defs>

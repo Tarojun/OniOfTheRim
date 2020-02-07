@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<AlienRace.BackstoryDef>
+	<defName>OniScout</defName>
+	<title>Oni scout</title>
+	<titleShort>Scout</titleShort>
+	<baseDescription>[PAWN_nameDef] was a young scout, training to be a hunter for [PAWN_possessive] tribe. [PAWN_pronoun] works with the older hunters to learn the game paths and watering holes, and how to treat the scrapes and bruises that may happen along the way.</baseDescription>
+	<bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>OniBackstory</li>
+	</spawnCategories>	
+	<skillGains>
+		<li>
+			<defName>Animals</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Medicine</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Shooting</defName>
+			<amount>1</amount>
+		</li>
+	</skillGains>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>OniBigKid</defName>
+	<title>Kid wrestler</title>
+	<titleShort>wrestler</titleShort>
+	<baseDescription>[PAWN_nameDef] was strong from the start, and could often be found wrestling and rough-housing with other youths.</baseDescription>
+	<bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>OniBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Melee</defName>
+			<amount>3</amount>
+		</li>
+	</skillGains>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>OniMonk</defName>
+	<title>Apprentice shaman</title>
+	<titleShort>shaman</titleShort>
+	<baseDescription>[PAWN_nameDef] was born into the shaman cast. [PAWN_pronoun] was raised to memorize the tribes lore and legends, and training in herbal and medical arts.</baseDescription>
+	<bodyTypeMale>Male</bodyTypeMale>	
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>OniBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Social</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Medicine</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Plants</defName>
+			<amount>3</amount>
+		</li>
+	</skillGains>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>OniCurious</defName>
+	<title>Curious youth</title>
+	<titleShort>curious</titleShort>
+	<baseDescription>[PAWN_nameDef] was always the curious one. Getting into things - making some small trouble for the tenders, but never anything malicious. This curiosity never faded, and grew into a thirst for all knowledge.</baseDescription>
+	<bodyTypeMale>Thin</bodyTypeMale>
+	<bodyTypeFemale>Thin</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>OniBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Social</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Intellectual</defName>
+			<amount>2</amount>
+		</li>
+	</skillGains>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>OniDigKid</defName>
+	<title>Little digger</title>
+	<titleShort>digger</titleShort>
+	<baseDescription>[PAWN_nameDef] was constantly playing in the mud or sand, [PAWN_pronoun] can often be found digging, burrowing and building. The others used to chuckle a bit, that [PAWN_pronoun] must be part mole.</baseDescription>
+	<maleCommonality>75</maleCommonality>
+	<femaleCommonality>25</femaleCommonality>
+	<bodyTypeMale>Male</bodyTypeMale>	
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>OniBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Mining</defName>
+			<amount>3</amount>
+		</li>
+		<li>
+			<defName>Construction</defName>
+			<amount>2</amount>
+		</li>
+	</skillGains>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>OniTribal</defName>
+	<title>Tribes child</title>
+	<titleShort>Tribesman</titleShort>
+	<baseDescription>Most of the Oni children lead a simple life, like [PAWN_nameDef]. They are looked after by their parents and tribal elders, occasionally lending a small hand here and there with the adults on simple chores.</baseDescription>
+	<bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>OniBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Animals</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Plants</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Social</defName>
+			<amount>1</amount>
+		</li>
+	</skillGains>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>OniTribal2</defName>
+	<title>Tribes child</title>
+	<titleShort>Tribesman</titleShort>
+	<baseDescription>Most of the Oni children lead a simple life, like [PAWN_nameDef]. [PAWN_pronoun] loved to run around everywhere in the settlement and being difficult to catch, sometimes to much of [PAWN_possessive] guardian's grief.</baseDescription>
+	<bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>OniBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Melee</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Animals</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Social</defName>
+			<amount>1</amount>
+		</li>
+	</skillGains>
+	<disallowedTraits>
+		<li>
+			<defName>SpeedOffset</defName>
+			<degree>-1</degree>
+		</li>
+	</disallowedTraits>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>OniBuilder</defName>
+	<title>Apprentice builder</title>
+	<titleShort>builder</titleShort>
+	<baseDescription>[PAWN_nameDef] was curious about how [PAWN_possessive] hut was made. As such, [PAWN_pronoun] played more with building blocks at a young age and discovering how easily [PAWN_pronoun] made mistakes, and learned from it.</baseDescription>
+	<bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>OniBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Crafting</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Construction</defName>
+			<amount>3</amount>
+		</li>
+	</skillGains>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>Oniminder</defName>
+	<title>Minders</title>
+	<titleShort>minder</titleShort>
+	<baseDescription>[PAWN_nameDef] was raised from young as an healer apprentice, refered as minders by the tribe.</baseDescription>
+	<bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>OniBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Plants</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Social</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Medicine</defName>
+			<amount>3</amount>
+		</li>
+	</skillGains>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>OniTribekid</defName>
+	<title>Oni tribe child</title>
+	<titleShort>Oni</titleShort>
+	<baseDescription>[PAWN_nameDef] was born in a large village. [PAWN_pronoun] had to learn to carry [PAWN_possessive] weight and help keep the tribe fed from an early age. With so many Oni in one village [PAWN_nameDef] became very engrossed in social activity.</baseDescription>
+	<bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>OniBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Social</defName>
+			<amount>3</amount>
+		</li>
+		<li>
+			<defName>Plants</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Animals</defName>
+			<amount>1</amount>
+		</li>
+	</skillGains>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>OniTribekid2</defName>
+	<title>Oni tribe child</title>
+	<titleShort>Oni</titleShort>
+	<baseDescription>[PAWN_nameDef] was raised in a large village where there was not enough to go around. [PAWN_pronoun] learned very quickly how to be resourceful with everything [PAWN_pronoun] can get.</baseDescription>
+	<bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>OniBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Intellectual</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Social</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Cooking</defName>
+			<amount>1</amount>
+		</li>
+	</skillGains>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>OniAnimalHerderKid</defName>
+	<title>young animal caretaker</title>
+	<titleShort>herder</titleShort>
+	<baseDescription>[PAWN_nameDef] has been assisting with looking after the animals in the tribe at a young age, and has gotten use to handling them early on.</baseDescription>
+	<bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>OniBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Animals</defName>
+			<amount>3</amount>
+		</li>
+	</skillGains>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>OniCoreKid</defName>
+	<title>Crafter apprentice</title>
+	<titleShort>crafter</titleShort>
+	<baseDescription>[PAWN_nameDef] has always been making little things for [PAWN_possessive] family. Naturally, they encouraged [PAWN_possessive] skill, and is developing into quite the artisan.</baseDescription>
+	<bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>OniBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Artistic</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Crafting</defName>
+			<amount>4</amount>
+		</li>
+	</skillGains>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>OniSticky</defName>
+	<title>Stickyfingers</title>
+	<titleShort>Stickyfingers</titleShort>
+	<baseDescription>If something was missing, it was probably [PAWN_nameDef]. Ever since [PAWN_pronoun] could crawl, [PAWN_pronoun] was getting into everything, and secreting things away in all kinds of little holes. A very sneaky and clever one here.</baseDescription>
+	<bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>OniBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Intellectual</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Construction</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Crafting</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Social</defName>
+			<amount>-2</amount>
+		</li>
+	</skillGains>
+	<workDisables>
+		<li>Firefighting</li>
+	</workDisables>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>ClumsyOniChild</defName>
+	<title>clumsy Oni child</title>
+	<titleShort>clumsy child</titleShort>
+	<baseDescription>At a young age, [PAWN_nameDef] struggled with doing just about anything because [PAWN_pronoun] kept carelessly shredding everything with [PAWN_possessive] sharp claws. [PAWN_nameDef] often needed more time to learn how to do things.</baseDescription>
+	<bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>OniBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Crafting</defName>
+			<amount>-2</amount>
+		</li>
+		<li>
+			<defName>Plants</defName>
+			<amount>-2</amount>
+		</li>
+		<li>
+			<defName>Medicine</defName>
+			<amount>-2</amount>
+		</li>
+	</skillGains>
+	<disallowedTraits>
+		<li>
+			<defName>TooSmart</defName>
+		</li>
+		<li>
+			<defName>FastLearner</defName>
+		</li>
+	</disallowedTraits>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>DreamerOniChild</defName>
+	<title>Oni dreamer</title>
+	<titleShort>dreamer</titleShort>
+	<baseDescription>[PAWN_nameDef] always had an imaginative mind, always wondering what is out there in the world. Sometimes felt a little confined where [PAWN_pronoun] currently is.</baseDescription>
+	<bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>OniBackstory</li>
+		<li>OniSlave</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Artistic</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Crafting</defName>
+			<amount>1</amount>
+		</li>
+	</skillGains>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>OniFeralChild</defName>
+	<title>Feral child</title>
+	<titleShort>feral child</titleShort>
+	<baseDescription>When [PAWN_nameDef] was born, [PAWN_pronoun] had little to no sense of being person and more akin to being a wild animal. It took a significant amount of time before [PAWN_nameDef] had enough mannerism and sense to behave close to a normal person and not an animal.</baseDescription>
+	<bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>OniBackstory</li>
+		<li>OniSlave</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Animals</defName>
+			<amount>6</amount>
+		</li>
+		<li>
+			<defName>Social</defName>
+			<amount>-4</amount>
+		</li>
+	</skillGains>
+	<workDisables>
+		<li>Intellectual</li>
+	</workDisables>
+</AlienRace.BackstoryDef>
+
+
+<AlienRace.BackstoryDef>
+	<defName>OniBlackTalonKid</defName>
+	<title>Black Talon recruit</title>
+	<titleShort>Black Talon</titleShort>
+	<baseDescription>[PAWN_nameDef] was raised at a young age by [PAWN_possessive] family to be put forward as a Black Talon recruit.</baseDescription>
+	<bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>OniBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Melee</defName>
+			<amount>3</amount>
+		</li>
+		<li>
+			<defName>Social</defName>
+			<amount>3</amount>
+		</li>
+		<li>
+			<defName>Shooting</defName>
+			<amount>3</amount>
+		</li>
+	</skillGains>
+</AlienRace.BackstoryDef>
+
+
+<AlienRace.BackstoryDef>
+	<defName>OnigoodSpacer</defName>
+	<title>Oni spacer child</title>
+	<titleShort>Sky Child</titleShort>
+	<baseDescription>[PAWN_nameDef] grew up on a crowded space station alongside another child, whose parents were [PAWN_possessive] masters. [PAWN_nameDef] was treated like family despite being a different race. One day, the space station was raided by pirates, and [PAWN_nameDef] was saved by the family as [PAWN_pronoun] was shoved into an escape pod at the start of the attack. The family does escape in another pod, but it headed unfortunately headed in another direction, and they could only communicate their goodbyes as they parted ways.</baseDescription>
+	<bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>OniSlave</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Cooking</defName>
+			<amount>3</amount>
+		</li>	
+		<li>
+			<defName>Social</defName>
+			<amount>3</amount>
+		</li>	  
+		<li>
+			<defName>Intellectual</defName>
+			<amount>2</amount>
+		</li>
+	</skillGains>
+	<forcedTraits>
+		<li>
+			<defName>Xenophobia</defName>
+			<degree>-1</degree>
+			<chance>33</chance>
+		</li>
+	</forcedTraits>
+	<disallowedTraits>
+		<li>
+			<defName>Xenophobia</defName>
+			<degree>1</degree>
+		</li>
+	</disallowedTraits>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>OniAdopt</defName>
+	<title>Adopted</title>
+	<titleShort>Adopted</titleShort>
+	<baseDescription>Rescued from a strange pod that fell from the sky, [PAWN_nameDef] was taken in and raised by an old farmer and his wife. Though [PAWN_pronoun] never got the hang of farming, [PAWN_possessive] perfect aim was a godsend in battle and earned [PAWN_objective] great fame as a marksmen.</baseDescription>
+	<bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>OniSlave</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Melee</defName>
+			<amount>-6</amount>
+		</li>
+		<li>
+			<defName>Shooting</defName>
+			<amount>8</amount>
+		</li>
+		<li>
+			<defName>Plants</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Animals</defName>
+			<amount>1</amount>
+		</li>
+	</skillGains>
+	<workDisables>
+		<li>Firefighting</li>
+	</workDisables>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>OniSpacer</defName>
+	<title>Oni spacer escapee</title>
+	<titleShort>Sky Child</titleShort>
+	<baseDescription>[PAWN_nameDef] grew up maintaining and serving on [PAWN_possessive] owners' space hotel. Proves to be a fatal error of judgement letting an Oni perform delicate maintenance. One day, [PAWN_nameDef] accidentally fitted a component backwards that lead to a massive failure and explosion in the coolant systems. [PAWN_possessive] owners did not make it to the escape pods during the evacuation.</baseDescription>
+	<bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Female</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>OniSlave</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Construction</defName>
+			<amount>3</amount>
+		</li>
+		<li>
+			<defName>Social</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Crafting</defName>
+			<amount>2</amount>
+		</li>
+	</skillGains>
+</AlienRace.BackstoryDef>
+
+</Defs>

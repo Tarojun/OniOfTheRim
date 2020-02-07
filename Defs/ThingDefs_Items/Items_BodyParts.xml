@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+<ThingDef ParentName="BodyPartNaturalBase">
+	<defName>RestoredOniHorn</defName>
+	<label>oni horn</label>
+	<description>A full horn cut from a live Oni, who will no doubt be very angry from that action. It is full of precursor chemical for making Oni Dust, and can be carefully broken down into horn fragments at a drug lab.</description>
+	<graphicData>
+		<texPath>Things/Item/Health/OniHorn</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+	<statBases>
+		<MarketValue>800</MarketValue>
+		<Mass>4</Mass>
+	</statBases>
+</ThingDef>
+   
+<ThingDef ParentName="BodyPartProstheticBase">
+	<defName>SteelOniHorn</defName>
+	<label>steel oni horn</label>
+	<description>A oni horn prosthesis. A sturdy replacement for a Oni horn. It is slightly stronger than the original horn, but the Oni no longer naturally shed horn fragments every year.</description>
+	<techLevel>Industrial</techLevel>
+	<costList>
+		<Steel>30</Steel>
+	</costList>
+	<statBases>
+		<WorkToMake>11000</WorkToMake>
+		<Mass>5</Mass>
+	</statBases>
+	<techHediffsTags>
+		<li>Simple</li>
+	</techHediffsTags>
+</ThingDef>
+  
+<ThingDef ParentName="BodyPartProstheticBase">
+	<defName>GoldOniHorn</defName>
+	<label>gold oni horn</label>
+	<description>A oni horn prosthesis. A fancy replacement for a Oni horn, increasing social impact. It is weaker than the original horn. but the Oni no longer naturally shed horn fragments every year.</description>
+	<techLevel>Industrial</techLevel>
+	<costList>
+		<Gold>1</Gold>
+		<Steel>20</Steel>
+	</costList>
+	<statBases>
+		<WorkToMake>11000</WorkToMake>
+		<Mass>5</Mass>
+	</statBases>
+	<techHediffsTags>
+		<li>Simple</li>
+	</techHediffsTags>
+</ThingDef>
+   
+<ThingDef ParentName="BodyPartBionicBase">
+	<defName>Bioniconihorn</defName>
+	<label>bionic oni horn</label>
+	<description>A high tech bionic horn designed for an Oni that is stronger than the natural horn and can mimic the appearance of the original horn. The victim of the horn attack would never have guessed it was an enhanced body part until it's too late!
+It also has an additional function to enable the Oni to tap into the potential of the unused accumulated precursor chemical unique in their body, that would otherwise be used to form their natural horn. Acting as a micro-drug processor, it can convert some of it into a minor safe stimulant for the Oni.</description>
+	<statBases>
+		<MarketValue>1500</MarketValue>
+		<Mass>4</Mass>
+		<WorkToMake>26000</WorkToMake>
+	</statBases>
+	<costList>
+		<Plasteel>15</Plasteel>
+		<ComponentSpacer>4</ComponentSpacer>
+	</costList>
+	<techHediffsTags>
+		<li>Advanced</li>
+	</techHediffsTags>
+</ThingDef>
+
+</Defs>
