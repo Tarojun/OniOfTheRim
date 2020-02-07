@@ -30,6 +30,36 @@
 </HediffDef>
 
 <HediffDef>
+	<defName>AncestralOniPassive</defName>
+	<label>Oni</label>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defaultLabelColor>(0.4, 1, 0.4)</defaultLabelColor>
+	<isBad>false</isBad>
+	<stages>
+		<li>
+			<becomeVisible>false</becomeVisible>
+			<statOffsets>
+				<CarryingCapacity>+40</CarryingCapacity>
+				<MeleeHitChance>6</MeleeHitChance>
+				<MeleeDodgeChance>5</MeleeDodgeChance>
+				<MeleeWeapon_CooldownMultiplier>-0.1</MeleeWeapon_CooldownMultiplier>
+				<ShootingAccuracyPawn>-2.5</ShootingAccuracyPawn>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Manipulation</capacity>
+					<offset>0.05</offset>
+				</li>
+			</capMods>
+		</li>
+	</stages>
+</HediffDef>
+
+<HediffDef>
 	<defName>OniFeatherShedding</defName>
 	<label>shedding feathers</label>
 	<hediffClass>HediffWithComps</hediffClass>
@@ -95,7 +125,7 @@
 </HediffDef>
 
 <HediffGiverSetDef>
-	<defName>OniPassiveSet</defName>
+	<defName>OniPassiveNormal</defName>
 	<hediffGivers>
 		<li Class="HediffGiver_Birthday">
 			<hediff>OniPassive</hediff>
@@ -106,6 +136,27 @@
 				</points>
 			</ageFractionChanceCurve>
 		</li>
+	</hediffGivers>
+</HediffGiverSetDef>
+
+<HediffGiverSetDef>
+	<defName>OniPassiveAncestral</defName>
+	<hediffGivers>
+		<li Class="HediffGiver_Birthday">
+			<hediff>AncestralOniPassive</hediff>
+			<ageFractionChanceCurve>
+				<points>
+					<li>(0, 1)</li>
+					<li>(1, 1)</li>
+				</points>
+			</ageFractionChanceCurve>
+		</li>
+	</hediffGivers>
+</HediffGiverSetDef>
+
+<HediffGiverSetDef>
+	<defName>OniPassiveSet</defName>
+	<hediffGivers>
 		<li Class="OniShedding.HediffGiver_OniShedCheckerSilent">
 			<hediff>OniFeatherShedding</hediff>
 			<ageFractionMtbDaysCurve>

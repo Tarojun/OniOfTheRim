@@ -26,6 +26,27 @@
 	<mods>
 		<li>Combat Extended</li>
 	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_AncestralAOni"]/comps</xpath>
+			<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_AncestralAOni"]</xpath>
+				<value>
+					<comps />
+				</value>
+			</li>
+		</operations>
+	</match>
+</Operation>
+
+<Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Combat Extended</li>
+	</mods>
 	<match Class="PatchOperationFindMod">
 		<mods>
 			<li>Oni of the Rim: Combat Extended</li>
@@ -216,6 +237,15 @@
 			</li>
 			<li Class="PatchOperationRemove">
 				<xpath>Defs/HediffDef[defName="OniPassive"]/stages/li/statOffsets/MeleeDodgeChance</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/HediffDef[defName="AncestralOniPassive"]/stages/li/statOffsets/MeleeDodgeChance</xpath>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/HediffDef[defName="AncestralOniPassive"]/stages/li/statOffsets/ShootingAccuracyPawn</xpath>
+				<value>
+					<ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn>
+				</value>
 			</li>
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/HediffDef[defName="WiseMegaOwlBuff"]/stages/li[2]/statOffsets</xpath>
@@ -524,6 +554,92 @@
 							<chanceFactor>0.122</chanceFactor>
 							<armorPenetrationBlunt>0.250</armorPenetrationBlunt>
 							<armorPenetrationSharp>0.3</armorPenetrationSharp>
+						</li>
+					</tools>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_AncestralAOni"]</xpath>
+				<value>
+					<li Class="CombatExtended.RacePropertiesExtensionCE">
+						<bodyShape>Humanoid</bodyShape>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_AncestralAOni"]/comps</xpath>
+				<value>
+					<li>
+						<compClass>CombatExtended.CompPawnGizmo</compClass>
+					</li>
+					<li Class="CombatExtended.CompProperties_Suppressable" />
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_AncestralAOni"]/statBases</xpath>
+				<value>
+					<MeleeDodgeChance>1.25</MeleeDodgeChance>
+					<MeleeCritChance>1.4</MeleeCritChance>
+					<MeleeParryChance>1.2</MeleeParryChance>
+					<ReloadSpeed>0.8</ReloadSpeed>
+					<Suppressability>0.3</Suppressability>
+				</value>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_AncestralAOni"]/statBases/ArmorRating_Blunt</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_AncestralAOni"]/statBases/ArmorRating_Sharp</xpath>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_AncestralAOni"]/tools</xpath>
+				<value>
+					<tools>  
+						<li Class="CombatExtended.ToolCE">
+							<label>horn</label>
+							<capacities>
+								<li>Stab</li>
+							</capacities>
+							<power>18</power>
+							<cooldownTime>2.5</cooldownTime>
+							<linkedBodyPartsGroup>OniHorn</linkedBodyPartsGroup>
+							<chanceFactor>0.2</chanceFactor>
+							<armorPenetrationBlunt>1</armorPenetrationBlunt>
+							<armorPenetrationSharp>0.55</armorPenetrationSharp>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>left talon</label>
+							<capacities>
+								<li>Cut</li>
+							</capacities>
+							<power>5.2</power>
+							<cooldownTime>1.25</cooldownTime>
+							<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+							<armorPenetrationBlunt>0.7</armorPenetrationBlunt>
+							<armorPenetrationSharp>0.4</armorPenetrationSharp>
+						</li>				
+						<li Class="CombatExtended.ToolCE">
+							<label>right talon</label>
+							<capacities>
+								<li>Cut</li>
+							</capacities>
+							<power>5.2</power>
+							<cooldownTime>1.25</cooldownTime>
+							<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+							<armorPenetrationBlunt>0.7</armorPenetrationBlunt>
+							<armorPenetrationSharp>0.4</armorPenetrationSharp>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>teeth</label>
+							<capacities>
+								<li>Bite</li>
+							</capacities>
+							<power>5.8</power>
+							<cooldownTime>2</cooldownTime>
+							<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+							<chanceFactor>0.122</chanceFactor>
+							<armorPenetrationBlunt>0.350</armorPenetrationBlunt>
+							<armorPenetrationSharp>0.45</armorPenetrationSharp>
 						</li>
 					</tools>
 				</value>
@@ -893,6 +1009,60 @@
 				<xpath>Defs/PawnKindDef[defName="Oni_Veteran"]/combatPower</xpath>
 				<value>
 					<combatPower>110</combatPower>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/PawnKindDef[defName="Ancestral_Oni_Brawler"]/combatPower</xpath>
+				<value>
+					<combatPower>24</combatPower>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/PawnKindDef[defName="Ancestral_Oni_Warrior"]/weaponMoney/min</xpath>
+				<value>
+					<min>80</min>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>Defs/PawnKindDef[defName="Ancestral_Oni_Warrior"]</xpath>
+				<value>
+					<li Class="CombatExtended.LoadoutPropertiesExtension">
+						<shieldMoney>
+							<min>100</min>
+							<max>150</max>
+						</shieldMoney>
+					<shieldTags>
+						<li>TribalShield</li>
+					</shieldTags>
+					<shieldChance>0.9</shieldChance>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/PawnKindDef[defName="Ancestral_Oni_Warrior"]/combatPower</xpath>
+				<value>
+					<combatPower>30</combatPower>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>Defs/PawnKindDef[defName="Ancestral_Oni_Guardian"]</xpath>
+				<value>
+					<li Class="CombatExtended.LoadoutPropertiesExtension">
+						<shieldMoney>
+							<min>120</min>
+							<max>160</max>
+						</shieldMoney>
+						<shieldTags>
+							<li>TribalShield</li>
+						</shieldTags>
+						<shieldChance>0.9</shieldChance>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/PawnKindDef[defName="Ancestral_Oni_Guardian"]/combatPower</xpath>
+				<value>
+					<combatPower>60</combatPower>
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">

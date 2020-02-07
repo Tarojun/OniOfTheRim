@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<ContainsAOniWine>Contains {0} / {1} Oni wine.</ContainsAOniWine>
+	<ContainsDemonBreathWort>Contains {0} / {1} demon breath wort.</ContainsDemonBreathWort>
+	<NoDemonBreathWort>need demon breath wort</NoDemonBreathWort>
+
+</LanguageData>

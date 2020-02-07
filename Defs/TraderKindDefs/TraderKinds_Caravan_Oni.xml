@@ -158,6 +158,13 @@
 			</countRange>
 		</li>
 		<li Class="StockGenerator_SingleDef">
+			<thingDef>AOniWine</thingDef>
+			<countRange>
+				<min>15</min>
+				<max>40</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
 			<thingDef>Beer</thingDef>
 			<countRange>
 				<min>25</min>
@@ -268,6 +275,13 @@
 			<countRange>
 				<min>0</min>
 				<max>5</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>OniSittingCushion</thingDef>
+			<countRange>
+				<min>2</min>
+				<max>8</max>
 			</countRange>
 		</li>
 		<li Class="StockGenerator_Category">

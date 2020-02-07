@@ -33,4 +33,20 @@
 	</stages>
 </ThoughtDef>
 
+<ThoughtDef>
+	<defName>ClothedNudistAncestralOni</defName>
+	<workerClass>OniShedding.ThoughtWorker_AncestralOniNudist</workerClass>
+	<validWhileDespawned>true</validWhileDespawned>
+	<requiredTraits>
+		<li>Nudist</li>
+	</requiredTraits>
+	<stages>
+		<li>
+			<label>constraining clothes</label>
+			<description>I'm a nudist but I have to wear these clothes. It's unbearable and uncomfortable over my superior natural feathers.</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		</li>
+	</stages>
+</ThoughtDef>
+
 </Defs>

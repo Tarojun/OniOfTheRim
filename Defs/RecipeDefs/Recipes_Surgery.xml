@@ -4,6 +4,7 @@
 <RecipeDef Name="Surgeryonihorn" ParentName="SurgeryFlesh" Abstract="True">
 	<recipeUsers>
 		<li>AOni</li>
+		<li>Alien_AncestralAOni</li>
 	</recipeUsers>
 </RecipeDef>
   

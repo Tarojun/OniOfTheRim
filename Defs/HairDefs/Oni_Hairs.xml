@@ -61,4 +61,28 @@
 	</hairTags>
 </HairDef>
 
+<!--	Empty placeholder in the case we ever use custom hairs for Ancestral Oni.
+		One reason using with hair as part of default head texture is issues with
+		Show Hair mod and pawns with body size larger than 1.0					-->
+
+<HairDef>
+	<defName>OniLong_Ancestral</defName>
+	<label>Oni Long (Ancestral)</label>
+	<hairGender>Female</hairGender>
+	<texPath>Things/Pawn/AncestralOni/Hair/ancestral_oni_long</texPath>
+	<hairTags>
+		<li>AncestralOni</li>
+	</hairTags>
+</HairDef>
+
+<HairDef>
+	<defName>OniMale_Ancestral</defName>
+	<label>Oni Male (Ancestral)</label>
+	<hairGender>Male</hairGender>
+	<texPath>Things/Pawn/AncestralOni/Hair/ancestral_oni_male</texPath>
+	<hairTags>
+		<li>AncestralOni</li>
+	</hairTags>
+</HairDef>
+
 </Defs>

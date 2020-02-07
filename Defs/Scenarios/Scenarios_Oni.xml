@@ -229,4 +229,83 @@
 	</scenario>
 </ScenarioDef>
 
+<ScenarioDef>
+	<defName>AncestralOniScenario</defName>
+	<label>Ancestral Oni curiosity</label>
+	<description>A curious group of an ancient mysterious breed of Oni seemingly appear from no where and settle in an area. Their intelligence borderlines just above that of animals, where they have to even figure out the basics of the basic of creating a settlement without any help or inspiration.\n\nWARNING: You start with no research at all! Ancestral Oni are even worse researchers than their modern counterpart!</description>
+	<scenario>
+		<summary>Four ancestral Oni arrives. Extremely difficult, having ridiculously bad building, cooking and research ability.</summary>
+		<playerFaction>
+			<def>PlayerFaction</def>
+			<factionDef>AncestralOniPlayerColony</factionDef>
+		</playerFaction>
+		<parts>
+			<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+				<def>ConfigPage_ConfigureStartingPawns</def>
+				<pawnCount>4</pawnCount>
+				<pawnChoiceCount>8</pawnChoiceCount>
+			</li>
+			<li Class="ScenPart_PlayerPawnsArriveMethod">
+				<def>PlayerPawnsArriveMethod</def>
+				<method>Standing</method>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>RawRice</thingDef>
+				<count>300</count>
+			</li>
+			<li Class="ScenPart_Naked">
+				<def>Naked</def>
+				<context>PlayerStarter</context>
+			</li>
+			<li Class="ScenPart_DisableIncident">
+				<def>DisableIncident</def>
+				<incident>Quest_JourneyOffer</incident>
+			</li>
+			<li Class="ScenPart_GameStartDialog">
+				<def>GameStartDialog</def>
+				<text>Having bravely left the herd of your kindred through curiosity, your group mysteriously arrives in a completely new and unknown world. No matter where you looked or attempting to backtrack your route, there are no traces of your herd to be found.\n\nBewildered, with no way to return and left stranded in an unfamiliar world for unknown reasons, your group settle down here and try imitate those settlements you have seen during your travels. At least it looks more comfortable than living out in the open.</text>
+				<closeSound>GameStartSting</closeSound>
+			</li>
+		</parts>
+	</scenario>
+</ScenarioDef>
+
+<ScenarioDef>
+	<defName>AncestralOniScenarioBrutality</defName>
+	<label>Ancestral Oni awakening</label>
+	<description>You awaken, suddenly feeling you are more than just an animal, becoming very curious and aware of your surroundings. An inspiration hits you, as you see large strange things that other beings have put together. They look like they could be comfy to live in, so you decide to try imitate it and living out on your own.\n\nWARNING: You start with no research at all! Ancestral Oni are even worse researchers than their modern counterpart!</description>
+	<scenario>
+		<summary>Alone, bewildered, clueless. Impossibly difficult, having ridiculously bad building, cooking and research ability.</summary>
+		<playerFaction>
+			<def>PlayerFaction</def>
+			<factionDef>AncestralOniPlayerColony</factionDef>
+		</playerFaction>
+		<parts>
+			<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+				<def>ConfigPage_ConfigureStartingPawns</def>
+				<pawnCount>1</pawnCount>
+				<pawnChoiceCount>4</pawnChoiceCount>
+			</li>
+			<li Class="ScenPart_PlayerPawnsArriveMethod">
+				<def>PlayerPawnsArriveMethod</def>
+				<method>Standing</method>
+			</li>
+			<li Class="ScenPart_Naked">
+				<def>Naked</def>
+				<context>PlayerStarter</context>
+			</li>
+			<li Class="ScenPart_DisableIncident">
+				<def>DisableIncident</def>
+				<incident>Quest_JourneyOffer</incident>
+			</li>
+			<li Class="ScenPart_GameStartDialog">
+				<def>GameStartDialog</def>
+				<text>With the curiosity getting the better of you, you ended up getting separated from your herd. You mysteriously found yourself in a completely new and unknown world. No matter where you looked, there are no traces of your herd to be found.\n\nBewildered, with no way to return and left stranded in an unfamiliar world for unknown reasons, you settle down here and try imitate those settlements you have seen during your travels. At least it looks more comfortable than living out in the open.</text>
+				<closeSound>GameStartSting</closeSound>
+			</li>
+		</parts>
+	</scenario>
+</ScenarioDef>
+
 </Defs>

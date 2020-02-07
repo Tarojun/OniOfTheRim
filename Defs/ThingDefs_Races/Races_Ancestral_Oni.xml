@@ -2,26 +2,26 @@
 <Defs>
 
 <AlienRace.ThingDef_AlienRace ParentName="BasePawn">
-	<defName>AOni</defName>
-	<label>Oni</label>
-	<description>The mysterious horned and feathered humanoid found on some rim worlds, Oni are often sought out by Glitterworlds for their beauty as a sort of exotic pet. Worse still some are kept as livestock for their feathers, pelts and horns, all having pratical and decorative uses. Oni live in temperate areas and rarely employ clothing due to the uncomfortable sensation on their feathered bodies.</description>
+	<defName>Alien_AncestralAOni</defName>
+	<label>Ancestral Oni</label>
+	<description>The ancient ancestors of the current Oni that can be found on some rim worlds. They have been mysteriously appearing with no traceable origins, but their descendant race welcomes them into their tribes without question.</description>
 	<alienRace>
 		<generalSettings>
-			<maxDamageForSocialfight>4</maxDamageForSocialfight>
+			<useOnlyPawnkindBackstories>true</useOnlyPawnkindBackstories>
+			<maxDamageForSocialfight>7</maxDamageForSocialfight>
 			<maleGenderProbability>0.4</maleGenderProbability>
 			<immuneToAge>false</immuneToAge>
 			<disallowedTraits>
 				<li>Pyromaniac</li>
 				<li>Prude</li>
+				<li>Transhumanist</li>
+				<li>Greedy</li>
+				<li>Jealous</li>
 			</disallowedTraits>
 			<forcedRaceTraitEntries>
 				<li>
 					<defName>Nudist</defName>
-					<chance>10</chance>
-				</li>
-				<li>
-					<defName>Natures_blessing</defName>
-					<chance>15</chance>
+					<chance>95</chance>
 				</li>
 				<li>
 					<defName>Beauty</defName>
@@ -41,15 +41,16 @@
 					<li>Average_Pointy</li>
 				</aliencrowntypes>
 				<alienbodytypes>
-					<li>Male</li>
-					<li>Female</li>
-					<li>Hulk</li>
 					<li>Thin</li>
-					<li>Fat</li>
 				</alienbodytypes>
 				<useGenderedHeads>true</useGenderedHeads>
 				<useGenderedBodies>false</useGenderedBodies>
-				<bodyAddons>
+				<customDrawSize>(1.4, 1.4)</customDrawSize>
+				<customHeadDrawSize>(1, 1)</customHeadDrawSize>
+				<customPortraitDrawSize>(1.4, 1.4)</customPortraitDrawSize>
+				<customPortraitHeadDrawSize>(1, 1)</customPortraitHeadDrawSize>
+				<!--headOffset>(0.0, 0.02)</headOffset-->
+				<!--bodyAddons>
 					<li>
 						<path>Things/Oni/Horn/OniHorn</path>
 						<bodyPart>Head</bodyPart>
@@ -86,7 +87,7 @@
 							</east>
 						</offsets>
 					</li>
-				</bodyAddons>
+				</bodyAddons-->
 				<alienskincolorgen Class="ColorGenerator_Options">
 					<options>
 						<li>
@@ -125,8 +126,68 @@
 							<weight>2</weight>
 							<only>RGBA(0.2,0.2,0.2,1)</only>
 						</li>
+						<li>
+							<weight>1</weight>
+							<only>RGBA(1,0.8,0.8,1)</only>
+						</li>
+						<li>
+							<weight>1</weight>
+							<only>RGBA(0.51,0.77,0.86,1)</only>
+						</li>
+						<li>
+							<weight>1</weight>
+							<only>RGBA(0.70,0.65,0.82,1)</only>
+						</li>
+						<li>
+							<weight>1</weight>
+							<only>RGBA(0.61,0.75,0.91,1)</only>
+						</li>
+						<li>
+							<weight>1</weight>
+							<only>RGBA(0.79,0.86,0.96,1)</only>
+						</li>
 					</options>
 				</alienskincolorgen>
+				<alienskinsecondcolorgen Class="ColorGenerator_Options">
+					<options>
+						<li>
+							<weight>5</weight>
+							<only>RGBA(1,1,1,1)</only>
+						</li>
+						<li>
+							<weight>5</weight>
+							<only>RGBA(0.5,0.5,0.5,1)</only>
+						</li>
+						<li>
+							<weight>5</weight>
+							<only>RGBA(0.9,0.9,0.9,1)</only>
+						</li>
+						<li>
+							<weight>5</weight>
+							<only>RGBA(0.8,0.8,0.8,1)</only>
+						</li>
+						<li>
+							<weight>5</weight>
+							<only>RGBA(0.7,0.7,0.7,1)</only>
+						</li>
+						<li>
+							<weight>5</weight>
+							<only>RGBA(0.6,0.6,0.6,1)</only>
+						</li>
+						<li>
+							<weight>5</weight>
+							<only>RGBA(0.4,0.4,0.4,1)</only>
+						</li>
+						<li>
+							<weight>2</weight>
+							<only>RGBA(0.3,0.3,0.3,1)</only>
+						</li>
+						<li>
+							<weight>2</weight>
+							<only>RGBA(0.2,0.2,0.2,1)</only>
+						</li>
+					</options>
+				</alienskinsecondcolorgen>
 				<alienhaircolorgen Class="ColorGenerator_Options">
 					<options>
 						<li>
@@ -190,7 +251,7 @@
 			</alienPartGenerator>
 			<humanRecipeImport>true</humanRecipeImport>
 			<notXenophobistTowards>
-				<li>Alien_AncestralAOni</li>
+				<li>AOni</li>
 				<li>Alien_BlueOni</li>
 				<li>Alien_GreenOni</li>
 				<li>Alien_RedOni</li>
@@ -209,26 +270,26 @@
 		</generalSettings>
 		<graphicPaths>
 			<li>
-				<head>Things/Oni/Head/</head>
-				<body>Things/Oni/Body/</body>
+				<head>Things/Pawn/AncestralOni/Head/</head>
+				<body>Things/Pawn/AncestralOni/Body/</body>
 			</li>
 		</graphicPaths>
 		<hairSettings>
 			<hasHair>true</hasHair>
 			<getsGreyAt>50</getsGreyAt>
 			<hairTags>
-				<li>Oni</li>
+				<li>AncestralOni</li>
 			</hairTags>
 		</hairSettings>
 		<relationSettings>
-			<relationChanceModifierChild>0.5</relationChanceModifierChild>
-			<relationChanceModifierExLover>0.8</relationChanceModifierExLover>
-			<relationChanceModifierExSpouse>0.5</relationChanceModifierExSpouse>
-			<relationChanceModifierFiance>0.8</relationChanceModifierFiance>
-			<relationChanceModifierLover>0.6</relationChanceModifierLover>
-			<relationChanceModifierParent>0.7</relationChanceModifierParent>
-			<relationChanceModifierSibling>0.5</relationChanceModifierSibling>
-			<relationChanceModifierSpouse>0.4</relationChanceModifierSpouse>
+			<relationChanceModifierChild>0.2</relationChanceModifierChild>
+			<relationChanceModifierExLover>0.1</relationChanceModifierExLover>
+			<relationChanceModifierExSpouse>0.1</relationChanceModifierExSpouse>
+			<relationChanceModifierFiance>0.1</relationChanceModifierFiance>
+			<relationChanceModifierLover>0.1</relationChanceModifierLover>
+			<relationChanceModifierParent>0.2</relationChanceModifierParent>
+			<relationChanceModifierSibling>0.2</relationChanceModifierSibling>
+			<relationChanceModifierSpouse>0.1</relationChanceModifierSpouse>
 		</relationSettings>
 		<thoughtSettings>
 			<cannotReceiveThoughts>
@@ -240,6 +301,25 @@
 				<li>Naked</li>
 				<li>PrudeSeen</li>
 				<li>NakedPrude</li>
+				<li>KnowGuestExecuted</li>
+				<li>KnowPrisonerDiedInnocent</li>
+				<li>AteCorpse</li>
+				<li>AteHumanlikeMeatDirect</li>
+				<li>AteHumanlikeMeatAsIngredient</li>
+				<li>SleptOutside</li>
+				<li>KnowPrisonerSold</li>
+				<li>KnowGuestOrganHarvested</li>
+				<li>ButcheredHumanlikeCorpse</li>
+				<li>KnowButcheredHumanlikeCorpse</li>
+				<li>ObservedLayingCorpse</li>
+				<li>ObservedLayingRottingCorpse</li>
+				<li>PrisonerBanishedToDie</li>
+				<li>ClothedNudist</li>
+				<li>HappyNude</li>
+				<li>ButcheredHumanlikeCorpseOpinion</li>
+				<li>AteRawHumanlikeMeat</li>
+				<li>SoldPrisoner</li>
+				<li>ExecutedPrisoner</li>
 			</cannotReceiveThoughts>
 			<replacerList>
 				<li>
@@ -253,8 +333,7 @@
 			</replacerList>
 			<restrictedThoughts>
 				<li>AteOniDelicacy</li>
-				<li>NudistOniWrapThought</li>
-				<li>NudistOniWrapThoughtGrand</li>
+				<li>ClothedNudistAncestralOni</li>
 			</restrictedThoughts>
 		</thoughtSettings>
 		<raceRestriction>
@@ -287,25 +366,39 @@
 		</raceRestriction>
 	</alienRace>
 	<statBases>
-		<MarketValue>3600</MarketValue>
-		<MoveSpeed>6.24</MoveSpeed>
+		<MarketValue>5600</MarketValue>
+		<MoveSpeed>7.44</MoveSpeed>
 		<Flammability>2.75</Flammability>
-		<ComfyTemperatureMin>2</ComfyTemperatureMin>
-		<ComfyTemperatureMax>30</ComfyTemperatureMax>
+		<ComfyTemperatureMin>-30</ComfyTemperatureMin>
+		<ComfyTemperatureMax>50</ComfyTemperatureMax>
 		<LeatherAmount>30</LeatherAmount>
-		<SocialImpact>1.2</SocialImpact>
-		<AnimalGatherSpeed>1.2</AnimalGatherSpeed>
+		<SocialImpact>0.75</SocialImpact>
+		<NegotiationAbility>0.75</NegotiationAbility>
+		<TradePriceImprovement>0.75</TradePriceImprovement>
+		<AnimalGatherSpeed>1.4</AnimalGatherSpeed>
 		<AnimalGatherYield>1.1</AnimalGatherYield>
-		<TrainAnimalChance>1.15</TrainAnimalChance>
-		<TameAnimalChance>1.15</TameAnimalChance>
+		<TrainAnimalChance>1.5</TrainAnimalChance>
+		<TameAnimalChance>1.5</TameAnimalChance>
 		<HuntingStealth>1.25</HuntingStealth>
-		<ImmunityGainSpeed>1.10</ImmunityGainSpeed>
-		<FoodPoisonChance>1.50</FoodPoisonChance>
-		<ResearchSpeed>0.65</ResearchSpeed>
-		<ConstructSuccessChance>0.9</ConstructSuccessChance>
-		<FixBrokenDownBuildingSuccessChance>0.9</FixBrokenDownBuildingSuccessChance>
-		<SmeltingSpeed>0.95</SmeltingSpeed>
-		<SmithingSpeed>0.95</SmithingSpeed>
+		<ImmunityGainSpeed>1.15</ImmunityGainSpeed>
+		<FoodPoisonChance>4.44</FoodPoisonChance>
+		<ResearchSpeed>0.2</ResearchSpeed>
+		<ConstructSuccessChance>0.8</ConstructSuccessChance>
+		<FixBrokenDownBuildingSuccessChance>0.8</FixBrokenDownBuildingSuccessChance>
+		<SmeltingSpeed>0.9</SmeltingSpeed>
+		<SmithingSpeed>0.9</SmithingSpeed>
+		<TailoringSpeed>0.9</TailoringSpeed>
+		<GlobalLearningFactor>0.75</GlobalLearningFactor>
+		<ButcheryFleshEfficiency>1.2</ButcheryFleshEfficiency>
+		<ButcheryFleshSpeed>1.2</ButcheryFleshSpeed>
+		<MiningSpeed>1.2</MiningSpeed>
+		<MiningYield>0.9</MiningYield>
+		<PlantWorkSpeed>1.15</PlantWorkSpeed>
+		<MedicalSurgerySuccessChance>0.9</MedicalSurgerySuccessChance>
+		<MedicalTendQuality>0.9</MedicalTendQuality>
+		<EatingSpeed>2</EatingSpeed>
+		<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
 		<Mass>75</Mass>
 	</statBases>
 	<tools>
@@ -314,15 +407,15 @@
 			<capacities>
 				<li>Stab</li>
 			</capacities>
-			<power>10</power>
+			<power>18</power>
 			<cooldownTime>2</cooldownTime>
 			<linkedBodyPartsGroup>OniHorn</linkedBodyPartsGroup>
-			<chanceFactor>0.66</chanceFactor>
+			<chanceFactor>0.33</chanceFactor>
 			<surpriseAttack>
 				<extraMeleeDamages>
 					<li>
 						<def>Stun</def>
-						<amount>25</amount>
+						<amount>30</amount>
 					</li>
 				</extraMeleeDamages>
 			</surpriseAttack>
@@ -332,14 +425,14 @@
 			<capacities>
 				<li>Cut</li>
 			</capacities>
-			<power>7</power>
-			<cooldownTime>1.3</cooldownTime>
+			<power>11</power>
+			<cooldownTime>1.5</cooldownTime>
 			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
 			<surpriseAttack>
 				<extraMeleeDamages>
 					<li>
 						<def>Stun</def>
-						<amount>16</amount>
+						<amount>20</amount>
 					</li>
 				</extraMeleeDamages>
 			</surpriseAttack>
@@ -349,14 +442,14 @@
 			<capacities>
 				<li>Cut</li>
 			</capacities>
-			<power>7</power>
-			<cooldownTime>1.3</cooldownTime>
+			<power>11</power>
+			<cooldownTime>1.5</cooldownTime>
 			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
 			<surpriseAttack>
 				<extraMeleeDamages>
 					<li>
 						<def>Stun</def>
-						<amount>16</amount>
+						<amount>20</amount>
 					</li>
 				</extraMeleeDamages>
 			</surpriseAttack>
@@ -366,10 +459,10 @@
 			<capacities>
 				<li>Bite</li>
 			</capacities>
-			<power>8.5</power>
+			<power>12.5</power>
 			<cooldownTime>2</cooldownTime>
 			<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-			<chanceFactor>0.07</chanceFactor>
+			<chanceFactor>0.4</chanceFactor>
 		</li>
 	</tools>
 	<race>
@@ -379,15 +472,16 @@
 		<makesFootprints>true</makesFootprints>
 		<lifeExpectancy>100</lifeExpectancy>
 		<leatherDef>Leather_Oni</leatherDef>
-		<nameGenerator>NamerPersonOniMale</nameGenerator>
-		<nameGeneratorFemale>NamerPersonOniFemale</nameGeneratorFemale>
+		<nameGenerator>NamerPersonAncestralOniMale</nameGenerator>
+		<nameGeneratorFemale>NamerPersonAncestralOniFemale</nameGeneratorFemale>
 		<body>Oni</body>
-		<baseBodySize>1.0</baseBodySize>
-		<baseHungerRate>1.0</baseHungerRate>
-		<baseHealthScale>1</baseHealthScale>
+		<baseBodySize>1.5</baseBodySize>
+		<baseHungerRate>1.75</baseHungerRate>
+		<baseHealthScale>3</baseHealthScale>
+		<useMeatFrom>AOni</useMeatFrom>
 		<foodType>OmnivoreHuman</foodType>
 		<gestationPeriodDays>40</gestationPeriodDays>
-		<manhunterOnDamageChance>0.40</manhunterOnDamageChance>
+		<manhunterOnDamageChance>0.8</manhunterOnDamageChance>
 		<manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
 		<litterSizeCurve>
 			<points>
@@ -442,7 +536,7 @@
 			<li>OrganicStandard</li>
 			<li>Human</li>
 			<li>OniPassiveSet</li>
-			<li>OniPassiveNormal</li>
+			<li>OniPassiveAncestral</li>
 		</hediffGiverSets>
 	</race>
 	<recipes>
@@ -452,5 +546,5 @@
 		<OniBrokenHorn>4</OniBrokenHorn>
 	</butcherProducts>
 </AlienRace.ThingDef_AlienRace>
-
+  
 </Defs>

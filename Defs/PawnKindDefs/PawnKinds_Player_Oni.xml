@@ -69,4 +69,14 @@
 	</techHediffsTags>
 </PawnKindDef>
 
+<PawnKindDef ParentName="BasePlayerOni">
+	<defName>Ancestral_Oni</defName>
+	<race>Alien_AncestralAOni</race>
+	<label>member</label>
+	<defaultFactionType>OniTPlayerColony</defaultFactionType>
+	<backstoryCategories>
+		<li>AncestralOniBackstoryStarter</li>
+	</backstoryCategories>
+</PawnKindDef>
+
 </Defs>

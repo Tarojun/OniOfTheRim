@@ -11,6 +11,12 @@
 				</kindDefs>
 				<chance>25</chance>
 			</li>
+			<li>
+				<kindDefs>
+					<li>Ancestral_Oni</li>
+				</kindDefs>
+				<chance>5</chance>
+			</li>
 		</alienslavekinds>
 		<alienrefugeekinds>
 			<li>
@@ -19,6 +25,12 @@
 					<li>OniPet</li>
 				</kindDefs>
 				<chance>10</chance>
+			</li>
+			<li>
+				<kindDefs>
+					<li>Ancestral_Oni</li>
+				</kindDefs>
+				<chance>1</chance>
 			</li>
 		</alienrefugeekinds>
 		<startingColonists>
@@ -48,6 +60,20 @@
 					<li>PlayerTribe</li>
 				</factionDefs>
 			</li>
+			<li>
+				<pawnKindEntries>
+					<li>
+						<kindDefs>
+							<li>Ancestral_Oni</li>
+						</kindDefs>
+						<chance>2</chance>
+					</li>
+				</pawnKindEntries>
+				<factionDefs>
+					<li>OniTPlayerColony</li>
+					<li>OniPlayerColony</li>
+				</factionDefs>
+			</li>
 		</startingColonists>
 		<alienwandererkinds>
 			<li>
@@ -65,6 +91,22 @@
 				<factionDefs>
 					<li>PlayerColony</li>
 					<li>PlayerTribe</li>
+				</factionDefs>
+			</li>
+			<li>
+				<pawnKindEntries>
+					<li>
+						<kindDefs>
+							<li>Oni_Penitent</li>
+							<li>Oni_Archer</li>
+							<li>Oni_Warrior</li>
+							<li>Oni_Hunter</li>
+						</kindDefs>
+						<chance>25</chance>
+					</li>
+				</pawnKindEntries>
+				<factionDefs>
+					<li>AncestralOniPlayerColony</li>
 				</factionDefs>
 			</li>
 		</alienwandererkinds>

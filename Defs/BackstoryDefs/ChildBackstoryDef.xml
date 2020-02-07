@@ -11,6 +11,7 @@
 	<slot>Childhood</slot>
 	<spawnCategories>
 		<li>OniBackstory</li>
+		<li>AncestralOniBackstory</li>
 	</spawnCategories>	
 	<skillGains>
 		<li>
@@ -38,6 +39,7 @@
 	<slot>Childhood</slot>
 	<spawnCategories>
 		<li>OniBackstory</li>
+		<li>AncestralOniBackstory</li>
 	</spawnCategories>
 	<skillGains>
 		<li>
@@ -109,6 +111,7 @@
 	<slot>Childhood</slot>
 	<spawnCategories>
 		<li>OniBackstory</li>
+		<li>AncestralOniBackstory</li>
 	</spawnCategories>
 	<skillGains>
 		<li>
@@ -132,6 +135,7 @@
 	<slot>Childhood</slot>
 	<spawnCategories>
 		<li>OniBackstory</li>
+		<li>AncestralOniBackstory</li>
 	</spawnCategories>
 	<skillGains>
 		<li>
@@ -159,6 +163,7 @@
 	<slot>Childhood</slot>
 	<spawnCategories>
 		<li>OniBackstory</li>
+		<li>AncestralOniBackstory</li>
 	</spawnCategories>
 	<skillGains>
 		<li>
@@ -242,6 +247,7 @@
 	<slot>Childhood</slot>
 	<spawnCategories>
 		<li>OniBackstory</li>
+		<li>AncestralOniBackstory</li>
 	</spawnCategories>
 	<skillGains>
 		<li>
@@ -296,6 +302,7 @@
 	<slot>Childhood</slot>
 	<spawnCategories>
 		<li>OniBackstory</li>
+		<li>AncestralOniBackstory</li>
 	</spawnCategories>
 	<skillGains>
 		<li>
@@ -372,6 +379,7 @@
 	<slot>Childhood</slot>
 	<spawnCategories>
 		<li>OniBackstory</li>
+		<li>AncestralOniBackstory</li>
 	</spawnCategories>
 	<skillGains>
 		<li>
@@ -408,6 +416,7 @@
 	<spawnCategories>
 		<li>OniBackstory</li>
 		<li>OniSlave</li>
+		<li>AncestralOniBackstory</li>
 	</spawnCategories>
 	<skillGains>
 		<li>
@@ -432,6 +441,7 @@
 	<spawnCategories>
 		<li>OniBackstory</li>
 		<li>OniSlave</li>
+		<li>AncestralOniBackstory</li>
 	</spawnCategories>
 	<skillGains>
 		<li>
@@ -459,6 +469,7 @@
 	<slot>Childhood</slot>
 	<spawnCategories>
 		<li>OniBackstory</li>
+		<li>AncestralOniBackstory</li>
 	</spawnCategories>
 	<skillGains>
 		<li>
@@ -574,6 +585,130 @@
 		<li>
 			<defName>Crafting</defName>
 			<amount>2</amount>
+		</li>
+	</skillGains>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>AncestralOniChild1</defName>
+	<title>wildborn ancestral Oni</title>
+	<titleShort>wildborn</titleShort>
+	<baseDescription>[PAWN_nameDef] was born and raised in a wild herd of [PAWN_possessive] kind. [PAWN_pronoun] had a slight preference over seeking vegetation for food.</baseDescription>
+	<bodyTypeMale>Thin</bodyTypeMale>
+	<bodyTypeFemale>Thin</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>AncestralOniBackstoryStarter</li>
+		<li>AncestralOniBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Plants</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Construction</defName>
+			<amount>-1</amount>
+		</li>
+		<li>
+			<defName>Intellectual</defName>
+			<amount>-1</amount>
+		</li>
+	</skillGains>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>AncestralOniChild2</defName>
+	<title>wildborn ancestral Oni</title>
+	<titleShort>wildborn</titleShort>
+	<baseDescription>[PAWN_nameDef] was born and raised in a wild herd of [PAWN_possessive] kind. [PAWN_pronoun] had a slight preference over interacting with other animals.</baseDescription>
+	<bodyTypeMale>Thin</bodyTypeMale>
+	<bodyTypeFemale>Thin</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>AncestralOniBackstoryStarter</li>
+		<li>AncestralOniBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Animals</defName>
+			<amount>2</amount>
+		</li>
+		<li>
+			<defName>Construction</defName>
+			<amount>-1</amount>
+		</li>
+		<li>
+			<defName>Intellectual</defName>
+			<amount>-1</amount>
+		</li>
+	</skillGains>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>AncestralOniWildChild</defName>
+	<title>wildborn ancestral Oni</title>
+	<titleShort>wildborn</titleShort>
+	<baseDescription>[PAWN_nameDef] was born and raised in a wild herd of [PAWN_possessive] kind. [PAWN_pronoun] was a lot more wild minded than the rest of the herd and resorting more to brute force.</baseDescription>
+	<bodyTypeMale>Thin</bodyTypeMale>
+	<bodyTypeFemale>Thin</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>AncestralOniBackstoryStarter</li>
+		<li>AncestralOniBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Melee</defName>
+			<amount>4</amount>
+		</li>
+		<li>
+			<defName>Construction</defName>
+			<amount>-1</amount>
+		</li>
+		<li>
+			<defName>Crafting</defName>
+			<amount>-1</amount>
+		</li>
+		<li>
+			<defName>Artistic</defName>
+			<amount>-1</amount>
+		</li>
+		<li>
+			<defName>Intellectual</defName>
+			<amount>-1</amount>
+		</li>
+	</skillGains>
+</AlienRace.BackstoryDef>
+
+<AlienRace.BackstoryDef>
+	<defName>AncestralCuriousChild</defName>
+	<title>wildborn ancestral Oni</title>
+	<titleShort>wildborn</titleShort>
+	<baseDescription>[PAWN_nameDef] was born and raised in a wild herd of [PAWN_possessive] kind. [PAWN_pronoun] was more curious than the rest of the herd and would try a lot more different and varied activities.</baseDescription>
+	<bodyTypeMale>Thin</bodyTypeMale>
+	<bodyTypeFemale>Thin</bodyTypeFemale>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>AncestralOniBackstoryStarter</li>
+		<li>AncestralOniBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		<li>
+			<defName>Melee</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Plants</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Animals</defName>
+			<amount>1</amount>
+		</li>
+		<li>
+			<defName>Construction</defName>
+			<amount>-1</amount>
 		</li>
 	</skillGains>
 </AlienRace.BackstoryDef>

@@ -96,7 +96,7 @@
 <ResearchProjectDef>
 	<defName>OniCultureFurniture</defName>
 	<label>Oni culture furniture</label>
-	<description>Reserved placeholder research for future development.</description>
+	<description>Build and craft Oni themed cultural furnitures and production facilities, such as their style of seating, beds and ground oven.\n\nOni-styled cushions are made at crafting spots or tailoring workbenches, that can serve as a sitting cushion.</description>
 	<baseCost>100</baseCost>
 	<techLevel>Neolithic</techLevel>
 	<researchViewX>0</researchViewX>
