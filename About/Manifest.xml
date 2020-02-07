@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest>
-    <identifier>Oni of the Rim</identifier>
+    <identifier>OniOfTheRim</identifier>
     <version>1.0</version>
+	<downloadUri>https://github.com/Tarojun/OniOfTheRim/releases/v1.0</downloadUri>
 </Manifest>
