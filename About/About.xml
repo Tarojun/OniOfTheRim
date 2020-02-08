@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 	<name>Oni of the Rim</name>
-	<author>MoriShep, Tarojun, Lucky</author>
-	<url>https://github.com/Tarojun/OniOfTheRim/releases</url>
+	<author>Many See Description</author>
+	<url>https://steamcommunity.com/sharedfiles/filedetails/?id=1632244750</url>
 <supportedVersions><li>1.0</li></supportedVersions>
 	<description>The mysterious horned and feathered humanoid found on some rim worlds, Oni are often sought out by Glitterworlds for their beauty as a sort of exotic pet. Worse still some are kept as livestock for their feathers, pelts and horns, all having practical and decorative uses. Oni live in temperate areas and rarely employ clothing due to the uncomfortable sensation on their feathered bodies. Due to this, they are highly vulnerable to being set on fire.
 
@@ -56,7 +56,7 @@ Three new plants, each involved with the Oni tribal culture. They are locked beh
 -Demon Breath - A plant with healing properties and also a spice of sorts only appealing to the Oni. Other races will not enjoy the Oni-styled recipes that uses this.
 -Yokai Pepper - Functions as a raw vegetable, but also used in a few drug recipes and in their delicacy meal.
 
-Oni smelly jelly is a Oni specific recreation food that only they can eat, as other humanlike races will not even consider its consumption.
+Oni wine made through their own specialised fermenting barrels, and Oni smelly jelly is a Oni specific recreation food that only they can eat, as other humanlike races will not even consider its consumption.
 A drug line based off Oniamine, a precursor chemical that can be extracted from Oni feathers, horn fragments, pelts and... Their meat. The drugs currently are mainly short term combat boosts, that will make the user a bit more easily tired and hungry once the effects wear off.
 New yokai narcotic poison, that can be used to make a new blowpipe dart weapon, mortar shells or IED trap.
 
@@ -71,6 +71,46 @@ it is very uncommon to encounter a singular individual. Males are easy to identi
 -High movement speed
 -Advanced training 
 Predatory - Can and will eat you, good news is they are fairly easy to take down from range
+
+New Ancestral Oni race recently added. They are more rare than your normal Oni, being significantly more primal and animalistic in nature, and have different stat bases.
+They do not have thoughts regarding ill treatment to other humanlikes that are strangers, dead or alive, due to their perception they are simply another animal, just "smarter". As such, eating humanlike meat is like any other meat laying around.
+
+Base stats of Ancestral Oni:
+Mass: 112.5 kg
+Body size: 1.5
+Nutrition per day: 2.8 (Normal humans and Oni at 1.6 per day)
+Eating speed: +100%
+Move speed: 7.44
+Comfortable temperature range: -30 to 50 Celsius
+
+Advantages:
+A racial passive granting +10% Sight, +5% Manipulation, +40 Carrying Capacity, +6 Melee hit chance, +5 Melee dodge chance, -10% melee cooldown, -2.5 shooting accuracy.
+Health factor: 3 (Three times the health of normal humans and Oni)
+Natural sharp armour: 45%
+Natural blunt armour: 35%
+Immunity gain speed: +15%
+Animal gather speed: +40%
+Animal gather yield: +10%
+Tame and train animal chance: +50%
+Hunting stealth: +25%
+Butcher speed and efficiency: +20%
+Plant work speed: +15%
+Mining speed: +20%
+
+Disadvantages:
+Flammability: 275%
+Market Value: 5600 (Means more wealth, contributing to stronger raids)
+Mining yield: -10%
+Global learning factor: -25%
+Social impact, negotiation and trade price improvements: -25%
+Smelting, smithing and tailoring speed: -10%
+Research speed: -80%
+Medical tend quality and success chance: -10%
+Construction success and repair success chance: -20%
+Food poison chance: +344% (Bringing it to 444% base chance)
+
+Disallowed Trait: Pyromaniac, Transhumanist, Greedy, Jealous
+Forced Trait Probability: Nudist at 95%
 
 Requires Alien Framework V2.0 by Erdelf  https://steamcommunity.com/workshop/filedetails/?id=839005762
 Original art and concept by Ameiro.
