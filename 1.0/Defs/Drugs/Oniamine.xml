@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="ResourceBase">
+	<defName>Oniamine</defName>
+	<label>oniamine</label>
+	<description>A precursor chemical processed from the Oni race. It is commonly used as an ingredient for stimulant type drugs, though there are other variants that is possible.</description>
+	<graphicData>
+		<texPath>Things/Item/Resource/Oniamine</texPath>
+		<graphicClass>Graphic_StackCount</graphicClass>
+		<drawSize>0.90</drawSize>
+	</graphicData>
+	<stackLimit>150</stackLimit>
+	<statBases>
+		<MaxHitPoints>50</MaxHitPoints>
+		<MarketValue>13</MarketValue>
+		<Mass>0.02</Mass>
+		<Flammability>0.7</Flammability>
+		<DeteriorationRate>1.0</DeteriorationRate>
+	</statBases>
+	<thingCategories>
+		<li>Manufactured</li>
+	</thingCategories>
+</ThingDef>
+
+<ThingDef ParentName="ResourceBase">
+	<defName>OniBrokenHorn</defName>
+	<label>oni horn fragments</label>
+	<description>Fragments of a Oni horn. It has the richest concentration of a precursor chemical called Oniamine, that can be used to produce unique drugs. Every year, some fragments can naturally shed off from a Oni.
+Strangely, when a Oni dies, a lot of this presursor chemical leaves the horn and dissipates into the body, making it difficult to extract. Harvesting the horn of a live Oni can maintain the concentration of Oniamine, but it is considered as bad as organ harvesting.</description>
+	<graphicData>
+		<texPath>Things/Item/Resource/BrokenOniHorn</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+	<stackLimit>150</stackLimit>
+	<statBases>
+		<MaxHitPoints>50</MaxHitPoints>
+		<MarketValue>20</MarketValue>
+		<Mass>0.075</Mass>
+		<Flammability>1.0</Flammability>
+		<DeteriorationRate>1.0</DeteriorationRate>
+	</statBases>
+	<thingCategories>
+		<li>Manufactured</li>
+	</thingCategories>
+	<tradeTags>
+		<li>ExoticMisc</li>
+	</tradeTags>
+</ThingDef>
+
+<RecipeDef>
+	<defName>Craft_OniBrokenHorn</defName>
+	<label>Break down Oni horn</label>
+	<description>Carefully break and ground down a full Oni horn into specific sized fragments for further processing.</description>
+	<jobString>Grounding Oni Horn</jobString>
+	<workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+	<effectWorking>CutStone</effectWorking>
+	<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+	<workAmount>300</workAmount>
+	<recipeUsers>
+		<li>CraftingSpot</li>
+		<li>DrugLab</li>
+	</recipeUsers>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RestoredOniHorn</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+	<products>
+		<OniBrokenHorn>35</OniBrokenHorn>
+	</products>
+</RecipeDef>
+
+<RecipeDef Abstract="True" Name="MakeOniamineBase">
+	<jobString>Making oniamine</jobString>
+	<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+	<workSkill>Intellectual</workSkill>
+	<effectWorking>Cook</effectWorking>
+	<soundWorking>Recipe_CookMeal</soundWorking>
+	<workAmount>300</workAmount>
+	<recipeUsers>
+		<li>CraftingSpot</li>
+		<li>DrugLab</li>
+	</recipeUsers>
+</RecipeDef>
+
+<RecipeDef ParentName="MakeOniamineBase">
+	<defName>Craft_Oniamine</defName>
+	<label>Make Oniamine (Oni Horn)</label>
+	<description>Make Oniamine from Oni horn fragments.</description>
+	<researchPrerequisite>OniamineBasic</researchPrerequisite>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>OniBrokenHorn</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+	<products>
+		<Oniamine>2</Oniamine>
+	</products>
+</RecipeDef>
+
+<RecipeDef ParentName="MakeOniamineBase">
+	<defName>Craft_Oniamine_F</defName>
+	<label>Make Oniamine (Oni Feathers)</label>
+	<description>Make Oniamine from Oni feathers.</description>
+	<researchPrerequisite>OniamineBasic</researchPrerequisite>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>OniFeather</li>
+				</thingDefs>
+			</filter>
+			<count>5</count>
+		</li>
+	</ingredients>
+	<products>
+		<Oniamine>2</Oniamine>
+	</products>
+</RecipeDef>
+
+<RecipeDef ParentName="MakeOniamineBase">
+	<defName>Craft_Oniamine_P</defName>
+	<label>Make Oniamine (Oni Pelt)</label>
+	<description>Make Oniamine from Oni pelts.</description>
+	<researchPrerequisite>OniamineAdvanced</researchPrerequisite>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>Leather_Oni</li>
+				</thingDefs>
+			</filter>
+			<count>3</count>
+		</li>
+	</ingredients>
+	<products>
+		<Oniamine>1</Oniamine>
+	</products>
+</RecipeDef>
+
+<RecipeDef>
+	<defName>Craft_Oniamine_M</defName>
+	<label>Make Oniamine (Oni meat)</label>
+	<description>Make Oniamine from Oni meat.</description>
+	<jobString>Making Oniamine</jobString>
+	<workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+	<effectWorking>Cremate</effectWorking>
+	<soundWorking>Recipe_Cremate</soundWorking>
+	<workAmount>2500</workAmount>
+	<researchPrerequisite>OniamineAdvanced</researchPrerequisite>
+	<recipeUsers>
+		<li>BiofuelRefinery</li>
+	</recipeUsers>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>Meat_AOni</li>
+				</thingDefs>
+			</filter>
+			<count>100</count>
+		</li>
+	</ingredients>
+	<products>
+		<Oniamine>5</Oniamine>
+	</products>
+</RecipeDef>
+
+</Defs>

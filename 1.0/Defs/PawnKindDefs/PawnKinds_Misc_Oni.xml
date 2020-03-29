@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+<!-- Oni mercenary pawnkinds for vanilla factions-->
+  
+<PawnKindDef ParentName="PirateScavTierBase">
+	<defName>Oni_Scavenger</defName>
+	<label>Oni scavenger gunner</label>
+	<race>AOni</race>
+	<backstoryCategories Inherit="False">
+		<li>OniBackstory</li>
+	</backstoryCategories>
+	<backstoryCryptosleepCommonality Inherit="False"></backstoryCryptosleepCommonality>
+	<apparelMoney>
+		<min>300</min>
+		<max>500</max>
+	</apparelMoney>	
+	<apparelTags>
+		<li>OniWear</li>
+	</apparelTags>
+	<weaponMoney>
+		<min>200</min>
+		<max>300</max>
+	</weaponMoney>
+	<weaponTags>
+		<li>Gun</li>
+		<li>OniMeleeBasic</li>
+	</weaponTags>
+</PawnKindDef>
+  
+<PawnKindDef ParentName="PirateScavTierBase">
+	<defName>Oni_Thrasher</defName>
+	<label>Oni scavenger thrasher</label>
+	<race>AOni</race>
+	<backstoryCategories Inherit="False">
+		<li>OniBackstory</li>
+	</backstoryCategories>
+	<backstoryCryptosleepCommonality Inherit="False"></backstoryCryptosleepCommonality>
+	<canBeSapper>true</canBeSapper>
+	<apparelMoney>
+		<min>300</min>
+		<max>800</max>
+	</apparelMoney>
+	<apparelTags>
+		<li>OniWear</li>
+	</apparelTags>
+	<weaponMoney>
+		<min>100</min>
+		<max>160</max>
+	</weaponMoney>
+	<weaponTags>
+		<li>NeolithicMeleeBasic</li>
+		<li>MedievalMeleeBasic</li>
+		<li>MedievalMeleeDecent</li>
+		<li>OniMeleeBasic</li>
+	</weaponTags>
+</PawnKindDef>
+  
+<PawnKindDef ParentName="MercenaryMidTierBase">
+	<defName>Oni_Mercenary_Gunner</defName>
+	<label>Oni mercenary gunner</label>
+	<race>AOni</race>
+	<backstoryCategories Inherit="False">
+		<li>OniBackstory</li>
+	</backstoryCategories>
+	<backstoryCryptosleepCommonality Inherit="False"></backstoryCryptosleepCommonality>
+	<combatPower>90</combatPower>
+	<gearHealthRange>
+		<min>0.7</min>
+		<max>3.2</max>
+	</gearHealthRange>
+	<apparelTags>
+		<li>IndustrialBasic</li>
+		<li>IndustrialAdvanced</li>
+		<li>IndustrialMilitaryBasic</li>
+		<li>IndustrialMilitaryAdvanced</li>
+		<li>OniWear</li>
+		<li>BeltDefensePop</li>
+	</apparelTags>
+	<apparelMoney>
+		<min>1000</min>
+		<max>1500</max>
+	</apparelMoney>
+	<apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+	<weaponMoney>
+		<min>330</min>
+		<max>650</max>
+	</weaponMoney>
+	<weaponTags>
+		<li>Gun</li>
+	</weaponTags>
+	<combatEnhancingDrugsChance>0.05</combatEnhancingDrugsChance>
+	<combatEnhancingDrugsCount>
+		<min>0</min>
+		<max>2</max>
+	</combatEnhancingDrugsCount>
+	<inventoryOptions>
+		<skipChance>0.8</skipChance>
+		<subOptionsChooseOne>
+			<li>
+				<thingDef>Silver</thingDef>
+				<countRange>
+					<min>50</min>
+					<max>200</max>
+				</countRange>
+			</li>
+			<li>
+				<thingDef>MedicineIndustrial</thingDef>
+				<countRange>
+					<min>1</min>
+					<max>1</max>
+				</countRange>
+			</li>
+		</subOptionsChooseOne>
+	</inventoryOptions>
+</PawnKindDef>
+  
+<PawnKindDef ParentName="MercenaryMidTierBase">
+	<defName>Oni_Mercenary_Slasher</defName>
+	<label>Oni mercenary slasher</label>	
+	<race>AOni</race>
+	<backstoryCategories Inherit="False">
+		<li>OniBackstory</li>
+	</backstoryCategories>
+	<backstoryCryptosleepCommonality Inherit="False"></backstoryCryptosleepCommonality>
+	<combatPower>150</combatPower>
+	<canBeSapper>true</canBeSapper>
+	<gearHealthRange>
+		<min>0.7</min>
+		<max>3.2</max>
+	</gearHealthRange>
+	<apparelTags>
+		<li>IndustrialBasic</li>
+		<li>IndustrialAdvanced</li>
+		<li>IndustrialMilitaryBasic</li>
+		<li>IndustrialMilitaryAdvanced</li>
+		<li>OniWear</li>
+	</apparelTags>
+	<apparelRequired>
+		<li>Apparel_ShieldBelt</li>
+	</apparelRequired>
+	<apparelMoney>
+		<min>300</min>
+		<max>1400</max>
+	</apparelMoney>
+	<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+	<weaponMoney>
+		<min>200</min>
+		<max>500</max>
+	</weaponMoney>
+	<weaponTags>
+		<li>MedievalMeleeDecent</li>
+		<li>MedievalMeleeAdvanced</li>
+		<li>OniMeleeBasic</li>
+	</weaponTags>
+	<inventoryOptions>
+		<skipChance>0.8</skipChance>
+		<subOptionsChooseOne>
+			<li>
+				<thingDef>Silver</thingDef>
+				<countRange>
+					<min>180</min>
+					<max>400</max>
+				</countRange>
+			</li>
+			<li>
+				<thingDef>MedicineIndustrial</thingDef>
+				<countRange>
+					<min>1</min>
+					<max>2</max>
+				</countRange>
+			</li>
+		</subOptionsChooseOne>
+	</inventoryOptions>
+</PawnKindDef>
+
+</Defs>

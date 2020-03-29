@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="MedicineBase">
+	<defName>MedicineOintment</defName>
+	<label>Demons Breath Ointment</label>
+	<description>A ointment made from grounded demons breath berries and medical herbs. It is less potent than industrial pharmaceuticals, but much better than raw herbs.</description>
+	<graphicData>
+		<texPath>Things/Item/Health/OniOintment</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+	<techLevel>Neolithic</techLevel>
+	<statBases>
+		<MarketValue>16</MarketValue>
+		<Mass>0.3</Mass>
+		<Flammability>1.5</Flammability>
+		<MedicalPotency>0.90</MedicalPotency>
+		<MedicalQualityMax>0.90</MedicalQualityMax>
+		<DeteriorationRate>3</DeteriorationRate>
+		<WorkToMake>700</WorkToMake>
+	</statBases>
+	<costList>
+		<DemonBreathLeaves>2</DemonBreathLeaves>
+		<MedicineHerbal>1</MedicineHerbal>
+	</costList>
+	<recipeMaker>
+		<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+		<workSkill>Intellectual</workSkill>
+		<recipeUsers>
+			<li>CraftingSpot</li>
+			<li>DrugLab</li>
+		</recipeUsers>
+		<skillRequirements>
+			<Crafting>2</Crafting>
+			<Intellectual>2</Intellectual>
+		</skillRequirements>
+	</recipeMaker>
+</ThingDef>
+
+</Defs>

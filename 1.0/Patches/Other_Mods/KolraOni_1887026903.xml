@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Kolra's Oni Race Mod</li>
+	</mods>
+	<match Class="PatchOperationReplace">
+		<success>Always</success>
+		<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="AOni"]/label</xpath>
+		<value>
+			<label>Feathered Oni</label>
+		</value>
+	</match>
+</Operation>
+
+<Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Kolra's Oni Race Mod</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_BlueOni"]/alienRace/thoughtSettings/replacerList</xpath>
+			<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_BlueOni"]/alienRace/thoughtSettings</xpath>
+				<value>
+					<replacerList />
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_GreenOni"]/alienRace/thoughtSettings</xpath>
+				<value>
+					<replacerList />
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_RedOni"]/alienRace/thoughtSettings</xpath>
+				<value>
+					<replacerList />
+				</value>
+			</li>
+		</operations>
+	</match>
+</Operation>
+
+<Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Kolra's Oni Race Mod</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_BlueOni"]/alienRace/thoughtSettings/replacerList</xpath>
+				<value>
+					<li>
+						<original>AteOniStew</original>
+						<replacer>AteOniStewGood</replacer> 
+					</li>
+					<li>
+						<original>AteDemonBreathBerriesAsIngredient</original>
+						<replacer>AteDemonBreathBerriesAsIngredientGood</replacer> 
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_GreenOni"]/alienRace/thoughtSettings/replacerList</xpath>
+				<value>
+					<li>
+						<original>AteOniStew</original>
+						<replacer>AteOniStewGood</replacer> 
+					</li>
+					<li>
+						<original>AteDemonBreathBerriesAsIngredient</original>
+						<replacer>AteDemonBreathBerriesAsIngredientGood</replacer> 
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_RedOni"]/alienRace/thoughtSettings/replacerList</xpath>
+				<value>
+					<li>
+						<original>AteOniStew</original>
+						<replacer>AteOniStewGood</replacer> 
+					</li>
+					<li>
+						<original>AteDemonBreathBerriesAsIngredient</original>
+						<replacer>AteDemonBreathBerriesAsIngredientGood</replacer> 
+					</li>
+				</value>
+			</li>
+		</operations>
+	</match>
+</Operation>
+
+<Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Kolra's Oni Race Mod</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_BlueOni"]/alienRace/thoughtSettings/restrictedThoughts</xpath>
+			<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_BlueOni"]/alienRace/thoughtSettings</xpath>
+				<value>
+					<restrictedThoughts />
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_GreenOni"]/alienRace/thoughtSettings</xpath>
+				<value>
+					<restrictedThoughts />
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_RedOni"]/alienRace/thoughtSettings</xpath>
+				<value>
+					<restrictedThoughts />
+				</value>
+			</li>
+		</operations>
+	</match>
+</Operation>
+
+<Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Kolra's Oni Race Mod</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_BlueOni"]/alienRace/thoughtSettings/restrictedThoughts</xpath>
+				<value>
+					<li>AteOniDelicacy</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_GreenOni"]/alienRace/thoughtSettings/restrictedThoughts</xpath>
+				<value>
+					<li>AteOniDelicacy</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_RedOni"]/alienRace/thoughtSettings/restrictedThoughts</xpath>
+				<value>
+					<li>AteOniDelicacy</li>
+				</value>
+			</li>
+		</operations>
+	</match>
+</Operation>
+
+<Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Kolra's Oni Race Mod</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_BlueOni"]/alienRace/raceRestriction/recipeList</xpath>
+			<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_BlueOni"]/alienRace/raceRestriction</xpath>
+				<value>
+					<recipeList />
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_GreenOni"]/alienRace/raceRestriction</xpath>
+				<value>
+					<recipeList />
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_RedOni"]/alienRace/raceRestriction</xpath>
+				<value>
+					<recipeList />
+				</value>
+			</li>
+		</operations>
+	</match>
+</Operation>
+
+<Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Kolra's Oni Race Mod</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_BlueOni"]/alienRace/raceRestriction/recipeList</xpath>
+				<value>
+					<li>CookOniStew</li>
+					<li>CookOniDelicacy</li>
+					<li>MakeOniSmellyJelly</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_GreenOni"]/alienRace/raceRestriction/recipeList</xpath>
+				<value>
+					<li>CookOniStew</li>
+					<li>CookOniDelicacy</li>
+					<li>MakeOniSmellyJelly</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_RedOni"]/alienRace/raceRestriction/recipeList</xpath>
+				<value>
+					<li>CookOniStew</li>
+					<li>CookOniDelicacy</li>
+					<li>MakeOniSmellyJelly</li>
+				</value>
+			</li>
+		</operations>
+	</match>
+</Operation>
+
+<Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Kolra's Oni Race Mod</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_BlueOni"]/alienRace/raceRestriction/foodList</xpath>
+			<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_BlueOni"]/alienRace/raceRestriction</xpath>
+				<value>
+					<foodList />
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_GreenOni"]/alienRace/raceRestriction</xpath>
+				<value>
+					<foodList />
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_RedOni"]/alienRace/raceRestriction</xpath>
+				<value>
+					<foodList />
+				</value>
+			</li>
+		</operations>
+	</match>
+</Operation>
+
+<Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Kolra's Oni Race Mod</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_BlueOni"]/alienRace/raceRestriction/foodList</xpath>
+				<value>
+					<li>OniDelicacy</li>
+					<li>OniSmellyJelly</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_GreenOni"]/alienRace/raceRestriction/foodList</xpath>
+				<value>
+					<li>OniDelicacy</li>
+					<li>OniSmellyJelly</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_RedOni"]/alienRace/raceRestriction/foodList</xpath>
+				<value>
+					<li>OniDelicacy</li>
+					<li>OniSmellyJelly</li>
+				</value>
+			</li>
+		</operations>
+	</match>
+</Operation>
+
+<Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Kolra's Oni Race Mod</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/FactionDef[defName="BlueOniPlayerTribe"]/startingResearchTags</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="BlueOniPlayerTribe"]/startingResearchTags</xpath>
+				<value>
+					<li>OniStart</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="GreenOniPlayerTribe"]/startingResearchTags</xpath>
+				<value>
+					<li>OniStart</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="RedOniPlayerTribe"]/startingResearchTags</xpath>
+				<value>
+					<li>OniStart</li>
+				</value>
+			</li>
+		</operations>
+	</match>
+</Operation>
+
+</Patch>

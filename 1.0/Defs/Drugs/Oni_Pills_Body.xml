@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="OniCombatDrugBase">
+	<defName>OniPillBody</defName>
+	<label>Red soma of body</label>
+	<description>An Oni drug that stimulate the body to move faster and efficiently. Like with all Light soma, it has a short duration of roughly eight hours.
+
+Stat boosts:
+x90% Pain
++2 Melee hit chance
++5 Melee dodge chance
+-10% Melee cooldown
+-10% Aiming time
++15% Moving
++15% Manipulation
++15% Sight
+
+Drawback on "expiring":
++30% Tiredness
++30% Hunger
+-10% Global work speed</description>
+	<graphicData>
+		<texPath>Things/Item/Drug/PillRed</texPath>
+		<graphicClass>Graphic_StackCount</graphicClass>
+	</graphicData>
+	<stackLimit>75</stackLimit>
+	<rotatable>false</rotatable>
+	<statBases>
+		<MarketValue>60</MarketValue>
+		<Mass>0.05</Mass>
+	</statBases>
+	<techLevel>Neolithic</techLevel>
+	<ingestible>
+		<joyKind>Chemical</joyKind>
+		<joy>0.1</joy>
+		<drugCategory>Hard</drugCategory>
+		<outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+				<hediffDef>OniBodyHigh</hediffDef>
+				<severity>1.50</severity>
+				<!--toleranceChemical>OniPill</toleranceChemical-->
+			</li>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+				<hediffDef>OniPillTolerance</hediffDef>
+				<severity>0.15</severity>
+			</li>
+		</outcomeDoers>
+	</ingestible>
+	<comps>
+		<li Class="CompProperties_Drug">
+			<!--chemical>OniPill</chemical-->
+			<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+			<listOrder>1020</listOrder>
+		</li>
+	</comps>
+	<tradeTags>
+		<li>ExoticMisc</li>
+		<li>OniCombatDrugs</li>
+	</tradeTags>
+</ThingDef>
+
+<HediffDef>
+	<defName>OniBodyHigh</defName>
+	<hediffClass>HediffWithComps</hediffClass>
+	<label>soma of body</label>
+	<defaultLabelColor>(1,1,0.5)</defaultLabelColor>
+	<maxSeverity>1.0</maxSeverity>
+	<isBad>false</isBad>
+	<comps>
+		<li Class="HediffCompProperties_SeverityPerDay">
+			<severityPerDay>-2</severityPerDay>
+		</li>
+	</comps>
+	<stages>
+		<li>
+			<label>drawback</label>
+			<restFallFactorOffset>0.3</restFallFactorOffset>
+			<hungerRateFactorOffset>0.3</hungerRateFactorOffset>
+			<statOffsets>
+				<WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+			</statOffsets>
+		</li>
+		<li>
+			<minSeverity>0.34</minSeverity>
+			<label>active</label>
+			<painFactor>0.9</painFactor>
+			<statOffsets>
+				<MeleeHitChance>2</MeleeHitChance>
+				<MeleeDodgeChance>5</MeleeDodgeChance>
+				<MeleeWeapon_CooldownMultiplier>-0.1</MeleeWeapon_CooldownMultiplier>
+				<AimingDelayFactor>-0.1</AimingDelayFactor>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.15</offset>
+				</li>
+				<li>
+					<capacity>Manipulation</capacity>
+					<offset>0.15</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>0.15</offset>
+				</li>
+			</capMods>
+		</li>
+	</stages>
+</HediffDef>
+
+<RecipeDef>
+	<defName>Craft_OniPillBody</defName>
+	<jobString>Making red soma of body</jobString>
+	<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+	<workSkill>Intellectual</workSkill>
+	<effectWorking>Cook</effectWorking>
+	<soundWorking>Recipe_CookMeal</soundWorking>
+	<workAmount>600</workAmount>
+	<targetCountAdjustment>1</targetCountAdjustment>
+	<researchPrerequisite>OniCombatDrug</researchPrerequisite>
+	<recipeUsers>
+		<li>CraftingSpot</li>
+		<li>DrugLab</li>
+	</recipeUsers>
+	<label>Make red soma of body</label>
+	<description>Make red soma of body from oniamine and yokai peppers.</description>
+	<skillRequirements>
+		<Crafting>2</Crafting>
+		<Intellectual>2</Intellectual>
+	</skillRequirements>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>Oniamine</li>
+				</thingDefs>
+			</filter>
+			<count>3</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>YokaiPepper</li>
+				</thingDefs>
+			</filter>
+			<count>6</count>
+		</li>
+	</ingredients>
+	<products>
+		<OniPillBody>1</OniPillBody>
+	</products>
+</RecipeDef>
+
+</Defs>

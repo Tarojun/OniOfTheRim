@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<RecipeDef>
+	<defName>Preen</defName>
+	<label>Preen for Oni Feathers</label>
+	<description>Onis preening their feathers using Demons Breath Ointment. The ointment helps with the cleaning and encourages rapid regrowth of loosen feathers, allowing more feathers to be produced than naturally shedding.</description>
+	<jobString>preening</jobString>    
+	<effectWorking>Cook</effectWorking>
+	<soundWorking>Recipe_Brewing</soundWorking>
+	<workAmount>1800</workAmount>
+	<workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+	<targetCountAdjustment>15</targetCountAdjustment>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>MedicineOintment</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<thingDefs>
+			<li>MedicineOintment</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+	<products>
+		<OniFeather>15</OniFeather>
+	</products>
+	<recipeUsers>
+		<li>CraftingSpot</li>
+	</recipeUsers>
+</RecipeDef>
+
+<RecipeDef ParentName="CookMealBase">
+	<defName>CookOniStew</defName>
+	<label>cook 2 Oni simple stew</label>
+	<description>Cook a simple meal from a combination of any vegetables and meat, with demon breath berries. Only an Oni can tolerate cooking with demon breath berries.\n\nNote: It uses 4 demon breath berries.</description>
+	<jobString>Cooking oni simple meal.</jobString>
+	<workSpeedStat>CookSpeed</workSpeedStat>
+	<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+	<effectWorking>Cook</effectWorking>
+	<soundWorking>Recipe_CookMeal</soundWorking>
+	<workAmount>500</workAmount>
+	<allowMixingIngredients>true</allowMixingIngredients>
+	<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+	<ingredients>
+		<li>
+			<filter>
+				<categories>
+					<li>FoodRaw</li>
+				</categories>
+			</filter>
+			<count>0.8</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>DemonBreathLeaves</li>
+				</thingDefs>
+			</filter>
+			<count>0.2</count>
+		</li>
+	</ingredients>
+	<products>
+		<OniStew>2</OniStew>
+	</products>
+	<defaultIngredientFilter>
+		<disallowedThingDefs Inherit="False">
+			<li>Meat_Human</li>
+			<li>InsectJelly</li>
+		</disallowedThingDefs>
+	</defaultIngredientFilter>
+	<workSkill>Cooking</workSkill>
+	<!--recipeUsers>
+	Disabling as a patch will add them anyway, else this will duplicate in the bill options.
+		<li>Campfire</li>
+		<li>ElectricStove</li>
+		<li>FueledStove</li>
+	</recipeUsers-->
+</RecipeDef>
+  
+<RecipeDef>
+	<defName>CookOniDelicacy</defName>
+	<label>cook 2 Oni delicacy</label>
+	<description>Cook a Oni delicacy made from insect meat, yokai peppers and demon breath berries. Only an Oni can cook and eat this.</description>
+	<jobString>Cooking oni delicacy.</jobString>
+	<workSpeedStat>CookSpeed</workSpeedStat>
+	<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+	<effectWorking>Cook</effectWorking>
+	<soundWorking>Recipe_CookMeal</soundWorking>
+	<workAmount>500</workAmount>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>Meat_Megaspider</li>
+				</thingDefs>
+			</filter>
+			<count>10</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>YokaiPepper</li>
+				</thingDefs>
+			</filter>
+			<count>10</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>DemonBreathLeaves</li>
+				</thingDefs>
+			</filter>
+			<count>8</count>
+		</li>
+	</ingredients>
+	<products>
+		<OniDelicacy>2</OniDelicacy>
+	</products>
+	<workSkill>Cooking</workSkill>
+	<skillRequirements>
+		<Cooking>6</Cooking>
+	</skillRequirements>
+	<!--recipeUsers>
+	Disabling as a patch will add them anyway, else this will duplicate in the bill options.
+		<li>Campfire</li>
+		<li>ElectricStove</li>
+		<li>FueledStove</li>
+	</recipeUsers-->
+</RecipeDef>
+
+<RecipeDef>
+	<defName>Peel_DemonBreathBerry_10</defName>
+	<label>Peel demon breath berries</label>
+	<description>Peel demon breath berries to remove their non-edible skin so it can be prepared for further Oni based recreation foods or as a bad alternative ingredient in regular meals. Except it's a good alternative for the Oni race.</description>
+	<jobString>Peeling demon breath berries.</jobString>    
+	<effectWorking>Cook</effectWorking>
+	<soundWorking>Recipe_Brewing</soundWorking>
+    <workSkill>Cooking</workSkill>
+	<workSpeedStat>CookSpeed</workSpeedStat>
+	<workAmount>100</workAmount>
+	<targetCountAdjustment>10</targetCountAdjustment>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>DemonBreathLeaves</li>
+				</thingDefs>
+			</filter>
+			<count>10</count>
+		</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<thingDefs>
+			<li>DemonBreathLeaves</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+	<products>
+		<DemonBreathBerryPeeled>10</DemonBreathBerryPeeled>
+	</products>
+	<recipeUsers>
+		<li>ButcherSpot</li>
+		<li>TableButcher</li>
+	</recipeUsers>
+</RecipeDef>
+
+<RecipeDef>
+	<defName>MakeOniSmellyJelly</defName>
+	<label>make Oni smelly jelly</label>
+	<description>Mix insect jelly with peeled demon breath berries and some grounded featherleaf to make a recreation food for the Oni. Only an Oni can make and eat this.</description>
+	<jobString>Making Oni smelly jelly.</jobString>    
+	<effectWorking>Cook</effectWorking>
+	<soundWorking>Recipe_Brewing</soundWorking>
+    <workSkill>Cooking</workSkill>
+	<workSpeedStat>CookSpeed</workSpeedStat>
+	<allowMixingIngredients>true</allowMixingIngredients>
+	<workAmount>1000</workAmount>
+	<targetCountAdjustment>5</targetCountAdjustment>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>DemonBreathBerryPeeled</li>
+				</thingDefs>
+			</filter>
+			<count>5</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>FeatherLeafLeaves</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>InsectJelly</li>
+				</thingDefs>
+			</filter>
+			<count>5</count>
+		</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<thingDefs>
+			<li>DemonBreathLeaves</li>
+			<li>FeatherLeafLeaves</li>
+			<li>InsectJelly</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+	<products>
+		<OniSmellyJelly>5</OniSmellyJelly>
+	</products>
+	<researchPrerequisite>OniNewPlants</researchPrerequisite>
+</RecipeDef>
+
+<RecipeDef>
+	<defName>MakeOniDevilstrand</defName>
+	<label>make onistrand</label>
+	<description>Combine oni feathers and devilstrand to create onistrand.</description>
+	<jobString>Making oni devilstrand.</jobString>
+	<workAmount>900</workAmount>
+	<workSpeedStat>TailoringSpeed</workSpeedStat>
+	<effectWorking>Tailor</effectWorking>
+	<soundWorking>Recipe_Tailor</soundWorking>
+	<targetCountAdjustment>15</targetCountAdjustment>
+	<recipeUsers>
+		<li>ElectricTailoringBench</li>
+		<li>HandTailoringBench</li>
+	</recipeUsers>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>OniFeather</li>
+				</thingDefs>
+			</filter>
+			<count>25</count>
+		</li>			
+		<li>
+			<filter>
+				<thingDefs>
+					<li>DevilstrandCloth</li>
+				</thingDefs>
+			</filter>
+			<count>15</count>
+		</li>
+	</ingredients>
+	<products>
+		<OniDevilstrand>15</OniDevilstrand>
+	</products>
+	<workSkill>Crafting</workSkill>
+	<skillRequirements>
+		<Crafting>4</Crafting>
+	</skillRequirements>
+	<researchPrerequisite>OniDevilstrand</researchPrerequisite>
+</RecipeDef>
+			
+</Defs>

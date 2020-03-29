@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<JobDef>
+	<defName>FillFermentingOniWineBarrel</defName>
+	<driverClass>OniFermenting.JobDriver_FillFermentingOniWineBarrel</driverClass>
+	<reportString>filling TargetA.</reportString>
+	<suspendable>false</suspendable>
+	<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+</JobDef>
+
+<JobDef>
+	<defName>TakeAOniWineOutOfFermentingOniWineBarrel</defName>
+	<driverClass>OniFermenting.JobDriver_TakeAOniWineOutOfFermentingOniWineBarrel</driverClass>
+	<reportString>taking wine out of TargetA.</reportString>
+	<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+</JobDef>
+
+</Defs>

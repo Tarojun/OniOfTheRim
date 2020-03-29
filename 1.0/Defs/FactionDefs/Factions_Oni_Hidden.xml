@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<FactionDef>
+	<defName>OniSpacer</defName>
+	<label>Revenant Talons</label>
+	<description>A mysterious faction consisting of the Oni race. Not a lot is known about them, except they appear out of nowhere and indiscriminately attack everyone as if possessed by raw malice and hatred.</description>
+	<pawnSingular>zealot</pawnSingular>
+	<pawnsPlural>zealots</pawnsPlural>
+	<requiredCountAtGameStart>1</requiredCountAtGameStart>
+	<maxCountAtGameStart>1</maxCountAtGameStart>
+	<fixedName>Revenant Talons</fixedName>
+	<techLevel>Neolithic</techLevel>
+	<backstoryCategories>
+		<li>OniBackstory</li>
+		<li>OniSlave</li>
+	</backstoryCategories>
+	<hidden>true</hidden>
+	<permanentEnemy>true</permanentEnemy>
+	<geneticVariance>1</geneticVariance>
+	<autoFlee>false</autoFlee>
+	<earliestRaidDays>25</earliestRaidDays>
+	<hairTags>
+		<li>Oni</li>
+	</hairTags>
+	<!--apparelStuffFilter>
+		<thingDefs>
+			<li>OniDevilstrand</li>
+			<li>Hyperweave</li>
+			<li>Plasteel</li>
+		</thingDefs>
+	</apparelStuffFilter-->
+	    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 1)</li>
+      </points>
+    </raidCommonalityFromPointsCurve>
+    <maxPawnCostPerTotalPointsCurve>
+		<points>
+			<li>(0,35)</li>
+			<li>(70, 50)</li>
+			<li>(700, 100)</li>
+			<li>(1300, 150)</li>		
+			<li>(100000, 10000)</li>
+		</points>
+    </maxPawnCostPerTotalPointsCurve>	
+    <allowedArrivalTemperatureRange>
+		<min>-20</min>
+		<max>50</max>
+    </allowedArrivalTemperatureRange>
+	<pawnGroupMakers>
+		<li>
+			<!--Normal mix-->
+			<kindDef>Combat</kindDef>
+			<commonality>100</commonality>
+			<options>
+				<Oni_Hunter>12</Oni_Hunter>
+				<Oni_HeavyArcher>12</Oni_HeavyArcher>
+				<Oni_Warrior>6</Oni_Warrior>
+				<Oni_Berserker>12</Oni_Berserker>
+				<Oni_Veteran>6</Oni_Veteran>
+				<Ancestral_Oni_Brawler>1</Ancestral_Oni_Brawler>
+				<Ancestral_Oni_Warrior>1</Ancestral_Oni_Warrior>
+				<Ancestral_Oni_Guardian>1</Ancestral_Oni_Guardian>
+			</options>
+		</li>
+		<li>
+			<!--mainly Ranged-->
+			<kindDef>Combat</kindDef>
+			<commonality>30</commonality>
+			<options>
+				<Oni_Hunter>5</Oni_Hunter>
+				<Oni_HeavyArcher>5</Oni_HeavyArcher>
+				<Oni_Chief>3</Oni_Chief>
+				<Oni_Veteran>10</Oni_Veteran>
+			</options>
+		</li>
+		<li>
+			<!--mainly Melee-->
+			<kindDef>Combat</kindDef>
+			<commonality>30</commonality>
+			<options>
+				<Oni_Berserker>10</Oni_Berserker>
+				<Oni_Veteran>12</Oni_Veteran>
+				<Oni_ChiefMelee>3</Oni_ChiefMelee>
+				<Oni_Veteran>12</Oni_Veteran>
+				<Ancestral_Oni_Brawler>1</Ancestral_Oni_Brawler>
+				<Ancestral_Oni_Warrior>1</Ancestral_Oni_Warrior>
+				<Ancestral_Oni_Guardian>1</Ancestral_Oni_Guardian>
+			</options>
+		</li>
+		<li>
+			<!--Veteran hitsquad. Unleash the Oni weapons and drugs to wreck you-->
+			<kindDef>Combat</kindDef>
+			<commonality>70</commonality>
+			<options>
+				<Oni_Hunter>1</Oni_Hunter>
+				<Oni_Warrior>1</Oni_Warrior>
+				<Oni_HeavyArcher>1</Oni_HeavyArcher>
+				<Oni_Berserker>1</Oni_Berserker>
+				<Oni_Chief>5</Oni_Chief>
+				<Oni_ChiefMelee>5</Oni_ChiefMelee>
+				<Oni_Veteran>15</Oni_Veteran>
+				<Ancestral_Oni_Guardian>2</Ancestral_Oni_Guardian>
+			</options>
+		</li>
+		<li>
+			<!--Ancestral assault-->
+			<kindDef>Combat</kindDef>
+			<commonality>30</commonality>
+			<options>
+				<Ancestral_Oni_Brawler>10</Ancestral_Oni_Brawler>
+				<Ancestral_Oni_Warrior>5</Ancestral_Oni_Warrior>
+				<Ancestral_Oni_Guardian>3</Ancestral_Oni_Guardian>
+			</options>
+		</li>
+    </pawnGroupMakers>
+</FactionDef>
+
+<FactionDef ParentName="TribeBase">
+	<defName>OniFreeborn</defName>
+	<label>Oni Freeborn Tribe</label>
+    <description>A tribe of the mysterious and sought after Oni race.</description>
+	<naturalColonyGoodwill>
+		<min>-90</min>
+		<max>50</max>
+    </naturalColonyGoodwill>
+    <startingGoodwill>
+		<min>-60</min>
+		<max>10</max>
+    </startingGoodwill>
+	<earliestRaidDays>10</earliestRaidDays>
+    <pawnSingular>Oni</pawnSingular>
+    <pawnsPlural>Oni</pawnsPlural>	
+    <listOrderPriority>20</listOrderPriority>
+	<settlementGenerationWeight>1.2</settlementGenerationWeight>
+    <!--requiredCountAtGameStart>1</requiredCountAtGameStart-->
+    <!--canMakeRandomly>true</canMakeRandomly-->
+    <!--canStageAttacks>true</canStageAttacks-->
+	<geneticVariance Inherit="False"></geneticVariance>
+	<!--factionNameMaker>NamerFactionTribal</factionNameMaker-->
+	<!--settlementNameMaker>NamerSettlementTribal</settlementNameMaker-->
+	<pawnNameMaker Inherit="False"></pawnNameMaker>
+	<!--techLevel>Neolithic</techLevel-->
+  	<backstoryCategories>
+		<li>OniBackstory</li>
+	</backstoryCategories>
+    <leaderTitle>Chief</leaderTitle>
+	<hairTags>
+		<li>Oni</li>
+	</hairTags>
+    <!--raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 1)</li>
+      </points>
+    </raidCommonalityFromPointsCurve-->
+   <caravanTraderKinds>
+		<!--li>Caravan_Neolithic_BulkGoods</li>
+		<li>Caravan_Neolithic_WarMerchant</li>
+		<li>Caravan_Neolithic_Slaver</li>
+		<li>Caravan_Neolithic_ShamanMerchant</li-->
+		<li>Caravan_Oni_Speciality</li>
+    </caravanTraderKinds>	
+    <!--visitorTraderKinds>
+		<li>Visitor_Neolithic_Standard</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+		<li>Base_Neolithic_Standard</li>
+    </baseTraderKinds-->
+    <allowedArrivalTemperatureRange>
+		<min>-20</min>
+		<max>50</max>
+    </allowedArrivalTemperatureRange>
+    <!--maxPawnCostPerTotalPointsCurve>
+		<points>
+			<li>(0,35)</li>
+			<li>(70, 50)</li>
+			<li>(700, 100)</li>
+			<li>(1300, 150)</li>		
+			<li>(100000, 10000)</li>
+		</points>
+    </maxPawnCostPerTotalPointsCurve-->	
+    <pawnGroupMakers Inherit="False">	
+		<li>
+			<!--Normal mix-->
+			<kindDef>Combat</kindDef>
+			<commonality>100</commonality>
+			<options>
+				<Oni_Penitent>7</Oni_Penitent>
+				<Oni_Warrior>12</Oni_Warrior>
+				<Oni_Archer>12</Oni_Archer>
+				<Oni_Hunter>12</Oni_Hunter>
+				<Oni_HeavyArcher>10</Oni_HeavyArcher>
+				<Oni_Berserker>10</Oni_Berserker>
+				<Oni_Chief>4</Oni_Chief>
+				<Oni_ChiefMelee>4</Oni_ChiefMelee>
+				<Oni_Veteran>2</Oni_Veteran>
+				<Ancestral_Oni_Brawler>0.4</Ancestral_Oni_Brawler>
+				<Ancestral_Oni_Warrior>0.2</Ancestral_Oni_Warrior>
+				<Ancestral_Oni_Guardian>0.2</Ancestral_Oni_Guardian>
+			</options>
+		</li>
+		<li>
+			<!--Ranged only-->
+			<kindDef>Combat</kindDef>
+			<commonality>60</commonality>
+			<options>
+				<Oni_Archer>10</Oni_Archer>
+				<Oni_Hunter>10</Oni_Hunter>
+				<Oni_HeavyArcher>10</Oni_HeavyArcher>
+				<Oni_Chief>5</Oni_Chief>
+			</options>
+		</li>
+		<li>
+			<!--Melee only-->
+			<kindDef>Combat</kindDef>
+			<commonality>60</commonality>
+			<options>
+				<Oni_Penitent>10</Oni_Penitent>
+				<Oni_Warrior>10</Oni_Warrior>
+				<Oni_Berserker>10</Oni_Berserker>
+				<Oni_ChiefMelee>5</Oni_ChiefMelee>
+				<Ancestral_Oni_Brawler>0.4</Ancestral_Oni_Brawler>
+				<Ancestral_Oni_Warrior>0.2</Ancestral_Oni_Warrior>
+				<Ancestral_Oni_Guardian>0.2</Ancestral_Oni_Guardian>
+			</options>
+		</li>
+		<li>
+			<!--Veteran hitsquad-->
+			<kindDef>Combat</kindDef>
+			<commonality>25</commonality>
+			<options>
+				<Oni_Hunter>1</Oni_Hunter>
+				<Oni_Warrior>1</Oni_Warrior>
+				<Oni_HeavyArcher>1</Oni_HeavyArcher>
+				<Oni_Berserker>1</Oni_Berserker>
+				<Oni_Chief>5</Oni_Chief>
+				<Oni_ChiefMelee>5</Oni_ChiefMelee>
+				<Oni_Veteran>15</Oni_Veteran>
+				<Ancestral_Oni_Brawler>0.4</Ancestral_Oni_Brawler>
+				<Ancestral_Oni_Warrior>0.7</Ancestral_Oni_Warrior>
+				<Ancestral_Oni_Guardian>0.7</Ancestral_Oni_Guardian>
+			</options>
+		</li>
+		<li>
+			<kindDef>Peaceful</kindDef>
+			<options>
+				<Oni_Warrior>10</Oni_Warrior>
+				<Oni_Archer>10</Oni_Archer>
+				<Oni_Hunter>20</Oni_Hunter>
+				<Oni_HeavyArcher>15</Oni_HeavyArcher>
+				<Oni_Berserker>15</Oni_Berserker>
+				<Oni_Chief>2</Oni_Chief>
+				<Oni_Veteran>2</Oni_Veteran>
+				<Ancestral_Oni_Brawler>0.4</Ancestral_Oni_Brawler>
+				<Ancestral_Oni_Warrior>0.2</Ancestral_Oni_Warrior>
+				<Ancestral_Oni_Guardian>0.2</Ancestral_Oni_Guardian>
+			</options>
+		</li>
+		<li>
+			<kindDef>Trader</kindDef>
+			<traders>
+				<Oni_Trader>1</Oni_Trader>
+			</traders>
+			<carriers>
+				<Muffalo>6</Muffalo>
+				<Dromedary>5</Dromedary>
+				<Alpaca>2</Alpaca>
+				<Elephant>1</Elephant>
+				</carriers>
+			<guards>
+				<Oni_Warrior>7</Oni_Warrior>
+				<Oni_Archer>7</Oni_Archer>				
+				<Oni_Hunter>15</Oni_Hunter>
+				<Oni_HeavyArcher>9</Oni_HeavyArcher>
+				<Oni_Berserker>9</Oni_Berserker>
+				<Oni_Veteran>20</Oni_Veteran>
+			</guards>
+		</li>
+		<li>
+			<kindDef>Settlement</kindDef>
+			<options>			
+				<Oni_Warrior>7</Oni_Warrior>
+				<Oni_Archer>10</Oni_Archer>
+				<Oni_Hunter>15</Oni_Hunter>
+				<Oni_HeavyArcher>10</Oni_HeavyArcher>
+				<Oni_Berserker>7</Oni_Berserker>
+				<Oni_Chief>10</Oni_Chief>
+				<Oni_ChiefMelee>10</Oni_ChiefMelee>
+				<Oni_Veteran>10</Oni_Veteran>
+				<Ancestral_Oni_Brawler>1.5</Ancestral_Oni_Brawler>
+				<Ancestral_Oni_Warrior>1.5</Ancestral_Oni_Warrior>
+				<Ancestral_Oni_Guardian>1.5</Ancestral_Oni_Guardian>
+			</options>
+		</li>
+    </pawnGroupMakers>
+	<!--homeIconPath>World/WorldObjects/TribalSettlement</homeIconPath-->
+	<expandingIconTexture>World/OniBase</expandingIconTexture>
+</FactionDef>
+
+</Defs>

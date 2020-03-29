@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThoughtDef>
+	<defName>AteOniStew</defName>
+	<durationDays>1</durationDays>
+	<showBubble>true</showBubble>
+	<icon>Things/Mote/ThoughtSymbol/Food</icon>
+	<stages>
+		<li>
+			<label>Ate Oni stew</label>
+			<description>Something feels off with the way this stew is cooked...</description>
+			<baseMoodEffect>-1</baseMoodEffect>
+		</li>
+	</stages>
+</ThoughtDef>
+
+<ThoughtDef>
+	<defName>AteOniStewGood</defName>
+	<durationDays>1</durationDays>
+	<showBubble>true</showBubble>
+	<icon>Things/Mote/ThoughtSymbol/Food</icon>
+	<stages>
+		<li>
+			<label>Ate Oni stew</label>
+			<description>That stew mixed with demon breath berries smelled and tasted so good.</description>
+			<baseMoodEffect>5</baseMoodEffect>
+		</li>
+	</stages>
+</ThoughtDef>
+
+<ThoughtDef>
+	<defName>AteOniDelicacy</defName>
+	<durationDays>1</durationDays>
+	<showBubble>true</showBubble>
+	<icon>Things/Mote/ThoughtSymbol/Food</icon>
+	<stages>
+		<li>
+			<label>Ate Oni delicacy</label>
+			<description>I ate our kind's delicacy of spicy insect meat with touch of demon breath berries. This is the taste worth dying for.</description>
+			<baseMoodEffect>14</baseMoodEffect>
+		</li>
+	</stages>
+</ThoughtDef>
+
+<ThoughtDef>
+	<defName>AteDemonBreathBerriesAsIngredient</defName>
+	<durationDays>0.5</durationDays>
+	<showBubble>true</showBubble>
+	<icon>Things/Mote/ThoughtSymbol/Food</icon>
+	<stages>
+		<li>
+			<label>demon breath berries ingredients</label>
+			<description>Why would you cook with those foul smelling berries?!</description>
+			<baseMoodEffect>-2</baseMoodEffect>
+		</li>
+	</stages>
+</ThoughtDef>
+
+<ThoughtDef>
+	<defName>AteDemonBreathBerriesAsIngredientGood</defName>
+	<durationDays>1</durationDays>
+	<showBubble>true</showBubble>
+	<icon>Things/Mote/ThoughtSymbol/Food</icon>
+	<stages>
+		<li>
+			<label>demon breath berries ingredients</label>
+			<description>The meal had a pleasant aroma of demon breath berries.</description>
+			<baseMoodEffect>1</baseMoodEffect>
+		</li>
+	</stages>
+</ThoughtDef>
+
+</Defs>

@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="BuildingBase">
+	<defName>Oni_GroundOven</defName>
+	<label>ground oven</label>
+	<description>A pit in the ground lined with stone, used to trap heat for cooking food.</description>    
+	<thingClass>Building_WorkTable</thingClass>
+	<category>Building</category>
+	<graphicData>
+		<texPath>Things/Building/GroundOven/GroundOven</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<shaderType>CutoutComplex</shaderType>
+		<drawRotated>false</drawRotated>
+		<allowFlip>false</allowFlip>
+		<damageData>
+			<rect>(0.2,0,0.6,0.1)</rect>
+		</damageData>
+	</graphicData>
+	<altitudeLayer>Building</altitudeLayer>
+	<passability>PassThroughOnly</passability>
+	<pathCost>50</pathCost>
+	<tickerType>Normal</tickerType>
+	<drawerType>RealtimeOnly</drawerType>
+	<statBases>
+		<MaxHitPoints>80</MaxHitPoints>
+		<WorkToBuild>150</WorkToBuild>
+		<Flammability>0</Flammability>
+		<WorkTableWorkSpeedFactor>0.5</WorkTableWorkSpeedFactor>
+	</statBases>
+	<selectable>true</selectable>
+	<stuffCategories>
+		<li>Stony</li>
+	</stuffCategories>
+	<costStuffCount>10</costStuffCount>
+	<terrainAffordanceNeeded>Diggable</terrainAffordanceNeeded>
+	<soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+	<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+	<resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+	<comps>
+		<li Class="CompProperties_Refuelable">
+			<fuelConsumptionRate>160.0</fuelConsumptionRate>
+			<fuelCapacity>50.0</fuelCapacity>
+			<fuelFilter>
+				<thingDefs>
+					<li>WoodLog</li>
+				</thingDefs>
+			</fuelFilter>
+			<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+		</li> 
+		<li Class="CompProperties_HeatPusher">
+			<compClass>CompHeatPusherPowered</compClass>
+			<heatPerSecond>1</heatPerSecond>
+		</li>
+	</comps>
+	<designationCategory>Production</designationCategory>
+	<hasInteractionCell>True</hasInteractionCell>
+	<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+	<recipes>
+		<li>CookMealSimple</li>
+		<li>Make_Pemmican</li>
+		<li>BurnApparel</li>
+		<li>BurnDrugs</li>
+	</recipes>
+	<inspectorTabs>
+		<li>ITab_Bills</li>
+	</inspectorTabs>
+	<building>
+		<isMealSource>true</isMealSource>
+		<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+		<heatPerTickWhileWorking>0.10</heatPerTickWhileWorking>
+	</building>
+	<researchPrerequisites>
+		<li>OniCultureFurniture</li>
+	</researchPrerequisites>
+</ThingDef>
+
+<ThingDef ParentName="BuildingBase">
+	<defName>OniFermentingWineBarrel</defName>
+	<label>Oni fermenting wine barrel</label>
+	<description>A specialized barrel for fermenting demon breath wort into wine. Strangely, Oni smelly jelly is used as a interior coating and is involved with the fermenting process.</description>
+	<thingClass>OniFermenting.Building_FermentingOniWineBarrel</thingClass>
+	<graphicData>
+		<texPath>Things/Building/OniFermentingWineBarrel/OniFermentingWineBarrel</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<damageData>
+			<rect>(0.05,0.1,0.9,0.9)</rect>
+		</damageData>
+		<shadowData>
+			<volume>(0.75, 0.35, 0.33)</volume>
+		</shadowData>
+	</graphicData>
+	<minifiedDef>MinifiedThing</minifiedDef>
+	<altitudeLayer>Building</altitudeLayer>
+	<passability>PassThroughOnly</passability>
+	<fillPercent>0.45</fillPercent>
+	<pathCost>60</pathCost>
+	<thingCategories>
+		<li>BuildingsProduction</li>
+	</thingCategories>
+	<statBases>
+		<WorkToBuild>600</WorkToBuild>
+		<Mass>10</Mass>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Flammability>1.0</Flammability>
+	</statBases>
+	<costList>
+		<Steel>5</Steel>
+		<WoodLog>30</WoodLog>
+		<OniSmellyJelly>5</OniSmellyJelly>
+	</costList>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+	<comps>
+		<li Class="CompProperties_TemperatureRuinable">
+			<minSafeTemperature>-1</minSafeTemperature>
+			<maxSafeTemperature>32</maxSafeTemperature>
+			<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+		</li>
+		<li Class="CompProperties_Forbiddable"/>
+	</comps>
+	<tickerType>Rare</tickerType>
+	<rotatable>true</rotatable>
+	<designationCategory>Production</designationCategory>
+	<constructEffect>ConstructWood</constructEffect>
+	<researchPrerequisites>
+		<li>Brewing</li>
+		<li>OniCultureFurniture</li>
+	</researchPrerequisites>
+</ThingDef>
+
+<!--ThingDef ParentName="BuildingBase">
+	<defName>Oni_FarmHive</defName>
+	<label>cultivated hive</label>
+	<description>A docile hive of small farmable insects. A modified version of the more well known normal dangerous insect hives, with this one requires maintaining by providing hay or kibble to nurture small insects that solely rely on the hive to stay alive.\n\nSmall insects are produced by the hive that can be collected and butchered.</description>
+	<graphicData>
+		<texPath>Things/Building/Natural/Hive</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>1</drawSize>
+	</graphicData>
+	<altitudeLayer>Building</altitudeLayer>
+	<rotatable>false</rotatable>
+	<fillPercent>0.5</fillPercent>
+	<statBases>
+		<MaxHitPoints>130</MaxHitPoints>
+		<Flammability>1.0</Flammability>
+		<Beauty>-10</Beauty>
+		<WorkToBuild>800</WorkToBuild>
+	</statBases>
+	<costList>
+		<InsectJelly>50</InsectJelly>
+    </costList>
+	<pathCost>50</pathCost>
+	<blockWind>true</blockWind>
+	<tickerType>Normal</tickerType>
+	<passability>PassThroughOnly</passability>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+	<comps>
+		<li Class="CompProperties_Refuelable">
+			<fuelConsumptionRate>10.0</fuelConsumptionRate>
+			<fuelCapacity>20.0</fuelCapacity>
+			<fuelFilter>
+			<thingDefs>
+				<li>Hay</li>
+				<li>Kibble</li>
+			</thingDefs>
+			</fuelFilter>
+			<initialFuelPercent>0</initialFuelPercent>
+		</li>
+		<li Class="CompProperties_Spawner">
+			<thingToSpawn>Meat_Megaspider</thingToSpawn>
+			<spawnCount>5</spawnCount>
+			<spawnIntervalRange>
+				<min>65</min>
+				<max>100</max>
+			</spawnIntervalRange>
+			<writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+		</li>
+		<li Class="CompProperties_HeatPusher">
+			<heatPerSecond>6</heatPerSecond>
+			<heatPushMaxTemperature>38</heatPushMaxTemperature>
+		</li>
+		<li Class="CompProperties_Forbiddable"/>
+	</comps>
+	<designationCategory>Production</designationCategory>
+	<constructEffect>ConstructDirt</constructEffect>
+	<researchPrerequisites>
+		<li>OniCultureFurniture</li>
+	</researchPrerequisites>
+</ThingDef-->
+
+</Defs>

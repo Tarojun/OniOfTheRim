@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Job Splitter</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/WorkGiverDef[defName="TakeAOniWineOutOfFermentingOniWineBarrel"]/workType[.="Hauling"]</xpath>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/WorkGiverDef[defName="TakeAOniWineOutOfFermentingOniWineBarrel"]/workType</xpath>
+				<value>
+					<workType>Brewing</workType>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/WorkGiverDef[defName="FillFermentingOniWineBarrel"]/workType</xpath>
+				<value>
+					<workType>Brewing</workType>
+				</value>
+			</li>
+		</operations>
+	</match>
+</Operation>
+
+</Patch>

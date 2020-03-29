@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<ThingDef Name="OniMealRottable" ParentName="MealRottable" Abstract="True">
+	<thingCategories Inherit="False">
+		<li>OniFoods</li>
+	</thingCategories>
+</ThingDef>
+
+<ThingDef ParentName="OniMealRottable">
+	<defName>OniStew</defName>
+	<label>oni simple stew</label>
+	<description>A traditional simple meal of the Oni. With the use of demon breath berries, only an Oni could fully enjoy this meal. Other races won't find it as enjoyable.</description>
+	<graphicData>
+		<texPath>Things/Item/Resource/Onistew</texPath>
+		<graphicClass>Graphic_StackCount</graphicClass>
+	</graphicData>
+	<socialPropernessMatters>true</socialPropernessMatters>
+	<statBases>
+		<MarketValue>15</MarketValue>
+		<Nutrition>0.8</Nutrition>
+	</statBases>
+	<ingestible>
+		<preferability>MealSimple</preferability>
+		<tasteThought>AteOniStew</tasteThought>
+		<ingestEffect>EatVegetarian</ingestEffect>
+		<ingestSound>Meal_Eat</ingestSound>
+		<outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+				<hediffDef>AteOniMeal</hediffDef>
+				<severity>0.5</severity>
+			</li>
+		</outcomeDoers>
+	</ingestible>
+</ThingDef>
+
+<ThingDef ParentName="OniMealRottable">
+	<defName>OniDelicacy</defName>
+	<label>Oni delicacy</label>
+	<description>A Oni delicacy made with insect meat, yokai peppers and demon breath berries. A horrifying combination where each ingredient is terrible enough on it's own if you're not an Oni.</description>
+	<graphicData>
+		<texPath>Things/Item/Resource/OniDelicacy</texPath>
+		<graphicClass>Graphic_StackCount</graphicClass>
+	</graphicData>
+	<socialPropernessMatters>true</socialPropernessMatters>
+	<statBases>
+		<MarketValue>40</MarketValue>
+		<Nutrition>0.8</Nutrition>
+	</statBases>
+	<ingestible>
+		<preferability>MealLavish</preferability>
+		<tasteThought>AteOniDelicacy</tasteThought>
+		<ingestEffect>EatVegetarian</ingestEffect>
+		<ingestSound>Meal_Eat</ingestSound>
+		<outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+				<hediffDef>AteOniMeal</hediffDef>
+				<severity>0.5</severity>
+			</li>
+		</outcomeDoers>
+	</ingestible>
+</ThingDef>
+
+<ThingDef ParentName="ResourceBase">
+	<defName>OniSmellyJelly</defName>
+	<label>Oni smelly jelly</label>
+	<description>Jelly mixed with demon breath berries and featherleaf.\n\nWith the intense rich smell of demon breath berries, and weird uneven gooey texture, the Oni somehow enjoy this as a recreation food and are the only humanlikes that would even consider eating this.\n\nBecause of its original insect jelly biological properties, it does not rot.</description>
+	<graphicData>
+		<texPath>Things/Item/Resource/OniSmellyJelly</texPath>
+		<graphicClass>Graphic_StackCount</graphicClass>
+	</graphicData>
+	<soundInteract>Standard_Drop</soundInteract>
+	<soundDrop>Standard_Drop</soundDrop>
+	<socialPropernessMatters>true</socialPropernessMatters>
+	<statBases>
+		<MaxHitPoints>60</MaxHitPoints>
+		<Flammability>1.0</Flammability>
+		<DeteriorationRate>6</DeteriorationRate>
+		<MarketValue>9.0</MarketValue>
+		<Mass>0.025</Mass>
+		<Nutrition>0.075</Nutrition>
+		<FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+	</statBases>
+	<ingestible>
+		<preferability>DesperateOnly</preferability>
+		<foodType>Processed</foodType>
+		<joy>0.105</joy>
+		<joyKind>Gluttonous</joyKind>
+		<ingestEffect>EatVegetarian</ingestEffect>
+		<ingestSound>Meal_Eat</ingestSound>
+		<optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+	</ingestible>
+    <tickerType>Rare</tickerType>
+	<comps>
+      <li Class="CompProperties_Ingredients" />
+      <li Class="CompProperties_FoodPoisonable" />
+	</comps>
+	<thingCategories>
+		<li>Foods</li>
+	</thingCategories>
+</ThingDef>
+
+<HediffDef>
+	<defName>AteOniMeal</defName>
+	<label>oni meal supplement</label>
+	<initialSeverity>0.5</initialSeverity>
+	<maxSeverity>0.5</maxSeverity>
+	<defaultLabelColor>(0.062, 0.76, 0.05)</defaultLabelColor>      	
+	<hediffClass>HediffWithComps</hediffClass>
+	<isBad>false</isBad>
+	<comps>
+		<li Class="HediffCompProperties_SeverityPerDay">
+			<severityPerDay>-1.0</severityPerDay>
+		</li>
+	</comps>
+	<stages>
+		<li>
+			<statOffsets>
+				<ImmunityGainSpeed>0.05</ImmunityGainSpeed>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Metabolism</capacity>
+					<offset>0.05</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.05</offset>
+				</li>
+				<li>
+					<capacity>BloodPumping</capacity>
+					<offset>0.05</offset>
+				</li>
+			</capMods>
+		</li>
+  </stages>
+</HediffDef>
+
+</Defs>

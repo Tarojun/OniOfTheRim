@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<FactionDef>
+	<defName>OniPlayerColony</defName>
+	<label>Oni Colony</label>
+	<description>Your Oni colony.</description>
+	<isPlayer>true</isPlayer>
+	<basicMemberKind>OniColonist</basicMemberKind>
+    <pawnSingular>colonist</pawnSingular>
+    <pawnsPlural>colonists</pawnsPlural>
+    <techLevel>Industrial</techLevel>
+	<homeIconPath>World/WorldObjects/TribalSettlement</homeIconPath>
+	<expandingIconTexture>World/OniBase</expandingIconTexture>
+	<colorSpectrum>
+		<li>(0, 0.737, 0.847)</li>
+	</colorSpectrum>
+    <backstoryCategories>
+		<li>OniBackstory</li>
+    </backstoryCategories>
+	<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+	<factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+	<geneticVariance>1</geneticVariance>
+	<startingResearchTags>
+		<li>ClassicStart</li>
+		<li>OniStart</li>
+	</startingResearchTags>
+	<hairTags>
+		<li>Urban</li>
+	</hairTags>
+    <apparelStuffFilter>
+		<thingDefs>
+			<li>OniFeather</li>
+		</thingDefs>
+    </apparelStuffFilter>
+</FactionDef>
+
+<FactionDef>
+	<defName>OniTPlayerColony</defName>
+	<label>Oni tribe</label>
+	<description>Your Oni tribe.</description>
+	<isPlayer>true</isPlayer>
+	<basicMemberKind>OniTribal</basicMemberKind>
+    <pawnSingular>tribesman</pawnSingular>
+    <pawnsPlural>tribespeople</pawnsPlural>
+    <techLevel>Neolithic</techLevel>
+	<homeIconPath>World/WorldObjects/TribalSettlement</homeIconPath>
+	<expandingIconTexture>World/OniBase</expandingIconTexture>
+	<colorSpectrum>
+		<li>(0, 0.737, 0.847)</li>
+	</colorSpectrum>
+    <backstoryCategories>
+		<li>OniBackstory</li>
+    </backstoryCategories>
+	<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+	<factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+	<geneticVariance>1</geneticVariance>
+	<forageabilityFactor>1.7</forageabilityFactor>
+	<startingResearchTags>
+		<li>TribalStart</li>
+		<li>OniStart</li>
+	</startingResearchTags>
+    <recipePrerequisiteTags>
+      <li>Tribal</li>
+    </recipePrerequisiteTags>
+	<hairTags>
+		<li>Tribal</li>
+	</hairTags>
+    <apparelStuffFilter>
+		<thingDefs>
+			<li>OniFeather</li>
+		</thingDefs>
+    </apparelStuffFilter>
+</FactionDef>
+
+<FactionDef>
+	<defName>AncestralOniPlayerColony</defName>
+	<label>Oni tribe (Ancestral)</label>
+	<description>Your Oni tribe.</description>
+	<isPlayer>true</isPlayer>
+	<basicMemberKind>Ancestral_Oni</basicMemberKind>
+    <pawnSingular>tribesman</pawnSingular>
+    <pawnsPlural>tribespeople</pawnsPlural>
+    <techLevel>Neolithic</techLevel>
+	<homeIconPath>World/WorldObjects/TribalSettlement</homeIconPath>
+	<expandingIconTexture>World/OniBase</expandingIconTexture>
+	<colorSpectrum>
+		<li>(0, 0.737, 0.847)</li>
+	</colorSpectrum>
+    <backstoryCategories>
+		<li>AncestralOniBackstoryStarter</li>
+    </backstoryCategories>
+	<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+	<factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+	<geneticVariance>1</geneticVariance>
+	<forageabilityFactor>1.7</forageabilityFactor>
+    <recipePrerequisiteTags>
+      <li>Tribal</li>
+    </recipePrerequisiteTags>
+	<hairTags>
+		<li>Tribal</li>
+	</hairTags>
+    <apparelStuffFilter>
+		<thingDefs>
+			<li>OniFeather</li>
+		</thingDefs>
+    </apparelStuffFilter>
+</FactionDef>
+
+</Defs>
