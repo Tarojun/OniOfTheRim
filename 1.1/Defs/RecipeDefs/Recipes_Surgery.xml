@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+<RecipeDef ParentName="SurgeryFlesh">
+	<defName>OniForcedShearing</defName>
+	<label>force shearing Oni feathers</label>
+	<description>Force shearing feathers off an Oni. The Oni will not be pleased. There will be a cool down before there are enough suitable feathers are regrown to be force harvested again.</description>
+	<workerClass>Recipe_InstallImplant</workerClass>
+	<jobString>Force Shearing Oni.</jobString>
+	<effectWorking>Tailor</effectWorking>
+	<soundWorking>Recipe_Tailor</soundWorking>
+	<workAmount>1800</workAmount>
+	<hideBodyPartNames>true</hideBodyPartNames>
+	<isViolation>true</isViolation>
+    <anesthetize>false</anesthetize>
+	<addsHediff>OniShearedAngry</addsHediff>
+	<surgerySuccessChanceFactor>5</surgerySuccessChanceFactor>
+	<skillRequirements>
+		<Medicine>4</Medicine>
+	</skillRequirements>
+	<ingredients>
+		<li>
+			<filter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories>
+			<li>Medicine</li>
+		</categories>
+	</fixedIngredientFilter>
+	<appliedOnFixedBodyParts>
+		<li>Torso</li>
+	</appliedOnFixedBodyParts>
+	<products>
+		<OniFeather>35</OniFeather>
+	</products>
+</RecipeDef>
+	  
+<HediffDef>
+	<defName>OniShearedAngry</defName>
+	<label>Feathers sheared</label>
+    <description>The Oni has been sheared for feathers against its will, causing a lot of pain and emotional distress.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defaultLabelColor>(1, 1, 1)</defaultLabelColor>
+	<initialSeverity>1</initialSeverity>
+	<isBad>false</isBad>		
+	<maxSeverity>1.0</maxSeverity>
+	<comps>
+		<li Class="HediffCompProperties_SeverityPerDay">
+			<severityPerDay>-0.15</severityPerDay>
+		</li>
+	</comps>
+	<stages>
+		<li>
+			<label>regrowing</label>	
+		</li>
+		<li>
+			<label>recovering</label>
+			<minSeverity>0.4</minSeverity>
+			<painFactor>1.2</painFactor>
+		</li>
+		<li>
+			<minSeverity>0.65</minSeverity>
+			<label>sore skin</label>
+			<painOffset>0.10</painOffset>
+			<painFactor>1.5</painFactor>
+		</li>		
+		<li>
+			<minSeverity>0.90</minSeverity>
+			<label>fresh</label>
+			<painOffset>0.15</painOffset>
+			<painFactor>2</painFactor>
+		</li>		
+	</stages>
+</HediffDef>	
+
+<ThoughtDef>
+	<defName>OniShearedAngry</defName>	
+	<workerClass>ThoughtWorker_Hediff</workerClass>
+	<hediff>OniShearedAngry</hediff>
+	<validWhileDespawned>true</validWhileDespawned>
+	<stages>
+		<li>
+			<label>forced sheared</label>
+			<description>I have been sheared for my feathers by force. I'm not a farm animal!</description>
+			<baseMoodEffect>-30</baseMoodEffect>
+		</li>
+	</stages>
+</ThoughtDef>
+
+<RecipeDef>
+	<defName>EnlightenMegaOwl</defName>
+	<label>enlighten mega owl</label>
+	<description>An Oni will use medicines and herbs in a ritualistic way to help the mega owl tap into it's full potential regardless of it's age.\n\nDev notes: Work is still classified under Doctoring/Surgery even when none of it's stats are used.</description>
+	<workerClass>Recipe_InstallImplant</workerClass>
+	<jobString>Enlightening mega owl.</jobString>
+    <workSpeedStat>AnimalGatherSpeed</workSpeedStat>
+    <workSkill>Animals</workSkill>
+    <workSkillLearnFactor>1</workSkillLearnFactor>
+	<workAmount>9000</workAmount>
+	<hideBodyPartNames>true</hideBodyPartNames>
+	<addsHediff>WiseMegaOwlBuff</addsHediff>
+	<surgerySuccessChanceFactor>20</surgerySuccessChanceFactor>
+	<skillRequirements>
+		<Animals>10</Animals>		
+		<Medicine>4</Medicine>
+		<Intellectual>5</Intellectual>
+	</skillRequirements>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>MedicineOintment</li>
+				</thingDefs>
+			</filter>
+			<count>8</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>Oniamine</li>
+				</thingDefs>
+			</filter>
+			<count>6</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>DemonBreathLeaves</li>
+				</thingDefs>
+			</filter>
+			<count>15</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>FeatherLeafLeaves</li>
+				</thingDefs>
+			</filter>
+			<count>30</count>
+		</li>
+	</ingredients>
+	<appliedOnFixedBodyParts>
+		<li>Brain</li>
+	</appliedOnFixedBodyParts>
+	<recipeUsers>
+		<li>Ornimegalonyx</li>
+	</recipeUsers>
+</RecipeDef>
+
+</Defs>

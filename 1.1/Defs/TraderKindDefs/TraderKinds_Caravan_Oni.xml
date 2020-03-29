@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<TraderKindDef>
+	<defName>Caravan_Oni_Speciality</defName>
+	<label>Oni speciality trader</label>
+	<commonality>1</commonality>
+	<stockGenerators>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>Silver</thingDef>
+			<countRange>
+				<min>1500</min>
+				<max>3000</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>Gold</thingDef>
+			<countRange>
+				<min>30</min>
+				<max>60</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>Jade</thingDef>
+			<countRange>
+				<min>30</min>
+				<max>60</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>OniFeather</thingDef>
+			<countRange>
+				<min>100</min>
+				<max>400</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>OniDevilstrand</thingDef>
+			<countRange>
+				<min>20</min>
+				<max>40</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_Category">
+			<categoryDef>Textiles</categoryDef>
+			<thingDefCountRange>
+				<min>1</min>
+				<max>2</max>
+			</thingDefCountRange>
+			<totalPriceRange>
+				<min>100</min>
+				<max>350</max>
+			</totalPriceRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>Pemmican</thingDef>
+			<countRange>
+				<min>350</min>
+				<max>500</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>OniStew</thingDef>
+			<countRange>
+				<min>0</min>
+				<max>30</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>OniDelicacy</thingDef>
+			<countRange>
+				<min>0</min>
+				<max>10</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>Meat_Megaspider</thingDef>
+			<countRange>
+				<min>45</min>
+				<max>200</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>OniSmellyJelly</thingDef>
+			<countRange>
+				<min>15</min>
+				<max>90</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>InsectJelly</thingDef>
+			<countRange>
+				<min>25</min>
+				<max>120</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>YokaiPepper</thingDef>
+			<countRange>
+				<min>150</min>
+				<max>700</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>DemonBreathLeaves</thingDef>
+			<countRange>
+				<min>40</min>
+				<max>150</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>FeatherLeafLeaves</thingDef>
+			<countRange>
+				<min>20</min>
+				<max>80</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>MedicineHerbal</thingDef>
+			<countRange>
+				<min>5</min>
+				<max>15</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>MedicineOintment</thingDef>
+			<countRange>
+				<min>10</min>
+				<max>30</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>Oniamine</thingDef>
+			<countRange>
+				<min>10</min>
+				<max>75</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>FeatherleafJoint</thingDef>
+			<countRange>
+				<min>10</min>
+				<max>40</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>OniBrokenHorn</thingDef>
+			<countRange>
+				<min>0</min>
+				<max>15</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>YokaiPepperNarcotic</thingDef>
+			<countRange>
+				<min>0</min>
+				<max>16</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>AOniWine</thingDef>
+			<countRange>
+				<min>15</min>
+				<max>40</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>Beer</thingDef>
+			<countRange>
+				<min>25</min>
+				<max>75</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_Tag">
+			<tradeTag>OniCombatDrugs</tradeTag>
+			<thingDefCountRange>
+				<min>1</min>
+				<max>5</max>
+			</thingDefCountRange>
+			<countRange>
+				<min>3</min>
+				<max>12</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_Tag">
+			<tradeTag>OniApparel</tradeTag>
+			<thingDefCountRange>
+				<min>8</min>
+				<max>12</max>
+			</thingDefCountRange>
+			<countRange>
+				<min>1</min>
+				<max>1</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_Tag">
+			<tradeTag>OniWeapons</tradeTag>
+			<thingDefCountRange>
+				<min>1</min>
+				<max>4</max>
+			</thingDefCountRange>
+			<countRange>
+				<min>1</min>
+				<max>3</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_WeaponsRanged">
+			<maxTechLevelGenerate>Neolithic</maxTechLevelGenerate>
+			<countRange>
+				<min>2</min>
+				<max>3</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_Category">
+			<maxTechLevelGenerate>Neolithic</maxTechLevelGenerate>
+			<categoryDef>WeaponsMelee</categoryDef>
+			<thingDefCountRange>
+				<min>2</min>
+				<max>3</max>
+			</thingDefCountRange>
+			<countRange>
+				<min>1</min>
+				<max>1</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_Animals">
+			<tradeTagsSell>
+				<li>OniMegaOwl</li>
+			</tradeTagsSell>
+			<kindCountRange>
+				<min>0</min>
+				<max>1</max>
+			</kindCountRange>
+			<countRange>
+				<min>1</min>
+				<max>4</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_Animals">
+			<tradeTagsSell>
+				<li>AnimalFighter</li>
+				<li>AnimalExotic</li>
+			</tradeTagsSell>
+			<tradeTagsBuy>
+				<li>AnimalFarm</li>
+				<li>AnimalPet</li>
+				<li>AnimalCommon</li>
+				<li>AnimalUncommon</li>
+				<li>AnimalInsect</li>
+				<li>BadassAnimal</li>
+			</tradeTagsBuy>
+			<kindCountRange>
+				<min>-1</min>
+				<max>2</max>
+			</kindCountRange>
+			<countRange>
+				<min>1</min>
+				<max>3</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>EggOrniFertilized</thingDef>
+			<countRange>
+				<min>0</min>
+				<max>8</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_Category">
+			<categoryDef>EggsFertilized</categoryDef>
+			<price>Expensive</price>
+			<thingDefCountRange>
+				<min>0</min>
+				<max>1</max>
+			</thingDefCountRange>
+			<countRange>
+				<min>0</min>
+				<max>5</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>OniSittingCushion</thingDef>
+			<countRange>
+				<min>2</min>
+				<max>8</max>
+			</countRange>
+		</li>
+		<li Class="StockGenerator_Category">
+			<categoryDef>Drugs</categoryDef>
+		</li>
+		<li Class="StockGenerator_Category">
+			<categoryDef>PlantMatter</categoryDef>
+		</li>
+		<li Class="StockGenerator_Category">
+			<categoryDef>Medicine</categoryDef>
+		</li>
+		<li Class="StockGenerator_BuyExpensiveSimple" />
+		<li Class="StockGenerator_BuyTradeTag">
+			<tag>Art</tag>
+		</li>
+		<li Class="StockGenerator_MultiDef">
+			<thingDefs>
+				<li>Chocolate</li>
+				<li>Kibble</li>
+				<li>Hay</li>
+				<li>MealSurvivalPack</li>
+			</thingDefs>
+		</li>
+		<li Class="StockGenerator_Category">
+			<categoryDef>FoodRaw</categoryDef>
+		</li>
+		<li Class="StockGenerator_Tag">
+			<tradeTag>Artifact</tradeTag>
+			<thingDefCountRange>
+				<min>-1</min>
+				<max>2</max>
+			</thingDefCountRange>
+			<countRange>
+				<min>1</min>
+				<max>1</max>
+			</countRange>
+		</li>
+	</stockGenerators>
+</TraderKindDef>
+
+</Defs>

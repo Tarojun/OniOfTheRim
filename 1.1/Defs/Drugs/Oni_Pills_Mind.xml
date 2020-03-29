@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="OniCombatDrugBase">
+	<defName>OniPillMind</defName>
+	<label>blue soma of mind</label>
+	<description>A Light soma that boosts the mind's perception of the environment and sharpening the senses. Like with all Oni combat drugs, it has a short duration of roughly eight hours.
+
+Stat Boosts:
+x110% Pain
++20% Global learning factor
++25% Psychic sensitivity
++20% Consciousness
++20% Sight
++20% Hearing
++20% Breathing</description>
+	<graphicData>
+		<texPath>Things/Item/Drug/PillBlue</texPath>
+		<graphicClass>Graphic_StackCount</graphicClass>
+	</graphicData>
+	<stackLimit>75</stackLimit>
+	<rotatable>false</rotatable>
+	<statBases>
+		<MarketValue>60</MarketValue>
+		<Mass>0.05</Mass>
+	</statBases>
+	<techLevel>Neolithic</techLevel>
+	<ingestible>
+		<joyKind>Chemical</joyKind>
+		<joy>0.25</joy>
+		<drugCategory>Hard</drugCategory>
+		<outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+				<hediffDef>OniMindHigh</hediffDef>
+				<severity>1.50</severity>
+				<!--toleranceChemical>OniPill</toleranceChemical-->
+			</li>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+				<hediffDef>OniPillTolerance</hediffDef>
+				<severity>0.15</severity>
+			</li>
+		</outcomeDoers>
+	</ingestible>
+	<comps>
+		<li Class="CompProperties_Drug">
+			<!--chemical>OniPill</chemical-->
+			<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+			<listOrder>1020</listOrder>
+		</li>
+	</comps>
+	<tradeTags>
+		<li>ExoticMisc</li>
+		<li>OniCombatDrugs</li>
+	</tradeTags>
+</ThingDef>
+
+<HediffDef>
+	<defName>OniMindHigh</defName>
+	<label>soma of mind</label>
+	<description>Blue soma of mind combat drug in the bloodstream. It supercharges combat-related abilities.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defaultLabelColor>(1,1,0.5)</defaultLabelColor>
+	<maxSeverity>1.0</maxSeverity>
+	<isBad>false</isBad>
+	<comps>
+		<li Class="HediffCompProperties_SeverityPerDay">
+			<severityPerDay>-3</severityPerDay>
+		</li>
+	</comps>
+	<stages>
+		<li>
+			<painFactor>1.1</painFactor>
+			<statOffsets>
+				<GlobalLearningFactor>0.2</GlobalLearningFactor>
+				<PsychicSensitivity>0.25</PsychicSensitivity>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<offset>0.2</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>0.2</offset>
+				</li>
+				<li>
+					<capacity>Hearing</capacity>
+					<offset>0.2</offset>
+				</li>
+				<li>
+					<capacity>Breathing</capacity>
+					<offset>0.2</offset>
+				</li>
+			</capMods>
+		</li>
+	</stages>
+</HediffDef>
+
+<ThoughtDef>
+	<defName>OniPillMindHigh</defName>
+	<workerClass>ThoughtWorker_Hediff</workerClass>
+	<hediff>OniMindHigh</hediff>
+	<validWhileDespawned>true</validWhileDespawned>
+	<stages>
+		<li>
+			<label>mind perception enhanced</label>
+			<description>I notice details I did not before, my senses sharper, and my focus more refined on the task at hand.</description>
+			<baseMoodEffect>5</baseMoodEffect>
+		</li>
+	</stages>
+</ThoughtDef>
+
+<RecipeDef>
+	<defName>Craft_OniPillMind</defName>
+	<jobString>Making blue soma of mind</jobString>
+	<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+	<workSkill>Intellectual</workSkill>
+	<effectWorking>Cook</effectWorking>
+	<soundWorking>Recipe_CookMeal</soundWorking>
+	<workAmount>600</workAmount>
+	<targetCountAdjustment>1</targetCountAdjustment>
+	<researchPrerequisite>OniCombatDrug</researchPrerequisite>
+	<recipeUsers>
+		<li>CraftingSpot</li>
+		<li>DrugLab</li>
+	</recipeUsers>
+	<label>Make blue soma of mind</label>
+	<description>Make the Blue Soma of Mind from oniamine and Featherleaf leaves.</description>
+	<skillRequirements>
+		<Crafting>2</Crafting>
+		<Intellectual>2</Intellectual>
+	</skillRequirements>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>Oniamine</li>
+				</thingDefs>
+			</filter>
+			<count>3</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>FeatherLeafLeaves</li>
+				</thingDefs>
+			</filter>
+			<count>6</count>
+		</li>
+	</ingredients>
+	<products>
+		<OniPillMind>1</OniPillMind>
+	</products>
+</RecipeDef>
+
+</Defs>

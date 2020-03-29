@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<RecipeDef Name="Surgeryonihorn" ParentName="SurgeryFlesh" Abstract="True">
+	<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+	<workAmount>2000</workAmount>
+	<recipeUsers>
+		<li>AOni</li>
+		<li>Alien_AncestralAOni</li>
+	</recipeUsers>
+	<ingredients>
+		<li>
+			<filter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+			</filter>
+			<count>2</count>
+		</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<categories>
+			<li>Medicine</li>
+		</categories>
+	</fixedIngredientFilter>
+</RecipeDef>
+
+<!-- Natural Oni horn -->
+
+<ThingDef ParentName="BodyPartNaturalBase">
+	<defName>RestoredOniHorn</defName>
+	<label>oni horn</label>
+	<description>A full horn cut from a live Oni, who will no doubt be very angry from that action. It is full of precursor chemical for making Oni Dust, and can be carefully broken down into horn fragments at a drug lab.</description>
+	<descriptionHyperlinks>
+		<RecipeDef>Installonihorn</RecipeDef>
+		<RecipeDef>Craft_OniBrokenHorn</RecipeDef>
+	</descriptionHyperlinks>
+	<statBases>
+		<MarketValue>800</MarketValue>
+		<Mass>4</Mass>
+	</statBases>
+	<graphicData Inherit="False">
+		<texPath>Things/Item/Health/OniHorn</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+</ThingDef>
+
+<RecipeDef ParentName="Surgeryonihorn">
+	<defName>Installonihorn</defName>
+	<label>install restored Oni horn</label>
+	<description>Replace missing or damaged horn.</description>
+    <descriptionHyperlinks><ThingDef>RestoredOniHorn</ThingDef></descriptionHyperlinks>
+	<workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+	<jobString>Installing horn</jobString>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>RestoredOniHorn</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<thingDefs>
+			<li>RestoredOniHorn</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+	<appliedOnFixedBodyParts>
+		<li>OniHorn</li>
+	</appliedOnFixedBodyParts>
+</RecipeDef>
+
+<!-- Steel Oni horn -->
+
+<HediffDef ParentName="AddedBodyPartBase">
+	<defName>Steelonihorn</defName>
+	<label>steel horn</label>
+	<labelNoun>a steel horn</labelNoun>
+	<description>An installed steel Oni horn.</description>
+    <descriptionHyperlinks><ThingDef>SteelOniHorn</ThingDef></descriptionHyperlinks>
+	<spawnThingOnRemoved>SteelOniHorn</spawnThingOnRemoved>
+	<addedPartProps>
+		<betterThanNatural>true</betterThanNatural>
+		<solid>true</solid>
+	</addedPartProps>
+	<comps>
+		<li Class="HediffCompProperties_VerbGiver">
+			<tools>
+				<li>
+					<label>Horn</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>15</power> <!-- Better then natural -->
+					<cooldownTime>2</cooldownTime>
+				</li>
+			</tools>
+		</li>
+	</comps>
+</HediffDef>
+
+<ThingDef ParentName="BodyPartProstheticMakeableBase">
+	<defName>SteelOniHorn</defName>
+	<label>steel oni horn</label>
+	<description>A oni horn prosthesis. A sturdy replacement for a Oni horn. It is slightly stronger than the original horn, but the Oni no longer naturally shed horn fragments every year.</description>
+	<descriptionHyperlinks><RecipeDef>InstallSteelOniHorn</RecipeDef></descriptionHyperlinks>
+	<costList>
+		<Steel>30</Steel>
+	</costList>
+	<statBases>
+		<Mass>5</Mass>
+	</statBases>
+	<techHediffsTags>
+		<li>Simple</li>
+	</techHediffsTags>
+</ThingDef>
+
+<RecipeDef ParentName="Surgeryonihorn">
+	<defName>InstallSteelOniHorn</defName>
+	<label>install steel horn</label>
+	<description>Install a steel horn to replace lost or damaged horn.</description>
+    <descriptionHyperlinks><ThingDef>SteelOniHorn</ThingDef></descriptionHyperlinks>
+	<jobString>Installing steel horn</jobString>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>SteelOniHorn</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<thingDefs>
+			<li>SteelOniHorn</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+	<appliedOnFixedBodyParts>
+		<li>OniHorn</li>
+	</appliedOnFixedBodyParts>
+	<addsHediff>Steelonihorn</addsHediff>
+</RecipeDef>
+
+<!-- Gold Oni horn -->
+
+
+<HediffDef ParentName="AddedBodyPartBase">
+	<defName>goldonihorn</defName>
+	<label>gold horn</label>
+	<labelNoun>a gold horn</labelNoun>
+	<description>An installed gold Oni horn.</description>
+    <descriptionHyperlinks><ThingDef>GoldOniHorn</ThingDef></descriptionHyperlinks>
+	<spawnThingOnRemoved>GoldOniHorn</spawnThingOnRemoved>
+	<addedPartProps>
+		<betterThanNatural>true</betterThanNatural>
+		<solid>true</solid>
+	</addedPartProps>
+	<stages>
+		<li>		  
+			<statOffsets>
+				<SocialImpact>0.20</SocialImpact>
+			</statOffsets>
+		</li>
+	</stages>
+	<comps>
+		<li Class="HediffCompProperties_VerbGiver">
+			<tools>
+				<li>
+					<label>Horn</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>8</power> <!-- weaker then natural -->
+					<cooldownTime>2</cooldownTime>
+				</li>
+			</tools>
+		</li>
+	</comps>
+</HediffDef>
+  
+<ThingDef ParentName="BodyPartProstheticMakeableBase">
+	<defName>GoldOniHorn</defName>
+	<label>gold oni horn</label>
+	<description>A oni horn prosthesis. A fancy replacement for a Oni horn, increasing social impact. It is weaker than the original horn. but the Oni no longer naturally shed horn fragments every year.</description>
+	<descriptionHyperlinks><RecipeDef>InstallGoldOniHorn</RecipeDef></descriptionHyperlinks>
+	<costList>
+		<Gold>1</Gold>
+		<Steel>20</Steel>
+	</costList>
+	<statBases>
+		<Mass>5</Mass>
+	</statBases>
+	<techHediffsTags>
+		<li>Simple</li>
+	</techHediffsTags>
+</ThingDef>
+
+<RecipeDef ParentName="Surgeryonihorn">
+	<defName>InstallGoldOniHorn</defName>
+	<label>install gold horn</label>
+	<description>Install a gold horn to replace lost or damaged horn</description>
+    <descriptionHyperlinks><ThingDef>GoldOniHorn</ThingDef></descriptionHyperlinks>
+	<jobString>Installing gold horn</jobString>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>GoldOniHorn</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<thingDefs>
+			<li>GoldOniHorn</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+	<appliedOnFixedBodyParts>
+		<li>OniHorn</li>
+	</appliedOnFixedBodyParts>
+	<addsHediff>goldonihorn</addsHediff>
+</RecipeDef>
+
+
+<!-- Bionic Oni horn -->
+
+<HediffDef ParentName="AddedBodyPartBase">
+	<defName>Bioniconihorn</defName>
+	<label>bionic oni horn</label>
+	<labelNoun>a bionic oni horn</labelNoun>
+	<description>An installed bionic Oni horn.</description>
+    <descriptionHyperlinks><ThingDef>Bioniconihorn</ThingDef></descriptionHyperlinks>
+	<spawnThingOnRemoved>Bioniconihorn</spawnThingOnRemoved>
+	<addedPartProps>
+		<betterThanNatural>true</betterThanNatural>
+		<solid>true</solid>
+	</addedPartProps>
+	<stages>
+		<li>
+			<capMods>
+				<li>
+					<capacity>Manipulation</capacity>
+					<offset>0.10</offset>
+				</li>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.10</offset>
+				</li>
+			</capMods>
+		</li>
+	</stages>
+	<comps>
+		<li Class="HediffCompProperties_VerbGiver">
+			<tools>
+				<li>
+					<label>Horn</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>20</power> <!-- stronger then natural -->
+					<cooldownTime>2</cooldownTime>
+				</li>
+			</tools>
+		</li>
+	</comps>
+</HediffDef>
+
+
+<ThingDef ParentName="BodyPartBionicBase">
+	<defName>Bioniconihorn</defName>
+	<label>bionic oni horn</label>
+	<description>A high tech bionic horn designed for an Oni that is stronger than the natural horn and can mimic the appearance of the original horn. The victim of the horn attack would never have guessed it was an enhanced body part until it's too late!
+It also has an additional function to enable the Oni to tap into the potential of the unused accumulated precursor chemical unique in their body, that would otherwise be used to form their natural horn. Acting as a micro-drug processor, it can convert some of it into a minor safe stimulant for the Oni.</description>
+	<descriptionHyperlinks><RecipeDef>InstallBionicOniHorn</RecipeDef></descriptionHyperlinks>
+	<costList>
+		<Plasteel>15</Plasteel>
+		<ComponentSpacer>4</ComponentSpacer>
+	</costList>
+	<statBases>
+		<Mass>4</Mass>
+	</statBases>
+	<techHediffsTags>
+		<li>Advanced</li>
+	</techHediffsTags>
+</ThingDef>
+
+<RecipeDef ParentName="Surgeryonihorn">
+	<defName>InstallBionicOniHorn</defName>
+	<label>install bionic Oni horn</label>
+	<description>Install a bionic horn.</description>
+    <descriptionHyperlinks><ThingDef>Bioniconihorn</ThingDef></descriptionHyperlinks>
+	<jobString>Installing Bionic horn</jobString>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>Bioniconihorn</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<thingDefs>
+			<li>Bioniconihorn</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+	<appliedOnFixedBodyParts>
+		<li>OniHorn</li>
+	</appliedOnFixedBodyParts>
+	<addsHediff>Bioniconihorn</addsHediff>
+</RecipeDef>
+
+</Defs>

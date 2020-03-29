@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="PlantBase">
+	<defName>PlantFeatherLeaf</defName>
+	<label>Featherleaf Plant</label>
+	<description>A leafy plant cultivated by the Oni race for the psychological effects of chemicals in its leaves. Featherleaf leaves can be prepared into joints at the crafting spot. Featherleaf makes a user feel relaxed, but reduces motivation, and can be addictive.</description>
+	<statBases>
+		<MaxHitPoints>85</MaxHitPoints>
+		<Beauty>1</Beauty>
+		<Nutrition>0.15</Nutrition>
+	</statBases>
+	<graphicData>
+		<texPath>Things/Plant/FeatherLeafPlant</texPath>
+		<graphicClass>Graphic_Random</graphicClass>
+	</graphicData>
+	<selectable>true</selectable>
+	<pathCost>10</pathCost>
+	<plant>
+		<growDays>7.50</growDays>
+		<dieIfLeafless>true</dieIfLeafless>
+		<harvestTag>Standard</harvestTag>
+		<harvestedThingDef>FeatherLeafLeaves</harvestedThingDef>
+		<harvestYield>10</harvestYield>
+		<sowMinSkill>4</sowMinSkill>
+		<sowTags>
+			<li>Ground</li>
+			<li>Hydroponic</li>
+		</sowTags>
+		<topWindExposure>0.1</topWindExposure>
+		<visualSizeRange>0.3~1.5</visualSizeRange>
+		<wildOrder>2</wildOrder>
+		<sowResearchPrerequisites>
+			<li>OniNewPlants</li>
+		</sowResearchPrerequisites>
+	</plant>
+</ThingDef>
+
+<ThingDef ParentName="PlantBase">
+	<defName>PlantDemonBreath</defName>
+	<label>demon breath plant</label>
+	<description>A plant cultivated by the Oni for its regenerative effects and... Unique flavor? Demons Breath can be used in cooking or grounded into a paste for medical use.\n\nIt's named Demon Breath by other races because of how bad it smells, but the Oni seem to love it instead. When an Oni consumes or used any of it's medical paste, the smell mysteriously disappears, much to the Oni's disappointment for any lingering scent of the Demon Breath on them.\n\nThe plant is very tall like a tree, therefore it needs free space above it to grow.</description>
+	<statBases>
+		<MaxHitPoints>150</MaxHitPoints>
+		<Beauty>1</Beauty>
+		<Nutrition>0.15</Nutrition>
+	</statBases>
+	<graphicData>
+		<texPath>Things/Plant/Demonsbreath</texPath>
+		<graphicClass>Graphic_Random</graphicClass>
+	</graphicData>
+	<selectable>true</selectable>
+	<pathCost>10</pathCost>
+	<plant>
+		<growDays>6</growDays>
+		<dieIfLeafless>true</dieIfLeafless>
+		<harvestTag>Standard</harvestTag>
+		<harvestedThingDef>DemonBreathLeaves</harvestedThingDef>
+		<harvestYield>11</harvestYield>
+		<sowMinSkill>6</sowMinSkill>
+		<sowTags>
+			<li>Ground</li>
+		</sowTags>
+		<topWindExposure>0.1</topWindExposure>
+		<visualSizeRange>0.7~2.3</visualSizeRange>
+		<immatureGraphicPath>Things/Immature/Demonsbreath</immatureGraphicPath>
+		<wildOrder>2</wildOrder>
+		<sowResearchPrerequisites>
+			<li>OniNewPlants</li>
+		</sowResearchPrerequisites>
+		<interferesWithRoof>true</interferesWithRoof>
+	</plant>
+</ThingDef>
+
+<ThingDef ParentName="PlantBase">
+	<defName>YokaiPepperPlant</defName>
+	<label>yokai pepper plant</label>
+	<description>A devilishly hot and spicy pepper cultivated by the Oni. Can grow well even in somewhat poor soil. When cooked, it is not as deadly spicy as one would think, making it an enjoyable addition to the meal.</description>
+	<statBases>
+		<MaxHitPoints>85</MaxHitPoints>
+		<Nutrition>0.2</Nutrition>
+	</statBases>
+	<graphicData>
+		<texPath>Things/Plant/YokaiPepperPlant</texPath>
+		<graphicClass>Graphic_Random</graphicClass>
+	</graphicData>
+	<selectable>true</selectable>
+	<pathCost>10</pathCost>
+	<ingestible />
+	<plant>
+		<fertilitySensitivity>0.4</fertilitySensitivity>
+		<dieIfLeafless>true</dieIfLeafless>
+		<harvestTag>Standard</harvestTag>
+		<harvestedThingDef>YokaiPepper</harvestedThingDef>
+		<harvestYield>13</harvestYield>
+		<sowTags>
+			<li>Ground</li>
+			<li>Hydroponic</li>
+		</sowTags>
+		<topWindExposure>0.1</topWindExposure>
+		<growDays>6.1</growDays>
+		<immatureGraphicPath>Things/Immature/YokaiPepperPlant</immatureGraphicPath>
+		<visualSizeRange>0.3~1.05</visualSizeRange>
+		<wildOrder>2</wildOrder>
+		<purpose>Food</purpose>
+		<sowResearchPrerequisites>
+			<li>OniNewPlants</li>
+		</sowResearchPrerequisites>
+	</plant>
+</ThingDef>
+
+</Defs>
