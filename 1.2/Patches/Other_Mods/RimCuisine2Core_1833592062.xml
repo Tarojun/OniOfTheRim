@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>[1.0] RimCuisine 2 Core</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[defName="Peel_DemonBreathBerry_10"]/recipeUsers</xpath>
+				<value>
+					<li>RC2_FoodPrepSpot</li>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="OniFermentingWineBarrel"]/thingClass</xpath>
+				<value>
+					<thingClass>ExpandableFermenting.Building_Fermenting</thingClass>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="OniFermentingWineBarrel"]/tickerType</xpath>
+				<value>
+					<tickerType>Normal</tickerType>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="OniFermentingWineBarrel"]/comps</xpath>
+				<value>
+					<li Class="ExpandableFermenting.CompProperties_Fermenting">
+						<ingredientDef>DemonBreathWort</ingredientDef>
+						<productDef>AOniWine</productDef> 
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/WorkGiverDef[defName="TakeAOniWineOutOfFermentingOniWineBarrel"]</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/WorkGiverDef[defName="FillFermentingOniWineBarrel"]</xpath>
+			</li>
+		</operations>
+	</match>
+</Operation>
+
+</Patch>

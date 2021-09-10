@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<HediffDef ParentName="DrugToleranceBase">
+	<defName>OniPillTolerance</defName>
+	<label>Soma tolerance</label>
+    <description>A built-up tolerance to the Oni combat drugs. The more severe this tolerance is, the more the user gets tired and hungry over time.</description>
+	<comps>
+		<li Class="HediffCompProperties_SeverityPerDay">
+			<severityPerDay>-0.1</severityPerDay>
+		</li>
+	</comps>
+	<stages Inherit="False">
+		<li>
+			<minSeverity>0</minSeverity>
+			<becomeVisible>false</becomeVisible>
+			<label>small</label>
+		</li>
+		<li>
+			<minSeverity>0.25</minSeverity>
+			<label>small</label>
+			<restFallFactorOffset>0.25</restFallFactorOffset>
+			<hungerRateFactorOffset>0.25</hungerRateFactorOffset>
+			<statOffsets>
+				<GlobalLearningFactor>-0.1</GlobalLearningFactor>
+				<WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+			</statOffsets>
+		</li>
+		<li>
+			<minSeverity>0.50</minSeverity>
+			<label>large</label>
+			<restFallFactorOffset>0.5</restFallFactorOffset>
+			<hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+			<statOffsets>
+				<GlobalLearningFactor>-0.1</GlobalLearningFactor>
+				<WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>-0.1</offset>
+				 </li>
+				 <li>
+					<capacity>Manipulation</capacity>
+					<offset>-0.1</offset>
+				 </li>
+			</capMods>
+		</li>
+		<li>
+			<minSeverity>0.80</minSeverity>
+			<label>massive</label>
+			<restFallFactorOffset>1</restFallFactorOffset>
+			<hungerRateFactorOffset>1</hungerRateFactorOffset>
+			<statOffsets>
+				<GlobalLearningFactor>-0.1</GlobalLearningFactor>
+				<WorkSpeedGlobal>-0.4</WorkSpeedGlobal>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>-0.15</offset>
+				 </li>
+				 <li>
+					<capacity>Manipulation</capacity>
+					<offset>-0.15</offset>
+				 </li>
+				<li>
+					<capacity>Breathing</capacity>
+					<offset>-0.1</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>-0.1</offset>
+				</li>
+				<li>
+					<capacity>BloodPumping</capacity>
+					<offset>-0.1</offset>
+				</li>
+			</capMods>
+		</li>
+	</stages>
+	<hediffGivers>
+		<li Class="HediffGiver_RandomDrugEffect">
+			<hediff>ChemicalDamageModerate</hediff>
+			<minSeverity>0.75</minSeverity>
+			<baseMtbDays>120</baseMtbDays>
+			<partsToAffect>
+				<li>Brain</li>
+			</partsToAffect>
+		</li>
+	</hediffGivers>
+</HediffDef>
+
+</Defs>

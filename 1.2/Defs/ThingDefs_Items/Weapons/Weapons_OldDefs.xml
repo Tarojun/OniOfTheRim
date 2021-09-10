@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="BaseWeaponNeolithic">
+	<defName>Oni_Blowgun_Gun</defName>
+	<label>Oni fukiya (old)</label>
+	<description>A simple weapon consisting of a narrow, long tube for firing light projectiles or darts. While the dart itself is not so lethal, it has narcotic poison on the tip.</description>
+	<graphicData>
+		<texPath>Things/Item/Weapon/Blowgun</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+	<soundInteract>Bow_Small</soundInteract>
+	<costList>
+		<YokaiPepperNarcotic>4</YokaiPepperNarcotic>
+		<OniFeather>2</OniFeather>
+		<WoodLog>20</WoodLog>
+	</costList>
+	<generateCommonality>0</generateCommonality>
+	<generateAllowChance>0</generateAllowChance>
+	<statBases>
+		<WorkToMake>2500</WorkToMake>
+		<Mass>0.5</Mass>
+		<AccuracyTouch>0.80</AccuracyTouch>
+		<AccuracyShort>0.75</AccuracyShort>
+		<AccuracyMedium>0.31</AccuracyMedium>
+		<AccuracyLong>0.12</AccuracyLong>
+		<RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown> 
+	</statBases>
+	<equippedStatOffsets>
+      <HuntingStealth>0.40</HuntingStealth>
+	</equippedStatOffsets>
+	<weaponTags Inherit="False" />
+	<thingCategories Inherit="False">
+		<li>OniWeaponOldDefs</li>
+	</thingCategories>
+	<recipeMaker>
+		<factionPrerequisiteTags>
+			<li>Oni_Redundancy_Debug</li>
+		</factionPrerequisiteTags>
+		<recipeUsers Inherit="False" />
+		<skillRequirements>
+			<Crafting>2</Crafting>
+		</skillRequirements>
+		<researchPrerequisite Inherit="False" />
+	</recipeMaker>
+    <tradeability>None</tradeability>
+	<verbs>
+		<li>
+			<verbClass>Verb_Shoot</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Oni_Blowgun_Dart</defaultProjectile>
+			<warmupTime>0.3</warmupTime>
+			<range>18</range>
+			<soundCast>Bow_Small</soundCast>
+		</li>
+	</verbs>
+	<tools>
+		<li>
+			<capacities>
+				<li>Stab</li>
+				<li>Poke</li>
+			</capacities>
+			<power>8</power>
+			<cooldownTime>2</cooldownTime>
+		</li>
+	</tools>
+	<tradeTags Inherit="False"></tradeTags>
+</ThingDef>
+
+<!-- ======================================================== -->
+
+<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+	<techLevel>Medieval</techLevel>
+	<defName>Oni_WarDagger_Gun</defName>
+	<label>Oni war kunai (old)</label>
+	<description>Oni war kunai are fearsome. In the trained hands, these can be a devastating tool both in melee and ranged combat.</description>
+	<graphicData>
+		<texPath>Things/Item/Weapon/ThrowingClub</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+	<soundInteract>Interact_BeatFire</soundInteract>
+	<thingCategories Inherit="False">
+		<li>OniWeaponOldDefs</li>
+	</thingCategories>
+	<statBases>
+		<WorkToMake>6500</WorkToMake>
+		<Mass>0.75</Mass>
+		<AccuracyTouch>0.93</AccuracyTouch>
+		<AccuracyShort>0.55</AccuracyShort>
+		<AccuracyMedium>0.25</AccuracyMedium>
+		<AccuracyLong>0.20</AccuracyLong>
+		<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+	</statBases>
+	<stuffCategories>
+		<li>Metallic</li>
+	</stuffCategories>
+	<costStuffCount>45</costStuffCount>
+	<recipeMaker>
+		<factionPrerequisiteTags>
+			<li>Oni_Redundancy_Debug</li>
+		</factionPrerequisiteTags>
+		<recipeUsers Inherit="False" />
+		<researchPrerequisite Inherit="False" />
+		<skillRequirements>
+			<Crafting>3</Crafting>
+		</skillRequirements>
+		<defaultIngredientFilter>
+			<categories>
+				<li>Root</li>
+			</categories>
+			<disallowedThingDefs Inherit="False"></disallowedThingDefs>
+		</defaultIngredientFilter>
+	</recipeMaker>
+    <tradeability>None</tradeability>
+	<generateCommonality>0</generateCommonality>
+	<generateAllowChance>0</generateAllowChance>
+	<weaponTags Inherit="False" />
+	<verbs>
+		<li>
+			<verbClass>Verb_Shoot</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Oni_WarDagger_Dart</defaultProjectile>
+			<warmupTime>0.5</warmupTime>
+			<range>15.5</range>
+			<soundCast>Interact_BeatFire</soundCast>
+		</li>
+	</verbs>
+	<tools>
+		<li>
+			<label>handle</label>
+			<capacities>
+				<li>Poke</li>
+			</capacities>
+			<power>7</power>
+			<cooldownTime>2</cooldownTime>
+		</li>
+		<li>
+			<label>point</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+			<power>14</power>
+			<cooldownTime>1.8</cooldownTime>
+		</li>
+		<li>
+			<label>edge</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+			<power>12</power>
+			<cooldownTime>1.8</cooldownTime>
+		</li>
+	</tools>
+	<tradeTags Inherit="False"></tradeTags>
+</ThingDef>
+
+</Defs>

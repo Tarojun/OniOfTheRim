@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Psychology (unofficial 1.1/1.2)</li>
+	</mods>
+	<match Class="PatchOperationAdd">
+		<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="AOni" or defName="Alien_AncestralAOni"]/alienRace/generalSettings/disallowedTraits</xpath>
+		<value>
+			<li>
+				<defName>Prude</defName>
+			</li>
+		</value>
+	</match>
+</Operation>
+
+</Patch>

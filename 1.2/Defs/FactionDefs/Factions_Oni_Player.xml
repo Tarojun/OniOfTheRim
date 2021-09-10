@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<FactionDef>
+	<defName>OniPlayerColony</defName>
+	<label>Oni Colony</label>
+	<description>Your Oni colony.</description>
+	<isPlayer>true</isPlayer>
+    <pawnSingular>colonist</pawnSingular>
+    <pawnsPlural>colonists</pawnsPlural>
+	<basicMemberKind>OniColonist</basicMemberKind>
+    <techLevel>Industrial</techLevel>
+    <backstoryFilters>
+		<li>
+			<categories>
+				<li>OniBackstory</li>
+			</categories>
+		</li>
+	</backstoryFilters>
+    <factionIconPath>World/OniBase</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+	<colorSpectrum>
+		<li>(0, 0.737, 0.847)</li>
+	</colorSpectrum>
+	<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+	<factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+	<geneticVariance>1</geneticVariance>
+	<startingResearchTags>
+		<li>ClassicStart</li>
+		<li>OniStart</li>
+	</startingResearchTags>
+    <startingTechprintsResearchTags>
+		<li>ClassicStart</li>
+		<li>ClassicStartTechprints</li>
+    </startingTechprintsResearchTags>
+	<hairTags>
+		<li>Urban</li>
+	</hairTags>
+    <apparelStuffFilter>
+		<thingDefs>
+			<li>OniFeather</li>
+		</thingDefs>
+    </apparelStuffFilter>
+</FactionDef>
+
+<FactionDef>
+	<defName>OniTPlayerColony</defName>
+	<label>Oni tribe</label>
+	<description>Your Oni tribe.</description>
+	<isPlayer>true</isPlayer>
+    <pawnSingular>tribesman</pawnSingular>
+    <pawnsPlural>tribespeople</pawnsPlural>
+	<basicMemberKind>OniTribal</basicMemberKind>
+    <techLevel>Neolithic</techLevel>
+    <backstoryFilters>
+		<li>
+			<categories>
+				<li>OniBackstory</li>
+			</categories>
+		</li>
+	</backstoryFilters>
+    <factionIconPath>World/OniBase</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+	<colorSpectrum>
+		<li>(0, 0.737, 0.847)</li>
+	</colorSpectrum>
+	<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+	<factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+	<geneticVariance>1</geneticVariance>
+	<forageabilityFactor>1.7</forageabilityFactor>
+	<startingResearchTags>
+		<li>TribalStart</li>
+		<li>OniStart</li>
+	</startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>TribalStart</li>
+      <li>TribalStartTechprints</li>
+    </startingTechprintsResearchTags>
+	<hairTags>
+		<li>Tribal</li>
+	</hairTags>
+    <apparelStuffFilter>
+		<thingDefs>
+			<li>OniFeather</li>
+		</thingDefs>
+    </apparelStuffFilter>
+    <recipePrerequisiteTags>
+		<li>Tribal</li>
+    </recipePrerequisiteTags>
+</FactionDef>
+
+<FactionDef>
+	<defName>AncestralOniPlayerColony</defName>
+	<label>Oni tribe (Ancestral)</label>
+	<description>Your Oni tribe.</description>
+	<isPlayer>true</isPlayer>
+    <pawnSingular>tribesman</pawnSingular>
+    <pawnsPlural>tribespeople</pawnsPlural>
+	<basicMemberKind>Ancestral_Oni</basicMemberKind>
+    <techLevel>Neolithic</techLevel>
+    <backstoryFilters>
+		<li>
+			<categories>
+				<li>AncestralOniBackstoryStarter</li>
+			</categories>
+		</li>
+	</backstoryFilters>
+    <factionIconPath>World/OniBase</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+	<colorSpectrum>
+		<li>(0, 0.737, 0.847)</li>
+	</colorSpectrum>
+	<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+	<factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+	<geneticVariance>1</geneticVariance>
+	<forageabilityFactor>1.7</forageabilityFactor>
+	<hairTags>
+		<li>Tribal</li>
+	</hairTags>
+    <apparelStuffFilter>
+		<thingDefs>
+			<li>OniFeather</li>
+		</thingDefs>
+    </apparelStuffFilter>
+    <recipePrerequisiteTags>
+		<li>Tribal</li>
+    </recipePrerequisiteTags>
+</FactionDef>
+
+</Defs>

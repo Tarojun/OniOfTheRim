@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<RulePackDef>
+	<defName>NamerPersonOniMale</defName>
+	<rulePack>
+		<rulesStrings>
+			<li>name->[malename] [lastname]</li>
+		</rulesStrings>
+		<rulesRaw>
+			<li Class="Rule_File">
+			  <keyword>lastname</keyword>
+			  <path>OniNames/lastname</path>
+			</li>
+			<li Class="Rule_File">
+				<keyword>malename</keyword>
+				<path>OniNames/malename</path>
+			</li>
+		</rulesRaw>
+	</rulePack>
+</RulePackDef>
+
+<RulePackDef>
+	<defName>NamerPersonOniFemale</defName>
+	<rulePack>
+		<rulesStrings>
+			<li>name->[femalename] [lastname]</li>
+		</rulesStrings>
+		<rulesRaw>
+			<li Class="Rule_File">
+			  <keyword>lastname</keyword>
+			  <path>OniNames/lastname</path>
+			</li>
+			<li Class="Rule_File">
+			  <keyword>femalename</keyword>
+			  <path>OniNames/femalename</path>
+			</li>
+		</rulesRaw>
+	</rulePack>
+</RulePackDef>
+
+<RulePackDef>
+	<defName>NamerPersonAncestralOniMale</defName>
+	<rulePack>
+		<rulesStrings>
+			<li>name->[malename] '[malenickname]' [lastname] </li>
+		</rulesStrings>
+		<rulesRaw>
+			<li Class="Rule_File">
+				<keyword>malenickname</keyword>
+				<path>OniNames/malenickname</path>
+			</li>
+			<li Class="Rule_File">
+			  <keyword>lastname</keyword>
+			  <path>OniNames/lastname</path>
+			</li>
+			<li Class="Rule_File">
+				<keyword>malename</keyword>
+				<path>OniNames/malename</path>
+			</li>
+		</rulesRaw>
+	</rulePack>
+</RulePackDef>
+
+<RulePackDef>
+	<defName>NamerPersonAncestralOniFemale</defName>
+	<rulePack>
+		<rulesStrings>
+			<li>name->[femalename] '[femalenickname]' [lastname] </li>
+		</rulesStrings>
+		<rulesRaw>
+			<li Class="Rule_File">
+				<keyword>femalenickname</keyword>
+				<path>OniNames/femalenickname</path>
+			</li>
+			<li Class="Rule_File">
+			  <keyword>lastname</keyword>
+			  <path>OniNames/lastname</path>
+			</li>
+			<li Class="Rule_File">
+			  <keyword>femalename</keyword>
+			  <path>OniNames/femalename</path>
+			</li>
+		</rulesRaw>
+	</rulePack>
+</RulePackDef>
+
+</Defs>

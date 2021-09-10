@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="RoughPlantBase">
+	<defName>FeatherLeafLeaves</defName>
+	<label>Featherleaf Leaves</label>
+	<description>Raw cut leaves of a Featherleaf plant, an Oni variant of the smokeleaf plant. Can be rolled into smokeable joint at a crafting spot, or used as an ingredient for a combat drug.</description>
+	<graphicData>
+		<texPath>Things/Item/Resource/PlantFoodRaw/FeatherLeaves</texPath>
+	</graphicData>
+	<statBases>
+		<MarketValue>1.6</MarketValue>
+      <Flammability>1.3</Flammability>
+	</statBases>
+	<comps>
+		<li Class="CompProperties_Rottable">
+			<daysToRotStart>30</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+		</li>
+	</comps>
+	<thingCategories>
+		<li>PlantMatter</li>
+	</thingCategories>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+    </ingestible>
+</ThingDef>
+
+<ThingDef ParentName="RoughPlantBase">
+	<defName>DemonBreathLeaves</defName>
+	<label>demon breath berry</label>
+	<description>Raw demon breath berries. Not edible on it's own, but can be used in oni-style recipes or as a medical ointment.\n\nIt's named demon breath by other races because of how bad it smells, but the Oni seem to love it instead. When an Oni consumes or used any of it's medical paste, the smell mysteriously disappears, much to the Oni's disappointment for any lingering scent of the demon breath on them.</description>
+	<graphicData>
+		<texPath>Things/Item/Resource/PlantFoodRaw/DemonBreathBerry</texPath>
+	</graphicData>
+	<statBases>
+		<MarketValue>1.6</MarketValue>
+	</statBases>
+	<comps>
+		<li Class="CompProperties_Rottable">
+			<daysToRotStart>30</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+		</li>
+	</comps>
+	<thingCategories>
+		<li>PlantMatter</li>
+	</thingCategories>
+    <ingestible>
+		<preferability>DesperateOnly</preferability>
+		<optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+		<specialThoughtAsIngredient>AteDemonBreathBerriesAsIngredient</specialThoughtAsIngredient>
+    </ingestible>
+</ThingDef>
+
+<ThingDef ParentName="PlantFoodRawBase">
+	<defName>DemonBreathBerryPeeled</defName>
+	<label>peeled demon breath berry</label>
+	<description>Demon breath berries that has been peeled of their not-so-edible skin. Most of the medical potential uses are lost as a result, but it still tastes and smells very bad if you're not an Oni.\n\nIt can now be used as a bad alternative vegetable in cooking. The terrible smell is tolerable just enough for a non-Oni to use as a cooking ingredient.</description>
+	<graphicData>
+		<texPath>Things/Item/Resource/PlantFoodRaw/DemonBreathBerryPeeled</texPath>
+	</graphicData>
+	<statBases>
+		<MarketValue>1.1</MarketValue>
+	</statBases>
+	<ingestible>
+		<foodType>Plant</foodType>
+		<preferability>DesperateOnly</preferability>
+		<optimalityOffsetFeedingAnimals>-10</optimalityOffsetFeedingAnimals>
+		<specialThoughtAsIngredient>AteDemonBreathBerriesAsIngredient</specialThoughtAsIngredient>
+	</ingestible>
+	<comps>
+		<li Class="CompProperties_Rottable">
+			<daysToRotStart>10</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+		</li>
+	</comps>
+</ThingDef>
+
+<ThingDef ParentName="PlantFoodRawBase">
+	<defName>YokaiPepper</defName>
+	<label>yokai pepper</label>
+	<description>Raw yokai pepper.</description>
+	<graphicData>
+		<texPath>Things/Item/Resource/PlantFoodRaw/yokaipeppers</texPath>
+	</graphicData>
+	<statBases>
+		<MarketValue>1.1</MarketValue>
+	</statBases>
+	<ingestible>
+		<foodType>VegetableOrFruit</foodType>
+	</ingestible>
+	<comps>
+		<li Class="CompProperties_Rottable">
+			<daysToRotStart>30</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+		</li>
+	</comps>
+</ThingDef>
+
+</Defs>
