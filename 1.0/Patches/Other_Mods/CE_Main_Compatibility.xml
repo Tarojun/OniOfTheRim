@@ -54,6 +54,12 @@
 		<nomatch Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="Oni_Fukiya"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="Oni_WarKunai"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
 					<xpath>Defs/ThingDef[defName="Oni_Blowgun_Gun"]</xpath>
 				</li>
 				<li Class="PatchOperationRemove">
@@ -61,6 +67,16 @@
 				</li>
 			</operations>
 		</nomatch>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="Oni_Blowgun_Gun"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="Oni_WarDagger_Gun"]</xpath>
+				</li>
+			</operations>
+		</match>
 	</match>
 </Operation>
 
@@ -753,7 +769,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationReplace">
-				<xpath>Defs/PawnKindDef[defName="Tribal_Warrior"]/combatPower</xpath>
+				<xpath>Defs/PawnKindDef[defName="Oni_Warrior"]/combatPower</xpath>
 				<value>
 					<combatPower>24</combatPower>
 				</value>

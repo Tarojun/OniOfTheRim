@@ -51,7 +51,7 @@
 				<useGenderedBodies>false</useGenderedBodies>
 				<bodyAddons>
 					<li>
-						<path>Things/Oni/Horn/OniHorn</path>
+						<path>Things/Oni/Horn/Old/OniHorn</path>
 						<bodyPart>Head</bodyPart>
 						<inFrontOfBody>true</inFrontOfBody>
 						<useSkinColor>true</useSkinColor>
