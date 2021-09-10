@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Oni_Fukiya</defName>
+				<statBases>
+					<SightsEfficiency>0.65</SightsEfficiency>
+					<ShotSpread>1</ShotSpread>
+					<SwayFactor>2.3</SwayFactor>
+					<Bulk>2.00</Bulk>
+					<RangedWeapon_Cooldown>0.2</RangedWeapon_Cooldown>
+				</statBases>
+				<costList>
+					<WoodLog>8</WoodLog>
+				</costList>
+				<Properties>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>Projectile_Fukiya_Dart_Stone</defaultProjectile>
+					<warmupTime>0.9</warmupTime>
+					<range>13</range>
+					<soundCast>Bow_Small</soundCast>
+				</Properties>
+				<AmmoUser>
+					<ammoSet>AmmoSet_Fukiya_Darts</ammoSet>
+				</AmmoUser>
+				<FireModes />
+				<weaponTags>
+					<li>CE_Fukiya</li>
+				</weaponTags>
+				<AllowWithRunAndGun>false</AllowWithRunAndGun>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Oni_Fukiya"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>6</power>
+							<cooldownTime>1.6</cooldownTime>
+							<armorPenetrationBlunt>0.55</armorPenetrationBlunt>
+						</li>
+					</tools>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Oni_WarKunai"]/description</xpath>
+				<value>
+					<description>Oni war kunai are fearsome. In the trained hands, these can be a devastating tool both in melee and ranged combat.\n\nCombat Extended version of these, they feature a thin thread for the user to return the kunai after being thrown, allowing it's reuse at cost of unusually higher ranged weapon cool down.</description>
+				</value>
+			</li>
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>Oni_WarKunai</defName>
+				<statBases>
+					<SightsEfficiency>1</SightsEfficiency>
+					<Bulk>2.00</Bulk>
+					<RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
+				</statBases>
+				<Properties>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>Projectile_CE_Oni_Kunai</defaultProjectile>
+					<warmupTime>0.3</warmupTime>
+					<range>8</range>
+					<soundCast>Interact_BeatFire</soundCast>
+				</Properties>
+				<FireModes />
+				<weaponTags>
+					<li>CE_Sidearm</li>
+				</weaponTags>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Oni_WarKunai"]</xpath>
+				<value>
+					<equippedStatOffsets>
+						<MeleeCritChance>0.65</MeleeCritChance>
+						<MeleeParryChance>0.15</MeleeParryChance>
+						<MeleeDodgeChance>0.05</MeleeDodgeChance>
+					</equippedStatOffsets>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Oni_WarKunai"]/statBases</xpath>
+				<value>
+					<MeleeCounterParryBonus>0.1</MeleeCounterParryBonus>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Oni_WarKunai"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>handle</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>2</power>
+							<cooldownTime>1.2</cooldownTime>
+							<chanceFactor>0.8</chanceFactor>
+							<armorPenetrationBlunt>0.55</armorPenetrationBlunt>
+							<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>point</label>
+							<capacities>
+								<li>Stab</li>
+							</capacities>
+							<power>17.5</power>
+							<cooldownTime>1.2</cooldownTime>
+							<chanceFactor>1.33</chanceFactor>
+							<armorPenetrationBlunt>0.55</armorPenetrationBlunt>
+							<armorPenetrationSharp>0.48</armorPenetrationSharp>
+							<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>edge</label>
+							<capacities>
+								<li>Cut</li>
+							</capacities>
+							<power>9.3</power>
+							<cooldownTime>1.2</cooldownTime>
+							<armorPenetrationBlunt>0.45</armorPenetrationBlunt>
+							<armorPenetrationSharp>0.43</armorPenetrationSharp>
+							<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="Oni_ShortSword"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>handle</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>2</power>
+							<cooldownTime>1.4</cooldownTime>
+							<armorPenetrationBlunt>0.55</armorPenetrationBlunt>
+							<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>point</label>
+							<capacities>
+								<li>Stab</li>
+							</capacities>
+							<power>28</power>
+							<cooldownTime>1.4</cooldownTime>
+							<chanceFactor>1.33</chanceFactor>
+							<armorPenetrationBlunt>0.55</armorPenetrationBlunt>
+							<armorPenetrationSharp>0.522</armorPenetrationSharp>
+							<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>edge</label>
+							<capacities>
+								<li>Cut</li>
+							</capacities>
+							<power>16.6</power>
+							<cooldownTime>1.4</cooldownTime>
+							<armorPenetrationBlunt>0.85</armorPenetrationBlunt>
+							<armorPenetrationSharp>0.44</armorPenetrationSharp>
+							<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Oni_ShortSword"]</xpath>
+				<value>
+					<equippedStatOffsets>
+						<MeleeCritChance>0.75</MeleeCritChance>
+						<MeleeParryChance>0.25</MeleeParryChance>
+						<MeleeDodgeChance>0.1</MeleeDodgeChance>
+					</equippedStatOffsets>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Oni_ShortSword"]/statBases</xpath>
+				<value>
+					<Bulk>4.5</Bulk>
+					<MeleeCounterParryBonus>0.25</MeleeCounterParryBonus>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="YokaiPepperNarcotic"]/statBases/MarketValue</xpath>
+				<value>
+					<MarketValue>7</MarketValue>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName="Craft_YokaiPepperNarcotic"]/ingredients</xpath>
+				<value>		
+					<ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>YokaiPepper</li>
+								</thingDefs>
+							</filter>
+							<count>10</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>SmokeleafLeaves</li>
+								</thingDefs>
+							</filter>
+							<count>3</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>MedicineHerbal</li>
+								</thingDefs>
+							</filter>
+							<count>1</count>
+						</li>
+					</ingredients>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/DamageDef[defName="OniDart"]/additionalHediffs/li[hediff="YokaiNarcoticDrugged"]/severityPerDamageDealt</xpath>
+				<value>
+					<severityPerDamageDealt>0.035</severityPerDamageDealt>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>

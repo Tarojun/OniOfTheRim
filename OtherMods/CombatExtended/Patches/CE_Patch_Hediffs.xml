@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="PatchOperationSequence">
+	<operations>
+		<li Class="PatchOperationRemove">
+			<xpath>Defs/HediffDef[defName="OniPassive"]/stages/li/statOffsets/MeleeDodgeChance</xpath>
+		</li>
+		<li Class="PatchOperationRemove">
+			<xpath>Defs/HediffDef[defName="AncestralOniPassive"]/stages/li/statOffsets/MeleeDodgeChance</xpath>
+		</li>
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/HediffDef[defName="AncestralOniPassive"]/stages/li/statOffsets/ShootingAccuracyPawn</xpath>
+			<value>
+				<ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/HediffDef[defName="WiseMegaOwlBuff"]/stages/li[2]/statOffsets</xpath>
+			<value>
+				<statOffsets>
+					<CarryingCapacity>+5</CarryingCapacity>
+					<MeleeDodgeChance>0.15</MeleeDodgeChance>
+					<MeleeCritChance>0.05</MeleeCritChance>
+					<MeleeParryChance>0.05</MeleeParryChance>
+					<MeleeArmorPenetration>0.05</MeleeArmorPenetration>
+					<MeleeHitChance>1</MeleeHitChance>
+				</statOffsets>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/HediffDef[defName="WiseMegaOwlBuff"]/stages/li[3]/statOffsets</xpath>
+			<value>
+				<statOffsets>
+					<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.1</ArmorRating_Heat>
+					<CarryingCapacity>+10</CarryingCapacity>
+					<MeleeDodgeChance>0.33</MeleeDodgeChance>
+					<MeleeCritChance>0.1</MeleeCritChance>
+					<MeleeParryChance>0.1</MeleeParryChance>
+					<MeleeArmorPenetration>0.1</MeleeArmorPenetration>
+					<MeleeHitChance>3</MeleeHitChance>
+				</statOffsets>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/HediffDef[defName="WiseMegaOwlBuff"]/stages/li[4]/statOffsets</xpath>
+			<value>
+				<statOffsets>
+					<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.25</ArmorRating_Heat>
+					<CarryingCapacity>+20</CarryingCapacity>
+					<MeleeDodgeChance>0.5</MeleeDodgeChance>
+					<MeleeCritChance>0.2</MeleeCritChance>
+					<MeleeParryChance>0.2</MeleeParryChance>
+					<MeleeArmorPenetration>0.25</MeleeArmorPenetration>
+					<MeleeHitChance>6</MeleeHitChance>
+				</statOffsets>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/HediffDef[defName="Bioniconihorn"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools</xpath>
+			<value>
+				<tools>
+					<li Class="CombatExtended.ToolCE">
+						<label>horn</label>
+						<capacities>
+							<li>Stab</li>
+						</capacities>
+						<power>22</power>
+						<cooldownTime>2.5</cooldownTime>
+						<chanceFactor>0.2</chanceFactor>
+						<armorPenetrationBlunt>0.4</armorPenetrationBlunt>
+						<armorPenetrationSharp>0.6</armorPenetrationSharp>
+					</li>
+				</tools>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/HediffDef[defName="goldonihorn"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools</xpath>
+			<value>
+				<tools>
+					<li Class="CombatExtended.ToolCE">
+						<label>horn</label>
+						<capacities>
+							<li>Stab</li>
+						</capacities>
+						<power>10</power>
+						<cooldownTime>2.5</cooldownTime>
+						<chanceFactor>0.2</chanceFactor>
+						<armorPenetrationBlunt>0.2</armorPenetrationBlunt>
+						<armorPenetrationSharp>0.4</armorPenetrationSharp>
+					</li>
+				</tools>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/HediffDef[defName="Steelonihorn"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools</xpath>
+			<value>
+				<tools>
+					<li Class="CombatExtended.ToolCE">
+						<label>horn</label>
+						<capacities>
+							<li>Stab</li>
+						</capacities>
+						<power>17</power>
+						<cooldownTime>2.5</cooldownTime>
+						<chanceFactor>0.2</chanceFactor>
+						<armorPenetrationBlunt>0.35</armorPenetrationBlunt>
+						<armorPenetrationSharp>0.52</armorPenetrationSharp>
+					</li>
+				</tools>
+			</value>
+		</li>
+	</operations>
+</Operation>
+
+</Patch>

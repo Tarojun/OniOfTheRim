@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HugsLib.UpdateFeatureDef Abstract="true" Name="UpdateFeatureBase">
+		<modNameReadable>Oni of the Rim</modNameReadable>
+		<modIdentifier>Oni_of_the_Rim</modIdentifier>
+		<linkUrl>https://steamcommunity.com/workshop/filedetails/?id=1632244750</linkUrl>
+	</HugsLib.UpdateFeatureDef>
+
+	<HugsLib.UpdateFeatureDef ParentName="UpdateFeatureBase">
+		<defName>Oni_of_the_Rim</defName>
+		<assemblyVersion>2.0.1</assemblyVersion>
+		<content>New update for the Oni of the Rim race mod, mostly to fixing some bugs, and most importantly to inform you of the body structure change to match with 1.3 with the addition of the tongue body part.
+Oni Shogun bed should now be classed as Royal Beds for Royalty requirements. The Oni double beds will not share properties as the regular double beds requirements, because they are still essentially a inferior bed type than regular beds.
+If you are in a on-going save, please inspect any Oni and Ancestral Oni you have as their health tab may be slightly messed due to how the base game tags hediffs to each body parts and adding or removing body parts from the codes may cause a mismatch to where prosthetic/bionics and missing body parts go.</content>
+	</HugsLib.UpdateFeatureDef>	
+
+</Defs>

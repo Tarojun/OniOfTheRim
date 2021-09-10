@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/FactionDef[defName = "Empire"]/permanentEnemyToEveryoneExcept</xpath>
+		<value>
+			<li>OniPlayerColony</li>
+			<li>OniTPlayerColony</li>
+			<li>AncestralOniPlayerColony</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<operations>
+		<!-- Guests -->
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/QuestScriptDef/root[@Class="QuestNode_Sequence"]/nodes/li[@Class="QuestNode_IsSet"]/node[@Class="QuestNode_GetRandomPawnKindForFaction"]/choices</xpath>
+				<value>
+					<li>
+						<factionDef>OniFreeborn</factionDef>
+						<pawnKinds>
+							<li>Oni_Warrior</li>
+							<li>Oni_Archer</li>
+							<li>Oni_Hunter</li>
+						</pawnKinds>
+					</li>  
+				</value>
+			</li>
+			<!-- Mercenaries -->
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/QuestScriptDef/root[@Class="QuestNode_Sequence"]/nodes/li[@Class="QuestNode_GetRandomPawnKindForFaction"]/choices</xpath>
+				<value>
+					<li>
+						<factionDef>OniFreeborn</factionDef>
+						<pawnKinds>
+							<li>Oni_HeavyArcher</li>
+							<li>Oni_Berserker</li>
+							<li>Oni_Veteran</li>
+						</pawnKinds>
+					</li>  
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationInsert">
+		<xpath>/Defs/RoyalTitleDef/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"]/things/li[text()="RoyalBed"]</xpath>
+		<success>Always</success>
+		<order>Append</order>
+		<value>
+			<li>OniShogunBed</li>
+		</value>
+	</Operation>
+
+</Patch>

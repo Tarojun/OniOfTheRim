@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="PatchOperationSequence">
+	<operations>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Apparel_OniWrap" or defName="Apparel_OniWrapStuffed"]/statBases</xpath>
+			<value>
+				<Bulk>9</Bulk>
+				<WornBulk>2</WornBulk>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="Apparel_OniWrap"]/statBases/ArmorRating_Blunt</xpath>
+			<value>
+				<ArmorRating_Blunt>0.27</ArmorRating_Blunt>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="Apparel_OniWrap"]/statBases/ArmorRating_Sharp</xpath>
+			<value>
+				<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="Apparel_OniWrapStuffed"]/statBases/StuffEffectMultiplierArmor</xpath>
+			<value>
+				<StuffEffectMultiplierArmor>5</StuffEffectMultiplierArmor>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Apparel_OniGrandWrap"]/statBases</xpath>
+			<value>
+				<Bulk>10</Bulk>
+				<WornBulk>3</WornBulk>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="Apparel_OniGrandWrap"]/statBases/ArmorRating_Blunt</xpath>
+			<value>
+				<ArmorRating_Blunt>0.77</ArmorRating_Blunt>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="Apparel_OniGrandWrap"]/statBases/ArmorRating_Sharp</xpath>
+			<value>
+				<ArmorRating_Sharp>2.97</ArmorRating_Sharp>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Apparel_OniHeaddress"]/equippedStatOffsets</xpath>
+			<value>
+				<Suppressability>-0.25</Suppressability>
+			</value>
+		</li>			<li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="Apparel_OniHeaddress"]/statBases/StuffEffectMultiplierArmor</xpath>
+			<value>
+				<StuffEffectMultiplierArmor>7</StuffEffectMultiplierArmor>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Apparel_OniWrapNudist"]/statBases</xpath>
+			<value>
+				<Bulk>9</Bulk>
+				<WornBulk>0.5</WornBulk>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="Apparel_OniWrapNudist"]/statBases/ArmorRating_Blunt</xpath>
+			<value>
+				<ArmorRating_Blunt>0.27</ArmorRating_Blunt>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="Apparel_OniWrapNudist"]/statBases/ArmorRating_Sharp</xpath>
+			<value>
+				<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Apparel_OniGrandWrapNudist"]/statBases</xpath>
+			<value>
+				<Bulk>10</Bulk>
+				<WornBulk>1.5</WornBulk>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="Apparel_OniGrandWrapNudist"]/statBases/ArmorRating_Blunt</xpath>
+			<value>
+				<ArmorRating_Blunt>0.63</ArmorRating_Blunt>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+			<xpath>Defs/ThingDef[defName="Apparel_OniGrandWrapNudist"]/statBases/ArmorRating_Sharp</xpath>
+			<value>
+				<ArmorRating_Sharp>2.43</ArmorRating_Sharp>
+			</value>
+		</li>
+	</operations>
+</Operation>
+
+</Patch>

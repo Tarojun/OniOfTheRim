@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<CombatExtended.AmmoCategoryDef>
+	<defName>StoneFukiyaDart</defName>
+	<label>stone dart</label>
+<labelShort>stone</labelShort>
+	<description>A sharpened stone is attached as a dart tip. Digs into exposed tissue fairly well but is ineffective against any kind of armor.</description>
+</CombatExtended.AmmoCategoryDef>
+
+<CombatExtended.AmmoCategoryDef>
+	<defName>SteelFukiyaDart</defName>
+	<label>steel dart</label>
+<labelShort>steel</labelShort>
+	<description>The dart tip is made from steel to enhance armor penetration.</description>
+	<advanced>true</advanced>
+</CombatExtended.AmmoCategoryDef>
+
+<CombatExtended.AmmoCategoryDef>
+	<defName>PlasteelFukiyaDart</defName>
+	<label>plasteel dart</label>
+<labelShort>plasteel</labelShort>
+	<description>Fitted with a plasteel tip to maximize armor penetration.</description>
+	<advanced>true</advanced>
+</CombatExtended.AmmoCategoryDef>
+
+<CombatExtended.AmmoCategoryDef>
+	<defName>StoneFukiyaDartYokai</defName>
+	<label>stone narcotic dart</label>
+<labelShort>stone</labelShort>
+	<description>A sharpened stone is attached as a dart tip, coated with yokai narcotic poison. Digs into exposed tissue fairly well but is ineffective against any kind of armor.</description>
+</CombatExtended.AmmoCategoryDef>
+
+<CombatExtended.AmmoCategoryDef>
+	<defName>SteelFukiyaDartYokai</defName>
+	<label>steel narcotic dart</label>
+<labelShort>steel</labelShort>
+	<description>The dart tip is made from steel to enhance armor penetration, and coated with yokai narcotic poison.</description>
+	<advanced>true</advanced>
+</CombatExtended.AmmoCategoryDef>
+
+<CombatExtended.AmmoCategoryDef>
+	<defName>PlasteelFukiyaDartYokai</defName>
+	<label>plasteel narcotic dart</label>
+<labelShort>plasteel</labelShort>
+	<description>Fitted with a plasteel tip to maximize armor penetration, and coated in yokai narcotic poison.</description>
+	<advanced>true</advanced>
+</CombatExtended.AmmoCategoryDef>
+
+<CombatExtended.AmmoCategoryDef>
+	<defName>StoneYumiArrow</defName>
+	<label>stone yumi arrow</label>
+<labelShort>stone</labelShort>
+	<description>A sharpened stone is attached as a arrowhead. Digs into exposed tissue fairly well but is ineffective against any kind of armor.</description>
+</CombatExtended.AmmoCategoryDef>
+
+<CombatExtended.AmmoCategoryDef>
+	<defName>SteelYumiArrow</defName>
+	<label>steel yumi arrow</label>
+<labelShort>steel</labelShort>
+	<description>The arrowhead is made from steel to enhance armor penetration.</description>
+	<advanced>true</advanced>
+</CombatExtended.AmmoCategoryDef>
+
+<CombatExtended.AmmoCategoryDef>
+	<defName>PlasteelYumiArrow</defName>
+	<label>plasteel yumi arrow</label>
+<labelShort>plasteel</labelShort>
+	<description>Fitted with a plasteel arrowhead to maximize armor penetration.</description>
+	<advanced>true</advanced>
+</CombatExtended.AmmoCategoryDef>
+
+<CombatExtended.AmmoCategoryDef>
+	<defName>StoneYumiArrowYokai</defName>
+	<label>stone narcotic yumi arrow</label>
+<labelShort>stone</labelShort>
+	<description>A sharpened stone is attached as a arrowhead, coated with yokai narcotic poison. Digs into exposed tissue fairly well but is ineffective against any kind of armor.</description>
+</CombatExtended.AmmoCategoryDef>
+
+<CombatExtended.AmmoCategoryDef>
+	<defName>SteelYumiArrowYokai</defName>
+	<label>steel narcotic yumi arrow</label>
+<labelShort>steel</labelShort>
+	<description>The arrowhead is made from steel to enhance armor penetration, and coated with yokai narcotic poison.</description>
+	<advanced>true</advanced>
+</CombatExtended.AmmoCategoryDef>
+
+<CombatExtended.AmmoCategoryDef>
+	<defName>PlasteelYumiArrowYokai</defName>
+	<label>plasteel narcotic yumi arrow</label>
+<labelShort>plasteel</labelShort>
+	<description>Fitted with a plasteel arrowhead to maximize armor penetration, and coated in yokai narcotic poison.</description>
+	<advanced>true</advanced>
+</CombatExtended.AmmoCategoryDef>
+
+</Defs>

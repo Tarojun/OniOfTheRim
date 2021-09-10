@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingCategoryDef>
+	<defName>AmmoFukiyaDart</defName>
+	<label>darts</label>
+	<parent>AmmoNeolithic</parent>
+	<iconPath>UI/Icons/ThingCategories/CaliberArrow</iconPath>
+</ThingCategoryDef>
+
+	<!-- ==================== AmmoSet ========================== -->
+
+<CombatExtended.AmmoSetDef>
+	<defName>AmmoSet_Fukiya_Darts</defName>
+	<label>darts</label>
+	<ammoTypes>
+		<Ammo_Fukiya_Dart_Stone>Projectile_Fukiya_Dart_Stone</Ammo_Fukiya_Dart_Stone>
+		<Ammo_Fukiya_Dart_Steel>Projectile_Fukiya_Dart_Steel</Ammo_Fukiya_Dart_Steel>
+		<Ammo_Fukiya_Dart_Plasteel>Projectile_Fukiya_Dart_Plasteel</Ammo_Fukiya_Dart_Plasteel>
+		<Ammo_Fukiya_Dart_Stone_Yokai>Projectile_Fukiya_Dart_Stone_Yokai</Ammo_Fukiya_Dart_Stone_Yokai>
+		<Ammo_Fukiya_Dart_Steel_Yokai>Projectile_Fukiya_Dart_Steel_Yokai</Ammo_Fukiya_Dart_Steel_Yokai>
+		<Ammo_Fukiya_Dart_Plasteel_Yokai>Projectile_Fukiya_Dart_Plasteel_Yokai</Ammo_Fukiya_Dart_Plasteel_Yokai>
+	</ammoTypes>
+</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Ammo ========================== -->
+
+<ThingDef Class="CombatExtended.AmmoDef" Name="AmmoFukiyaBase" ParentName="NeolithicAmmoBase" Abstract="True">
+	<description>Simple dart design with a sharp tip attached to a small wooden shaft.</description>
+	<statBases>
+		<Mass>0.012</Mass>
+		<Bulk>0.04</Bulk>
+		<Flammability>1</Flammability>
+	</statBases>
+	<thingCategories>
+		<li>AmmoFukiyaDart</li>
+	</thingCategories>
+	<stackLimit>5000</stackLimit>
+	<tradeTags>
+		<li>CE_AutoEnableTrade</li>
+		<li>CE_AutoEnableCrafting_FueledSmithy</li>
+		<li>CE_AutoEnableCrafting_ElectricSmithy</li>
+	</tradeTags>
+</ThingDef>
+
+<ThingDef Class="CombatExtended.AmmoDef" Name="AmmoFukiyaYokaiBase" ParentName="NeolithicAmmoBase" Abstract="True">
+	<description>Simple dart design with a sharp tip attached to a small wooden shaft. Coated with yokai narcotic, and ever slightly increases damage. The poison is lost after impact.</description>
+	<statBases>
+		<Mass>0.012</Mass>
+		<Bulk>0.04</Bulk>
+		<Flammability>1</Flammability>
+	</statBases>
+	<thingCategories>
+		<li>AmmoFukiyaDart</li>
+	</thingCategories>
+	<stackLimit>5000</stackLimit>
+	<tradeTags>
+		<li>CE_AutoEnableTrade</li>
+		<li>CE_AutoEnableCrafting_FueledSmithy</li>
+		<li>CE_AutoEnableCrafting_ElectricSmithy</li>
+	</tradeTags>
+</ThingDef>
+
+<ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoFukiyaBase">
+	<defName>Ammo_Fukiya_Dart_Stone</defName>
+	<label>dart (stone)</label>
+	<graphicData>
+		<texPath>Things/Ammo/FukiyaDarts/Stone</texPath>
+		<graphicClass>Graphic_StackCount</graphicClass>
+	</graphicData>
+	<statBases>
+		<MarketValue>0.08</MarketValue>
+	</statBases>
+		<ammoClass>StoneFukiyaDart</ammoClass>
+	<tradeTags>
+		<li>CE_AutoEnableCrafting_CraftingSpot</li>
+	</tradeTags>
+</ThingDef>
+
+<ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoFukiyaBase">
+	<defName>Ammo_Fukiya_Dart_Steel</defName>
+	<label>dart (steel)</label>
+	<graphicData>
+		<texPath>Things/Ammo/FukiyaDarts/Steel</texPath>
+		<graphicClass>Graphic_StackCount</graphicClass>
+	</graphicData>
+	<statBases>
+		<Mass>0.014</Mass>
+		<MarketValue>0.22</MarketValue>
+	</statBases>
+			<ammoClass>SteelFukiyaDart</ammoClass>
+</ThingDef>
+
+<ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoFukiyaBase">
+	<defName>Ammo_Fukiya_Dart_Plasteel</defName>
+	<label>dart (plasteel)</label>
+	<graphicData>
+		<texPath>Things/Ammo/FukiyaDarts/Plasteel</texPath>
+		<graphicClass>Graphic_StackCount</graphicClass>
+	</graphicData>
+	<statBases>
+		<Mass>0.011</Mass>
+		<MarketValue>0.72</MarketValue>
+	</statBases>
+		<ammoClass>PlasteelFukiyaDart</ammoClass>
+	<generateAllowChance>0</generateAllowChance>
+</ThingDef>
+
+<ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoFukiyaYokaiBase">
+	<defName>Ammo_Fukiya_Dart_Stone_Yokai</defName>
+	<label>yokai narcotic dart (stone)</label>
+	<graphicData>
+		<texPath>Things/Ammo/FukiyaPoison/Stone</texPath>
+		<graphicClass>Graphic_StackCount</graphicClass>
+	</graphicData>
+	<statBases>
+		<MarketValue>0.32</MarketValue>
+	</statBases>
+		<ammoClass>StoneFukiyaDartYokai</ammoClass>
+	<tradeTags>
+		<li>CE_AutoEnableCrafting_CraftingSpot</li>
+	</tradeTags>
+</ThingDef>
+
+<ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoFukiyaYokaiBase">
+	<defName>Ammo_Fukiya_Dart_Steel_Yokai</defName>
+	<label>yokai narcotic dart (steel)</label>
+	<graphicData>
+		<texPath>Things/Ammo/FukiyaPoison/Steel</texPath>
+		<graphicClass>Graphic_StackCount</graphicClass>
+	</graphicData>
+	<statBases>
+		<Mass>0.014</Mass>
+		<MarketValue>0.46</MarketValue>
+	</statBases>
+			<ammoClass>SteelFukiyaDartYokai</ammoClass>
+</ThingDef>
+
+<ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoFukiyaYokaiBase">
+	<defName>Ammo_Fukiya_Dart_Plasteel_Yokai</defName>
+	<label>yokai narcotic dart (plasteel)</label>
+	<graphicData>
+		<texPath>Things/Ammo/FukiyaPoison/Plasteel</texPath>
+		<graphicClass>Graphic_StackCount</graphicClass>
+	</graphicData>
+	<statBases>
+		<Mass>0.011</Mass>
+		<MarketValue>0.96</MarketValue>
+	</statBases>
+		<ammoClass>PlasteelFukiyaDartYokai</ammoClass>
+	<generateAllowChance>0</generateAllowChance>
+</ThingDef>
+
+
+	<!-- ================== Projectiles ================== -->
+
+<ThingDef Class="CombatExtended.AmmoDef" Name="BaseFukiyaDartProjectile" ParentName="BaseBullet" Abstract="true">
+	<graphicData>
+		<texPath>Things/Item/Weapon/OniDart</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+	<projectile Class="CombatExtended.ProjectilePropertiesCE">
+		<damageDef>OniDart_CE_Plain</damageDef>
+		<speed>23</speed>
+	</projectile>
+</ThingDef>
+
+<ThingDef Class="CombatExtended.AmmoDef" Name="BaseFukiyaDartYokaiProjectile" ParentName="BaseBullet" Abstract="true">
+	<graphicData>
+		<texPath>Things/Item/Weapon/OniDart</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+	<projectile Class="CombatExtended.ProjectilePropertiesCE">
+		<damageDef>OniDart</damageDef>
+		<speed>23</speed>
+	</projectile>
+</ThingDef>
+
+<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseFukiyaDartProjectile">
+	<defName>Projectile_Fukiya_Dart_Stone</defName>
+	<label>dart (stone)</label>
+	<projectile Class="CombatExtended.ProjectilePropertiesCE">
+		<damageAmountBase>4</damageAmountBase>
+		<armorPenetrationSharp>0.25</armorPenetrationSharp>
+		<armorPenetrationBlunt>0.05</armorPenetrationBlunt>
+		<preExplosionSpawnChance>0.3</preExplosionSpawnChance>
+		<preExplosionSpawnThingDef>Ammo_Fukiya_Dart_Stone</preExplosionSpawnThingDef>
+	</projectile>
+</ThingDef>
+
+<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseFukiyaDartProjectile">
+	<defName>Projectile_Fukiya_Dart_Steel</defName>
+	<label>dart (steel)</label>
+	<projectile Class="CombatExtended.ProjectilePropertiesCE">
+		<damageAmountBase>4</damageAmountBase>
+		<armorPenetrationSharp>0.35</armorPenetrationSharp>
+		<armorPenetrationBlunt>0.05</armorPenetrationBlunt>
+		<preExplosionSpawnChance>0.6</preExplosionSpawnChance>
+		<preExplosionSpawnThingDef>Ammo_Fukiya_Dart_Steel</preExplosionSpawnThingDef>
+	</projectile>
+</ThingDef>
+
+<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseFukiyaDartProjectile">
+	<defName>Projectile_Fukiya_Dart_Plasteel</defName>
+	<label>dart (plasteel)</label>
+	<projectile Class="CombatExtended.ProjectilePropertiesCE">
+		<damageAmountBase>4</damageAmountBase>
+		<armorPenetrationSharp>0.4</armorPenetrationSharp>
+		<armorPenetrationBlunt>0.05</armorPenetrationBlunt>
+		<preExplosionSpawnChance>0.75</preExplosionSpawnChance>
+		<preExplosionSpawnThingDef>Ammo_Fukiya_Dart_Plasteel</preExplosionSpawnThingDef>
+	</projectile>
+</ThingDef>
+
+<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseFukiyaDartYokaiProjectile">
+	<defName>Projectile_Fukiya_Dart_Stone_Yokai</defName>
+	<label>yokai narcotic dart (stone)</label>
+	<projectile Class="CombatExtended.ProjectilePropertiesCE">
+		<damageAmountBase>4.5</damageAmountBase>
+		<armorPenetrationSharp>0.25</armorPenetrationSharp>
+		<armorPenetrationBlunt>0.05</armorPenetrationBlunt>
+		<preExplosionSpawnChance>0.3</preExplosionSpawnChance>
+		<preExplosionSpawnThingDef>Ammo_Fukiya_Dart_Stone</preExplosionSpawnThingDef>
+	</projectile>
+</ThingDef>
+
+<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseFukiyaDartYokaiProjectile">
+	<defName>Projectile_Fukiya_Dart_Steel_Yokai</defName>
+	<label>yokai narcotic dart (steel)</label>
+	<projectile Class="CombatExtended.ProjectilePropertiesCE">
+		<damageAmountBase>4.5</damageAmountBase>
+		<armorPenetrationSharp>0.35</armorPenetrationSharp>
+		<armorPenetrationBlunt>0.05</armorPenetrationBlunt>
+		<preExplosionSpawnChance>0.6</preExplosionSpawnChance>
+		<preExplosionSpawnThingDef>Ammo_Fukiya_Dart_Steel</preExplosionSpawnThingDef>
+	</projectile>
+</ThingDef>
+
+<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseFukiyaDartYokaiProjectile">
+	<defName>Projectile_Fukiya_Dart_Plasteel_Yokai</defName>
+	<label>yokai narcotic dart (plasteel)</label>
+	<projectile Class="CombatExtended.ProjectilePropertiesCE">
+		<damageAmountBase>4.5</damageAmountBase>
+		<armorPenetrationSharp>0.4</armorPenetrationSharp>
+		<armorPenetrationBlunt>0.05</armorPenetrationBlunt>
+		<preExplosionSpawnChance>0.75</preExplosionSpawnChance>
+		<preExplosionSpawnThingDef>Ammo_Fukiya_Dart_Plasteel</preExplosionSpawnThingDef>
+	</projectile>
+</ThingDef>
+
+	<!-- ==================== Recipes ========================== -->
+
+<RecipeDef ParentName="AmmoRecipeNeolithicBase">
+	<defName>MakeAmmo_Fukiya_Dart_Stone</defName>
+	<label>make stone darts x15</label>
+	<description>Craft 15 stone darts.</description>
+	<jobString>Making stone darts.</jobString>
+	<workAmount>100</workAmount>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>WoodLog</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<thingDefs>
+			<li>WoodLog</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+	<products>
+		<Ammo_Fukiya_Dart_Stone>15</Ammo_Fukiya_Dart_Stone>
+	</products>
+</RecipeDef>
+
+<RecipeDef ParentName="AmmoRecipeNeolithicBase">
+	<defName>MakeAmmo_Fukiya_Dart_Steel</defName>
+	<label>make steel darts x15</label>
+	<description>Craft 15 steel darts.</description>
+	<jobString>Making steel darts.</jobString>
+	<workAmount>300</workAmount>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>WoodLog</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>Steel</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<thingDefs>
+			<li>WoodLog</li>
+			<li>Steel</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+	<products>
+		<Ammo_Fukiya_Dart_Steel>15</Ammo_Fukiya_Dart_Steel>
+	</products>
+</RecipeDef>
+
+<RecipeDef ParentName="AmmoRecipeNeolithicBase">
+	<defName>MakeAmmo_Fukiya_Dart_Plasteel</defName>
+	<label>make plasteel darts x15</label>
+	<description>Craft 15 plasteel darts.</description>
+	<jobString>Making plasteel darts.</jobString>
+	<workAmount>500</workAmount>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>WoodLog</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>Plasteel</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<thingDefs>
+			<li>WoodLog</li>
+			<li>Plasteel</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+	<products>
+		<Ammo_Fukiya_Dart_Plasteel>15</Ammo_Fukiya_Dart_Plasteel>
+	</products>
+</RecipeDef>
+
+<RecipeDef ParentName="AmmoRecipeNeolithicBase">
+	<defName>MakeAmmo_Fukiya_Dart_Stone_Yokai</defName>
+	<label>make stone yokai narcotic darts x30</label>
+	<description>Craft 30 stone yokai narcotic darts. Adds poisoning effect and ever slightly increases damage. The poison is lost after impact.</description>
+	<jobString>Poisoning stone darts.</jobString>
+	<workAmount>100</workAmount>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>Ammo_Fukiya_Dart_Stone</li>
+				</thingDefs>
+			</filter>
+			<count>60</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>YokaiPepperNarcotic</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<thingDefs>
+			<li>Ammo_Fukiya_Dart_Stone</li>
+			<li>YokaiPepperNarcotic</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+	<products>
+		<Ammo_Fukiya_Dart_Stone_Yokai>30</Ammo_Fukiya_Dart_Stone_Yokai>
+	</products>
+</RecipeDef>
+
+<RecipeDef ParentName="AmmoRecipeNeolithicBase">
+	<defName>MakeAmmo_Fukiya_Dart_Steel_Yokai</defName>
+	<label>make steel yokai narcotic darts x30</label>
+	<description>Craft 30 steel yokai narcotic darts. Adds poisoning effect and ever slightly increases damage. The poison is lost after impact.</description>
+	<jobString>Poisoning steel darts.</jobString>
+	<workAmount>100</workAmount>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>Ammo_Fukiya_Dart_Steel</li>
+				</thingDefs>
+			</filter>
+			<count>30</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>YokaiPepperNarcotic</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<thingDefs>
+			<li>Ammo_Fukiya_Dart_Steel</li>
+			<li>YokaiPepperNarcotic</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+	<products>
+		<Ammo_Fukiya_Dart_Steel_Yokai>30</Ammo_Fukiya_Dart_Steel_Yokai>
+	</products>
+</RecipeDef>
+
+<RecipeDef ParentName="AmmoRecipeNeolithicBase">
+	<defName>MakeAmmo_Fukiya_Dart_Plasteel_Yokai</defName>
+	<label>make plasteel yokai narcotic darts x30</label>
+	<description>Craft 30 plasteel yokai narcotic darts. Adds poisoning effect and ever slightly increases damage. The poison is lost after impact.</description>
+	<jobString>Poisoning plasteel darts.</jobString>
+	<workAmount>100</workAmount>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>Ammo_Fukiya_Dart_Plasteel</li>
+				</thingDefs>
+			</filter>
+			<count>30</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>YokaiPepperNarcotic</li>
+				</thingDefs>
+			</filter>
+			<count>1</count>
+		</li>
+	</ingredients>
+	<fixedIngredientFilter>
+		<thingDefs>
+			<li>Ammo_Fukiya_Dart_Plasteel</li>
+			<li>YokaiPepperNarcotic</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+	<products>
+		<Ammo_Fukiya_Dart_Plasteel_Yokai>30</Ammo_Fukiya_Dart_Plasteel_Yokai>
+	</products>
+</RecipeDef>
+
+</Defs>
