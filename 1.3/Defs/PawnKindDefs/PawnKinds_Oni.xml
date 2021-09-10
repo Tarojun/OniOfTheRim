@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<PawnKindDef Name="OniBaseTribal" Abstract="True">
+	<race>AOni</race>
+	<defaultFactionType>OniFreeborn</defaultFactionType>
+	<maxGenerationAge>60</maxGenerationAge>
+	<chemicalAddictionChance>0.05</chemicalAddictionChance>
+	<invNutrition>2.4</invNutrition>
+	<invFoodDef>OniStew</invFoodDef>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+	<apparelTags>
+		<li>Neolithic</li>
+		<li>OniWear</li>
+	</apparelTags>
+	<backstoryCategories>
+		<li>OniBackstory</li>
+	</backstoryCategories>
+</PawnKindDef>
+
+<PawnKindDef ParentName="OniBaseTribal">
+	<defName>Oni_Penitent</defName>
+	<label>Oni penitent</label>
+	<combatPower>40</combatPower>
+	<chemicalAddictionChance>0.10</chemicalAddictionChance>
+	<invNutrition>1</invNutrition>
+	<itemQuality>Poor</itemQuality>
+	<gearHealthRange>0.2~1.1</gearHealthRange>
+	<apparelMoney>50~100</apparelMoney>
+	<weaponMoney>90~150</weaponMoney>
+	<weaponTags>
+		<li>NeolithicMeleeBasic</li>
+		<li>OniMeleeBasic</li>
+	</weaponTags>
+	<apparelRequired>
+		<li>Apparel_OniWrap</li>
+	</apparelRequired>
+	<techHediffsMoney>50~50</techHediffsMoney>
+	<techHediffsTags>
+		<li>Poor</li>
+	</techHediffsTags>
+	<techHediffsChance>0.15</techHediffsChance>
+	<initialWillRange>0~1</initialWillRange>
+	<initialResistanceRange>10~17</initialResistanceRange>
+</PawnKindDef>
+
+<PawnKindDef ParentName="OniBaseTribal">
+	<defName>Oni_Archer</defName>
+	<label>Oni archer</label>
+	<combatPower>45</combatPower>
+	<itemQuality>Poor</itemQuality>
+	<gearHealthRange>0.5~1.8</gearHealthRange>
+	<apparelMoney>180~350</apparelMoney>
+	<weaponMoney>80~80</weaponMoney>
+	<weaponTags>
+		<li>NeolithicRangedBasic</li>
+	</weaponTags>
+	<disallowedTraits>
+		<li>Brawler</li>
+	</disallowedTraits>
+	<apparelRequired>
+		<li>Apparel_OniWrap</li>
+	</apparelRequired>
+	<techHediffsMoney>50~50</techHediffsMoney>
+	<techHediffsTags>
+		<li>Poor</li>
+	</techHediffsTags>
+	<techHediffsChance>0.03</techHediffsChance>
+	<initialWillRange>1~3</initialWillRange>
+	<initialResistanceRange>17~27</initialResistanceRange>
+</PawnKindDef>
+
+<PawnKindDef ParentName="OniBaseTribal">
+	<defName>Oni_Warrior</defName>
+	<label>Oni warrior</label>
+	<combatPower>50</combatPower>
+	<itemQuality>Poor</itemQuality>
+	<canBeSapper>true</canBeSapper>
+	<gearHealthRange>0.5~1.8</gearHealthRange>
+	<apparelMoney>200~300</apparelMoney>
+	<apparelRequired>
+		<li>Apparel_OniWrapStuffed</li>
+		<li>Apparel_OniHeaddress</li>
+	</apparelRequired>
+	<weaponMoney>150~150</weaponMoney>
+	<weaponTags>
+		<li>NeolithicMeleeDecent</li>
+		<li>OniMeleeBasic</li>
+	</weaponTags>
+	<initialWillRange>1~3</initialWillRange>
+	<initialResistanceRange>5~9</initialResistanceRange>
+</PawnKindDef>
+
+<PawnKindDef ParentName="OniBaseTribal" Name="Oni_Hunter">
+	<defName>Oni_Hunter</defName>
+	<label>Oni hunter</label>
+	<combatPower>60</combatPower>
+	<gearHealthRange>0.5~1.8</gearHealthRange>
+	<apparelMoney>200~300</apparelMoney>
+	<apparelRequired>
+		<li>Apparel_OniWrapStuffed</li>
+	</apparelRequired>
+	<weaponMoney>100~100</weaponMoney>
+	<weaponTags>
+		<li>NeolithicRangedDecent</li>
+		<li>OniRangedBasic</li>
+		<li>OniMeleeRanged</li>
+	</weaponTags>
+	<disallowedTraits>
+		<li>Brawler</li>
+	</disallowedTraits>
+	<initialWillRange>2~4</initialWillRange>
+	<initialResistanceRange>10~16</initialResistanceRange>
+</PawnKindDef>
+  
+<PawnKindDef ParentName="Oni_Hunter">
+	<defName>Oni_Trader</defName>
+	<label>trader</label>
+	<trader>true</trader>
+	<apparelRequired Inherit="False">
+		<li>Apparel_TribalHeaddress</li>
+		<li>Apparel_OniGrandWrapNudist</li>
+	</apparelRequired>
+	<initialWillRange>2~4</initialWillRange>
+	<initialResistanceRange>9~15</initialResistanceRange>
+</PawnKindDef>
+
+<PawnKindDef ParentName="OniBaseTribal">
+	<defName>Oni_Berserker</defName>
+	<label>berserker</label>
+	<combatPower>80</combatPower>
+	<canBeSapper>true</canBeSapper>
+	<apparelMoney>200~550</apparelMoney>
+	<apparelRequired>
+		<li>Apparel_OniWrapStuffed</li>
+		<li>Apparel_OniHeaddress</li>
+	</apparelRequired>
+	<weaponMoney>300~300</weaponMoney>
+	<weaponTags>
+		<li>NeolithicMeleeAdvanced</li>
+		<li>MedievalMeleeDecent</li>
+		<li>MedievalMeleeAdvanced</li>
+		<li>OniMeleeBasic</li>
+		<li>OniMeleeRanged</li>
+	</weaponTags>
+	<combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+	<combatEnhancingDrugsCount>
+		<min>0</min>
+		<max>2</max>
+	</combatEnhancingDrugsCount>
+	<inventoryOptions>
+		<skipChance>0.3</skipChance>
+		<subOptionsChooseOne>
+			<li>
+				<thingDef>Silver</thingDef>
+				<countRange>
+					<min>15</min>
+					<max>150</max>
+				</countRange>
+			</li>
+			<li>
+				<thingDef>OniPillBody</thingDef>
+				<countRange>
+					<min>0</min>
+					<max>2</max>
+				</countRange>
+			</li>
+			<li>
+				<thingDef>OniPillHealth</thingDef>
+				<countRange>
+					<min>0</min>
+					<max>2</max>
+				</countRange>
+			</li>
+		</subOptionsChooseOne>
+	</inventoryOptions>
+	<initialWillRange>2~4</initialWillRange>
+	<initialResistanceRange>13~20</initialResistanceRange>
+</PawnKindDef>
+
+<PawnKindDef ParentName="OniBaseTribal">
+	<defName>Oni_HeavyArcher</defName>
+	<label>heavy archer</label>
+	<combatPower>90</combatPower>
+	<apparelMoney>200~550</apparelMoney>
+	<apparelRequired>
+		<li>Apparel_OniWrapStuffed</li>
+		<li>Apparel_OniHeaddress</li>
+	</apparelRequired>
+	<weaponMoney>250~250</weaponMoney>
+	<weaponTags>
+		<li>NeolithicRangedHeavy</li>
+		<li>NeolithicRangedChief</li>
+		<li>OniRangedAdvanced</li>
+	</weaponTags>
+	<combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+	<combatEnhancingDrugsCount>
+		<min>0</min>
+		<max>2</max>
+	</combatEnhancingDrugsCount>
+	<inventoryOptions>
+		<skipChance>0.3</skipChance>
+		<subOptionsChooseOne>
+			<li>
+				<thingDef>Silver</thingDef>
+				<countRange>
+					<min>15</min>
+					<max>150</max>
+				</countRange>
+			</li>
+			<li>
+				<thingDef>OniPillBody</thingDef>
+				<countRange>
+					<min>0</min>
+					<max>2</max>
+				</countRange>
+			</li>
+			<li>
+				<thingDef>OniPillHealth</thingDef>
+				<countRange>
+					<min>0</min>
+					<max>2</max>
+				</countRange>
+			</li>
+		</subOptionsChooseOne>
+	</inventoryOptions>
+	<disallowedTraits>
+		<li>Brawler</li>
+	</disallowedTraits>
+	<initialWillRange>2~4</initialWillRange>
+	<initialResistanceRange>14~22</initialResistanceRange>
+</PawnKindDef>
+
+<PawnKindDef ParentName="OniBaseTribal" Name="OniBaseChiefTribal" Abstract="True">
+	<combatPower>100</combatPower>
+	<baseRecruitDifficulty>0.90</baseRecruitDifficulty>
+	<minGenerationAge>30</minGenerationAge>
+	<maxGenerationAge>999</maxGenerationAge>
+	<itemQuality>Normal</itemQuality>
+	<factionLeader>true</factionLeader>
+	<canBeSapper>true</canBeSapper>
+	<apparelMoney>450~750</apparelMoney>
+	<apparelRequired>
+		<li>Apparel_OniHeaddress</li>
+		<li>Apparel_PlateArmor</li>
+	</apparelRequired>
+	<weaponMoney>500~1000</weaponMoney>
+	<initialWillRange>3~5</initialWillRange>
+	<initialResistanceRange>19~30</initialResistanceRange>
+	<combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+	<combatEnhancingDrugsCount>
+		<min>0</min>
+		<max>2</max>
+	</combatEnhancingDrugsCount>
+	<inventoryOptions>
+		<skipChance>0</skipChance>
+		<subOptionsChooseOne>
+			<li>
+				<thingDef>Silver</thingDef>
+				<countRange>
+					<min>50</min>
+					<max>200</max>
+				</countRange>
+			</li>
+			<li>
+				<thingDef>OniPillBody</thingDef>
+				<countRange>
+					<min>1</min>
+					<max>2</max>
+				</countRange>
+			</li>
+			<li>
+				<thingDef>OniPillHealth</thingDef>
+				<countRange>
+					<min>1</min>
+					<max>2</max>
+				</countRange>
+			</li>
+		</subOptionsChooseOne>
+	</inventoryOptions>
+</PawnKindDef>
+
+<PawnKindDef ParentName="OniBaseChiefTribal">
+	<defName>Oni_Chief</defName>
+	<label>chief</label>
+	<weaponTags>
+		<li>NeolithicRangedChief</li>
+		<li>OniRangedAdvanced</li>
+	</weaponTags>
+	<disallowedTraits>
+		<li>Brawler</li>
+	</disallowedTraits>
+	<initialResistanceRange>16~26</initialResistanceRange>
+</PawnKindDef>
+  
+<PawnKindDef ParentName="OniBaseChiefTribal">
+	<defName>Oni_ChiefMelee</defName>
+	<label>chief</label>
+	<weaponTags>
+		<li>NeolithicMeleeAdvanced</li>
+		<li>MedievalMeleeAdvanced</li>
+		<li>OniMeleeBasic</li>
+		<li>OniMeleeAdvanced</li>
+	</weaponTags>
+	<initialResistanceRange>38~58</initialResistanceRange>
+</PawnKindDef>  
+
+<PawnKindDef ParentName="OniBaseTribal">
+	<defName>Oni_Veteran</defName>
+	<label>veteran</label>
+	<combatPower>75</combatPower>
+	<baseRecruitDifficulty>0.70</baseRecruitDifficulty>
+	<itemQuality>Good</itemQuality>
+	<canBeSapper>true</canBeSapper>
+	<apparelMoney>350~650</apparelMoney>
+	<apparelRequired>
+		<li>Apparel_OniHeaddress</li>
+		<li>Apparel_PlateArmor</li>
+	</apparelRequired>
+	<weaponMoney>400~900</weaponMoney>
+	<weaponTags>
+		<li>OniMeleeBasic</li>
+		<li>OniRangedBasic</li>
+		<li>OniMeleeAdvanced</li>
+		<li>OniRangedAdvanced</li>
+		<li>NeolithicRangedChief</li>
+		<li>MedievalMeleeAdvanced</li>
+	</weaponTags>
+	<combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+	<combatEnhancingDrugsCount>
+		<min>0</min>
+		<max>2</max>
+	</combatEnhancingDrugsCount>
+	<inventoryOptions>
+		<skipChance>0</skipChance>
+		<subOptionsChooseOne>
+			<li>
+				<thingDef>Silver</thingDef>
+				<countRange>
+					<min>50</min>
+					<max>200</max>
+				</countRange>
+			</li>
+			<li>
+				<thingDef>OniPillBody</thingDef>
+				<countRange>
+					<min>0</min>
+					<max>2</max>
+				</countRange>
+			</li>
+			<li>
+				<thingDef>OniPillHealth</thingDef>
+				<countRange>
+					<min>0</min>
+					<max>2</max>
+				</countRange>
+			</li>
+		</subOptionsChooseOne>
+	</inventoryOptions>
+	<disallowedTraits>
+		<li>Wimp</li>
+	</disallowedTraits>
+    <skills>
+		<li>
+			<skill>Shooting</skill>
+			<range>8~20</range>
+		</li>
+		<li>
+			<skill>Melee</skill>
+			<range>8~20</range>
+		</li>
+    </skills>
+	<initialWillRange>3~5</initialWillRange>
+	<initialResistanceRange>38~58</initialResistanceRange>
+</PawnKindDef>
+
+<PawnKindDef ParentName="OniBaseTribal">
+	<defName>Oni_Breacher</defName>
+	<label>breacher</label>
+	<combatPower>55</combatPower>
+	<itemQuality>Poor</itemQuality>
+	<canBeSapper>true</canBeSapper>
+	<isGoodBreacher>true</isGoodBreacher>
+	<gearHealthRange>0.5~1.8</gearHealthRange>
+	<apparelMoney>200~300</apparelMoney>
+	<apparelRequired>
+		<li>Apparel_OniWrapStuffed</li>
+		<li>Apparel_OniHeaddress</li>
+	</apparelRequired>
+	<weaponMoney>150~150</weaponMoney>
+	<weaponTags>
+		<li>NeolithicMeleeDestructive</li>
+	</weaponTags>
+	<initialWillRange>1~3</initialWillRange>
+	<initialResistanceRange>12~19</initialResistanceRange>
+</PawnKindDef>
+
+<PawnKindDef>
+	<defName>OniRefugee</defName>
+	<label>refugee</label>
+	<race>AOni</race>
+	<combatPower>30</combatPower>
+	<backstoryCategories>
+		<li>OniSlave</li>
+	</backstoryCategories>
+	<backstoryCryptosleepCommonality>0.3</backstoryCryptosleepCommonality>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+	<isFighter>false</isFighter>
+    <chemicalAddictionChance>0.08</chemicalAddictionChance>
+    <gearHealthRange>0.4~1.4</gearHealthRange>
+	<apparelMoney>0~1000</apparelMoney>
+	<apparelTags>
+		<li>IndustrialBasic</li>
+		<li>OniWear</li>
+	</apparelTags>
+	<apparelRequired>
+		<li>Apparel_OniWrap</li>
+	</apparelRequired>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <techHediffsMoney>50~800</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+    </techHediffsTags>
+    <techHediffsChance>0.08</techHediffsChance>
+    <initialWillRange>1~3</initialWillRange>
+    <initialResistanceRange>12~19</initialResistanceRange>
+</PawnKindDef>
+
+<PawnKindDef>
+	<defName>OniPet</defName>
+	<label>slave</label>
+	<race>AOni</race>
+	<combatPower>30</combatPower>
+	<baseRecruitDifficulty>0.30</baseRecruitDifficulty>
+	<backstoryCategories>
+		<li>OniSlave</li>
+	</backstoryCategories>
+	<defaultFactionType>OutlanderCivil</defaultFactionType>
+	<itemQuality>Poor</itemQuality>
+	<backstoryCryptosleepCommonality>0.10</backstoryCryptosleepCommonality>
+	<isFighter>false</isFighter>
+	<chemicalAddictionChance>0.05</chemicalAddictionChance>
+	<gearHealthRange>0.2~0.8</gearHealthRange>
+	<apparelTags>
+		<li>IndustrialBasic</li>
+		<li>OniWear</li>
+	</apparelTags>
+	<apparelRequired>
+		<li>Apparel_OniWrap</li>
+	</apparelRequired>
+	<apparelMoney>0~350</apparelMoney>
+	<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+	<techHediffsChance>0.03</techHediffsChance>
+	<techHediffsMoney>50~800</techHediffsMoney>
+	<techHediffsTags>
+	  <li>Poor</li>
+	</techHediffsTags>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+	<invNutrition>1</invNutrition>
+	<invFoodDef>Pemmican</invFoodDef>
+	<initialWillRange>0~0</initialWillRange>
+	<initialResistanceRange>10~17</initialResistanceRange>
+</PawnKindDef>
+
+</Defs>

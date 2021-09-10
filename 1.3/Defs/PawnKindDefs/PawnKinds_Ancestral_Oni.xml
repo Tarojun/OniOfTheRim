@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<PawnKindDef Name="AncestralOniBase" Abstract="True">
+	<race>Alien_AncestralAOni</race>
+	<defaultFactionType>OniFreeborn</defaultFactionType>
+	<backstoryFiltersOverride>
+		<li>
+			<categories>
+				<li>AncestralOniBackstory</li>
+			</categories>
+		</li>
+    </backstoryFiltersOverride>
+	<maxGenerationAge>60</maxGenerationAge>
+	<chemicalAddictionChance>0.01</chemicalAddictionChance>
+	<invNutrition>4.8</invNutrition>
+	<invFoodDef>OniStew</invFoodDef>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+</PawnKindDef>
+
+<PawnKindDef ParentName="AncestralOniBase">
+	<defName>Ancestral_Oni_Brawler</defName>
+	<label>ancestral oni</label>
+	<combatPower>50</combatPower>
+	<baseRecruitDifficulty>0.1</baseRecruitDifficulty>
+	<canBeSapper>true</canBeSapper>
+	<combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+	<combatEnhancingDrugsCount>
+		<min>0</min>
+		<max>2</max>
+	</combatEnhancingDrugsCount>
+	<initialWillRange>2~4</initialWillRange>
+	<initialResistanceRange>13~20</initialResistanceRange>
+</PawnKindDef>
+
+<PawnKindDef ParentName="AncestralOniBase">
+	<defName>Ancestral_Oni_Warrior</defName>
+	<label>ancestral oni</label>
+	<combatPower>55</combatPower>
+	<baseRecruitDifficulty>0.1</baseRecruitDifficulty>
+	<canBeSapper>true</canBeSapper>
+	<weaponMoney>300~400</weaponMoney>
+	<weaponTags>
+		<li>NeolithicMeleeAdvanced</li>
+		<li>MedievalMeleeDecent</li>
+		<li>MedievalMeleeAdvanced</li>
+		<li>OniMeleeBasic</li>
+		<li>OniMeleeRanged</li>
+	</weaponTags>
+	<combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+	<combatEnhancingDrugsCount>
+		<min>0</min>
+		<max>2</max>
+	</combatEnhancingDrugsCount>
+	<initialWillRange>2~4</initialWillRange>
+	<initialResistanceRange>14~22</initialResistanceRange>
+</PawnKindDef>
+
+<PawnKindDef ParentName="AncestralOniBase">
+	<defName>Ancestral_Oni_Guardian</defName>
+	<label>ancestral oni</label>
+	<combatPower>100</combatPower>
+	<baseRecruitDifficulty>0.2</baseRecruitDifficulty>
+	<canBeSapper>true</canBeSapper>
+	<apparelRequired>
+		<li>Apparel_OniHeaddress</li>
+	</apparelRequired>
+	<weaponMoney>500~1000</weaponMoney>
+	<weaponTags>
+		<li>NeolithicMeleeAdvanced</li>
+		<li>MedievalMeleeDecent</li>
+		<li>MedievalMeleeAdvanced</li>
+		<li>OniMeleeBasic</li>
+		<li>OniMeleeRanged</li>
+	</weaponTags>
+	<combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+	<combatEnhancingDrugsCount>
+		<min>0</min>
+		<max>2</max>
+	</combatEnhancingDrugsCount>
+	<inventoryOptions>
+		<skipChance>0</skipChance>
+		<subOptionsChooseOne>
+			<li>
+				<thingDef>OniPillBody</thingDef>
+				<countRange>
+					<min>1</min>
+					<max>2</max>
+				</countRange>
+			</li>
+			<li>
+				<thingDef>OniPillHealth</thingDef>
+				<countRange>
+					<min>1</min>
+					<max>2</max>
+				</countRange>
+			</li>
+			<li>
+				<thingDef>OniPillBlackTalon</thingDef>
+				<countRange>
+					<min>1</min>
+					<max>2</max>
+				</countRange>
+			</li>
+		</subOptionsChooseOne>
+	</inventoryOptions>
+	<initialWillRange>3~5</initialWillRange>
+	<initialResistanceRange>16~26</initialResistanceRange>
+</PawnKindDef>
+
+</Defs>

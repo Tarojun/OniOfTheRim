@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+<!-- Oni mercenary pawnkinds for vanilla factions-->
+  
+<PawnKindDef ParentName="PirateScavTierBase">
+	<defName>Oni_Scavenger</defName>
+	<label>Oni scavenger gunner</label>
+	<race>AOni</race>
+	<backstoryCategories Inherit="False">
+		<li>OniBackstory</li>
+	</backstoryCategories>
+	<apparelTags>
+		<li>OniWear</li>
+	</apparelTags>
+	<apparelMoney>300~500</apparelMoney>
+	<weaponMoney>200~300</weaponMoney>
+	<weaponTags>
+	  <li>Gun</li>
+	</weaponTags>
+	<initialResistanceRange>17~26</initialResistanceRange>
+</PawnKindDef>
+  
+<PawnKindDef ParentName="PirateScavTierBase">
+	<defName>Oni_Thrasher</defName>
+	<label>Oni scavenger thrasher</label>
+	<race>AOni</race>
+	<backstoryCategories Inherit="False">
+		<li>OniBackstory</li>
+	</backstoryCategories>
+	<canBeSapper>true</canBeSapper>
+	<apparelMoney>300~800</apparelMoney>
+	<apparelTags>
+		<li>OniWear</li>
+		<li>Outlander</li>
+	</apparelTags>
+	<weaponMoney>100~160</weaponMoney>
+	<weaponTags>
+		<li>NeolithicMeleeBasic</li>
+		<li>MedievalMeleeBasic</li>
+		<li>MedievalMeleeDecent</li>
+		<li>OniMeleeBasic</li>
+	</weaponTags>
+	<initialResistanceRange>14~23</initialResistanceRange>
+</PawnKindDef>
+  
+<PawnKindDef ParentName="MercenaryGunnerBase">
+	<defName>Oni_Mercenary_Gunner</defName>
+	<label>Oni mercenary gunner</label>
+	<race>AOni</race>
+	<backstoryCategories Inherit="False">
+		<li>OniBackstory</li>
+	</backstoryCategories>
+	<apparelTags>
+		<li>OniWear</li>
+	</apparelTags>
+    <initialResistanceRange>6~10</initialResistanceRange>
+</PawnKindDef>
+  
+<PawnKindDef ParentName="MercenarySlasherBase">
+	<defName>Oni_Mercenary_Slasher</defName>
+	<label>Oni mercenary slasher</label>	
+	<race>AOni</race>
+	<backstoryCategories Inherit="False">
+		<li>OniBackstory</li>
+	</backstoryCategories>
+	<apparelTags>
+		<li>OniWear</li>
+	</apparelTags>
+	<weaponTags>
+		<li>OniMeleeBasic</li>
+	</weaponTags>
+    <initialResistanceRange>10~16</initialResistanceRange>
+</PawnKindDef>
+
+</Defs>

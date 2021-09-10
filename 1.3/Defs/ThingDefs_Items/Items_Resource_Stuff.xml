@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<ThingDef ParentName="WoolBase">
+	<defName>OniFeather</defName>
+	<label>oni feather</label>
+	<description>Beautiful feathers dropped from a Oni. They can be used as textiles or certain art furnitures.\n\nTraces of the precursor chemical oniamine can be found and extracted.</description>
+	<graphicData>
+		<texPath>Things/Item/Resource/Featherstack</texPath>
+		<graphicClass>Graphic_StackCount</graphicClass>
+	</graphicData>
+	<statBases>
+		<MarketValue>3.25</MarketValue>
+		<Mass>0.015</Mass>
+		<DeteriorationRate>2.6</DeteriorationRate>
+		<StuffPower_Armor_Blunt>0.2</StuffPower_Armor_Blunt>
+		<StuffPower_Insulation_Cold>25</StuffPower_Insulation_Cold>
+		<StuffPower_Insulation_Heat>20</StuffPower_Insulation_Heat>
+	</statBases>
+	<stuffProps>
+		<color>(050,050,050)</color>
+		<commonality>0.1</commonality>
+		<statFactors>
+			<Beauty>3</Beauty>
+		</statFactors>
+	</stuffProps>
+</ThingDef>
+
+<ThingDef ParentName="ResourceBase">
+	<defName>OniDevilstrand</defName>
+	<label>onistrand</label>
+	<description>Fabric spun from combining devilstrand and oni feathers. A unique reaction occur as they are spun together, further improving the protective properties of devilstrand.</description>
+	<graphicData>
+		<texPath>Things/Item/Resource/Devilstrand</texPath>
+		<graphicClass>Graphic_StackCount</graphicClass>
+		<color>(140,30,30)</color>
+	</graphicData>
+	<statBases>
+		<MaxHitPoints>100</MaxHitPoints>
+		<MarketValue>7.5</MarketValue>
+		<Mass>0.035</Mass>
+		<Flammability>0.4</Flammability>
+		<DeteriorationRate>2.6</DeteriorationRate>
+		<StuffPower_Armor_Sharp>1.50</StuffPower_Armor_Sharp>
+		<StuffPower_Armor_Blunt>0.48</StuffPower_Armor_Blunt>
+		<StuffPower_Armor_Heat>3.00</StuffPower_Armor_Heat>
+		<StuffPower_Insulation_Cold>30</StuffPower_Insulation_Cold>
+		<StuffPower_Insulation_Heat>25</StuffPower_Insulation_Heat>
+	</statBases>
+	<burnableByRecipe>true</burnableByRecipe>
+	<healthAffectsPrice>false</healthAffectsPrice>
+	<stuffProps>
+		<categories>
+			<li>Fabric</li>
+		</categories>
+		<commonality>0.05</commonality>
+		<color>(140,30,30)</color>
+		<statFactors>
+			<Flammability>0.4</Flammability>
+			<MaxHitPoints>1.5</MaxHitPoints>
+			<Beauty>3.2</Beauty>
+		</statFactors>
+	</stuffProps>
+	<thingCategories>
+	  <li>Textiles</li>
+	</thingCategories>
+	<comps>
+		<li>
+			<compClass>CompColorable</compClass>
+		</li>
+	</comps>
+</ThingDef>
+
+</Defs>

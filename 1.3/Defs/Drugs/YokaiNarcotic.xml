@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef Name="YokaiNarcoticBase" Abstract="True">
+	<thingClass>ThingWithComps</thingClass>
+	<category>Item</category>
+	<useHitPoints>true</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+	<selectable>true</selectable>
+	<statBases>
+		<MaxHitPoints>50</MaxHitPoints>
+		<Flammability>1.0</Flammability>
+		<DeteriorationRate>6</DeteriorationRate>
+		<Beauty>-4</Beauty>
+	</statBases>
+	<altitudeLayer>Item</altitudeLayer>
+	<stackLimit>25</stackLimit>
+	<thingCategories>
+		<li>Drugs</li>
+	</thingCategories>
+	<alwaysHaulable>true</alwaysHaulable>
+	<comps>
+		<li Class="CompProperties_Forbiddable" />
+	</comps>
+	<pathCost>15</pathCost>
+	<resourceReadoutPriority>Last</resourceReadoutPriority>
+	<drawGUIOverlay>true</drawGUIOverlay>
+	<ingestible>
+		<foodType>Processed</foodType>
+		<baseIngestTicks>120</baseIngestTicks>
+		<chairSearchRadius>0</chairSearchRadius>
+		<ingestSound>Ingest_Drink</ingestSound>
+		<ingestHoldUsesTable>false</ingestHoldUsesTable>
+		<ingestCommandString>Take {0}</ingestCommandString>
+		<ingestReportString>Taking {0}.</ingestReportString>
+		<preferability>NeverForNutrition</preferability>
+		<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+	</ingestible>
+	<socialPropernessMatters>true</socialPropernessMatters>	
+</ThingDef>
+
+<ThingDef ParentName="YokaiNarcoticBase">
+	<defName>YokaiPepperNarcotic</defName>
+	<label>yokai narcotic</label>
+	<description>A narcotic poison made from medical herbs mixed with a super concentrate blend of smokeleaf and yokai pepper.\n\nUnder normal conditions, there is not even a hint of yokai peppers being anywhere near poisonous, but this specific method and combination does produce a short lived but strong narcotic.\n\nBe warned, overdosing at lethal levels brings the victim ever closer to an eternal sleep, AKA Death.</description>
+	<graphicData>
+		<texPath>Things/Item/Drug/YokaiNarcotic</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+	<rotatable>false</rotatable>
+	<statBases>
+		<MarketValue>12</MarketValue>
+		<Mass>0.05</Mass>
+	</statBases>
+	<techLevel>Neolithic</techLevel>
+	<ingestible>
+		<drugCategory>Medical</drugCategory>
+		<outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+				<hediffDef>YokaiNarcoticDrugged</hediffDef>
+				<severity>1.33</severity>
+			</li>
+			<li Class="IngestionOutcomeDoer_OffsetNeed">
+				<need>Rest</need>
+				<offset>-1</offset>
+			</li>
+		</outcomeDoers>
+	</ingestible>
+	<comps>
+		<li Class="CompProperties_Drug">
+			<listOrder>1100</listOrder>
+		</li>
+	</comps>
+</ThingDef>
+
+
+<HediffDef>
+	<defName>YokaiNarcoticDrugged</defName>
+	<label>drugged on yokai narcotic</label>
+	<description>Poisoned by yokai narcotic. Increasing severity results in further losses of consciousness, until reaching 25% severity which leads to a knock out. Reaching 100% results in death.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+	<lethalSeverity>4</lethalSeverity>
+	<makesSickThought>true</makesSickThought>
+	<comps>
+		<li Class="HediffCompProperties_Immunizable">
+			<severityPerDayNotImmune>-1</severityPerDayNotImmune>
+		</li>
+	</comps>
+	<stages>
+		<li>
+			<becomeVisible>false</becomeVisible>
+		</li>
+		<li>
+			<label>Initial</label>
+			<minSeverity>0.05</minSeverity>
+			<vomitMtbDays>1</vomitMtbDays>
+			<restFallFactorOffset>1.2</restFallFactorOffset>
+			<statOffsets>
+				<AimingDelayFactor>0.05</AimingDelayFactor>
+				<RestRateMultiplier>-0.1</RestRateMultiplier>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<postFactor>0.9</postFactor>
+				</li>
+			</capMods>
+		</li>
+		<li>
+			<label>Low</label>
+			<minSeverity>0.25</minSeverity>
+			<vomitMtbDays>0.75</vomitMtbDays>
+			<restFallFactorOffset>1.2</restFallFactorOffset>
+			<statOffsets>
+				<AimingDelayFactor>0.1</AimingDelayFactor>
+				<RestRateMultiplier>-0.1</RestRateMultiplier>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<postFactor>0.8</postFactor>
+				</li>
+			</capMods>
+		</li>
+		<li>
+			<label>Medium</label>
+			<minSeverity>0.5</minSeverity> 
+			<vomitMtbDays>0.5</vomitMtbDays>
+			<restFallFactorOffset>1.5</restFallFactorOffset>
+			<statOffsets>
+				<AimingDelayFactor>0.25</AimingDelayFactor>
+				<RestRateMultiplier>-0.25</RestRateMultiplier>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<postFactor>0.7</postFactor>
+				</li>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.8</postFactor>
+				</li>
+				<li>
+					<capacity>Manipulation</capacity>
+					<postFactor>0.8</postFactor>
+				</li>
+			</capMods>
+		</li>
+		<li>
+			<label>High</label>
+			<minSeverity>0.75</minSeverity>  
+			<vomitMtbDays>0.25</vomitMtbDays>
+			<restFallFactorOffset>2.25</restFallFactorOffset>
+			<statOffsets>
+				<AimingDelayFactor>0.5</AimingDelayFactor>
+				<RestRateMultiplier>-0.5</RestRateMultiplier>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<postFactor>0.5</postFactor>
+				</li>
+				<li>
+					<capacity>Moving</capacity>
+					<postFactor>0.7</postFactor>
+				</li>
+				<li>
+					<capacity>Manipulation</capacity>
+					<postFactor>0.7</postFactor>
+				</li>
+			</capMods>
+		</li>
+		<li>
+			<label>Extreme</label>
+			<minSeverity>1</minSeverity>  
+			<vomitMtbDays>0.2</vomitMtbDays>
+			<restFallFactorOffset>4</restFallFactorOffset>
+			<statOffsets>
+				<RestRateMultiplier>-0.9</RestRateMultiplier>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<setMax>0.1</setMax>
+				</li>
+				<li>
+					<capacity>Moving</capacity>
+					<setMax>0.1</setMax>
+				</li>
+				<li>
+					<capacity>Manipulation</capacity>
+					<setMax>0.1</setMax>
+				</li>
+			</capMods>
+		</li>
+		<li>
+			<label>Lethal</label>
+			<minSeverity>3</minSeverity>  
+			<vomitMtbDays>0.1</vomitMtbDays>
+			<restFallFactorOffset>6</restFallFactorOffset>
+			<statOffsets>
+				<RestRateMultiplier>-0.95</RestRateMultiplier>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<setMax>0.05</setMax>
+				</li>
+				<li>
+					<capacity>Moving</capacity>
+					<setMax>0.05</setMax>
+				</li>
+				<li>
+					<capacity>Manipulation</capacity>
+					<setMax>0.05</setMax>
+				</li>
+			</capMods>
+			<hediffGivers>
+				<li Class="HediffGiver_Random">
+				<hediff>ChemicalDamageModerate</hediff>
+					<mtbDays>15</mtbDays>
+					<partsToAffect>
+						<li>Brain</li>
+					</partsToAffect>
+				</li>
+			</hediffGivers>
+		</li>
+		<li>
+		<label>Fatal</label>
+			<minSeverity>3.5</minSeverity>
+			<vomitMtbDays>0.1</vomitMtbDays>
+			<lifeThreatening>true</lifeThreatening>
+			<deathMtbDays>5</deathMtbDays>
+			<restFallFactorOffset>6</restFallFactorOffset>
+			<statOffsets>
+				<RestRateMultiplier>-0.95</RestRateMultiplier>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<setMax>0.05</setMax>
+				</li>
+				<li>
+					<capacity>Moving</capacity>
+					<setMax>0.05</setMax>
+				</li>
+				<li>
+					<capacity>Manipulation</capacity>
+					<setMax>0.05</setMax>
+				</li>
+			</capMods>
+			<hediffGivers>
+				<li Class="HediffGiver_Random">
+					<hediff>ChemicalDamageModerate</hediff>
+					<mtbDays>5</mtbDays>
+					<partsToAffect>
+						<li>Brain</li>
+					</partsToAffect>
+				</li>
+				<li Class="HediffGiver_Random">
+					<hediff>HeartAttack</hediff>
+					<mtbDays>5</mtbDays>
+					<partsToAffect>
+						<li>Heart</li>
+					</partsToAffect>
+				</li>
+			</hediffGivers>
+		</li>
+	</stages>
+</HediffDef>
+
+
+<RecipeDef>
+	<defName>Craft_YokaiPepperNarcotic</defName>
+	<jobString>Making yokai narcotic</jobString>
+	<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+	<workSkill>Intellectual</workSkill>
+	<effectWorking>Cook</effectWorking>
+	<soundWorking>Recipe_CookMeal</soundWorking>
+	<workAmount>700</workAmount>
+	<targetCountAdjustment>1</targetCountAdjustment>
+	<researchPrerequisite>YokaiPepperNarcotic</researchPrerequisite>
+	<recipeUsers>
+		<li>CraftingSpot</li>
+		<li>DrugLab</li>
+	</recipeUsers>
+	<label>Make yokai narcotic</label>
+	<description>Make yokai narcotic from extracting and blending yokai peppers and smokeleaf into a super concentrate, then mixing it with finely grounded medicinal herb paste.</description>		
+	<skillRequirements>
+	<Crafting>2</Crafting>
+	<Intellectual>2</Intellectual>
+	</skillRequirements>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>YokaiPepper</li>
+				</thingDefs>
+			</filter>
+			<count>16</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>SmokeleafLeaves</li>
+				</thingDefs>
+			</filter>
+			<count>5</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>MedicineHerbal</li>
+				</thingDefs>
+			</filter>
+			<count>2</count>
+		</li>
+	</ingredients>
+	<products>
+		<YokaiPepperNarcotic>4</YokaiPepperNarcotic>
+	</products>
+</RecipeDef>
+
+</Defs>

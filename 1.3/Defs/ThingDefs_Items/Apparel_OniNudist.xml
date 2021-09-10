@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<ThingDef ParentName="ApparelMakeableBase">
+	<defName>Apparel_OniWrapNudist</defName>
+	<label>feathered nudist wrap</label>
+	<description>The traditional Oni apparel simply made from their feathers, woven in a way to allow slightly easier movement of the air passing through it, increasing movement speed. Provides good insulation from both heat and cold.\n\nThis version is made with a very baffling method that somehow extremely secure but immediately falls apart if any other clothing is added over or under the layer, but an Oni can treat this like an extension of their body and does not feel like clothing. Non-Oni nudist seems to disagree...</description>
+	<techLevel>Neolithic</techLevel>
+	<graphicData>
+		<texPath>Things/Apparel/Onifeatherdress</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>1.15</drawSize>
+	</graphicData>
+	<recipeMaker>
+		<recipeUsers>
+			<li>ElectricTailoringBench</li>
+			<li>HandTailoringBench</li>
+			<li>CraftingSpot</li>
+		</recipeUsers>
+	</recipeMaker>
+	<costList>
+	  <OniFeather>60</OniFeather>
+	</costList>
+	<statBases>
+		<WorkToMake>2600</WorkToMake>
+		<MaxHitPoints>250</MaxHitPoints>
+		<Mass>0.5</Mass>
+		<ArmorRating_Blunt>0.04</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.072</ArmorRating_Sharp>
+		<Insulation_Cold>13.75</Insulation_Cold>
+		<Insulation_Heat>11.0</Insulation_Heat>
+		<EquipDelay>2.5</EquipDelay>
+	</statBases>
+	<equippedStatOffsets>
+		<SocialImpact>0.25</SocialImpact>
+		<MoveSpeed>0.25</MoveSpeed>
+	</equippedStatOffsets>
+	<thingCategories>
+      <li>OniApparel</li>
+    </thingCategories>
+	<apparel>	
+		<wornGraphicPath>Things/Apparel/Onifeatherdress</wornGraphicPath>
+		<layers>
+			<li>Shell</li>
+			<li>Middle</li>
+			<li>OnSkin</li>
+		</layers>
+		<bodyPartGroups>
+			<li>Torso</li>
+			<li>Shoulders</li>
+			<li>Arms</li>
+			<li>Legs</li>
+			<li>Neck</li>
+		</bodyPartGroups>
+		<tags>
+			<li>OniWearNudist</li>
+		</tags>
+	</apparel>
+	<tradeTags>
+		<li>OniApparel</li>
+	</tradeTags>
+</ThingDef>
+  
+<ThingDef ParentName="ApparelMakeableBase">
+	<defName>Apparel_OniGrandWrapNudist</defName>
+	<label>grand Oni nudist wrap</label>
+	<description>A grand design of the Oni wrap, held together with onistrand, modeled after their artistically "perfect" ancestral form.\n\nThis version is made with a very baffling method that somehow extremely secure but immediately falls apart if any other clothing is added over or under the layer, but an Oni can treat this like an extension of their body and does not feel like clothing. Non-Oni nudist seems to disagree...</description>
+	<recipeMaker>
+		<researchPrerequisite>ComplexClothing</researchPrerequisite>
+	</recipeMaker>
+	<graphicData>
+		<texPath>Things/Apparel/Onigrandfeatherdress</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>1.15</drawSize>
+	</graphicData>
+	<costList>
+		<OniFeather>100</OniFeather>
+		<OniDevilstrand>40</OniDevilstrand>
+	</costList>
+	<statBases>
+		<WorkToMake>8500</WorkToMake>
+		<MaxHitPoints>250</MaxHitPoints>
+		<Mass>0.8</Mass>
+		<ArmorRating_Blunt>0.144</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.85</ArmorRating_Heat>
+		<Insulation_Cold>15</Insulation_Cold>
+		<Insulation_Heat>19.25</Insulation_Heat>
+	</statBases>
+	<equippedStatOffsets>
+		<SocialImpact>0.45</SocialImpact>
+	</equippedStatOffsets>
+	<thingCategories>
+      <li>OniApparel</li>
+    </thingCategories>
+	<apparel>	
+		<wornGraphicPath>Things/Apparel/Onigrandfeatherdress</wornGraphicPath>
+		<layers>
+			<li>OnSkin</li>
+			<li>Middle</li>
+			<li>Shell</li>
+		</layers>
+		<bodyPartGroups>
+			<li>Torso</li>
+			<li>Shoulders</li>
+			<li>Arms</li>
+			<li>Legs</li>
+			<li>Neck</li>
+			<li>Feet</li>
+		</bodyPartGroups>
+		<tags>
+			<li>OniWearNudist</li>
+		</tags>
+	</apparel>
+	<tradeTags>
+		<li>OniApparel</li>
+	</tradeTags>
+</ThingDef>
+
+</Defs>

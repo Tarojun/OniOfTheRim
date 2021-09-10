@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="BuildingBase">
+	<defName>Oni_GroundOven</defName>
+	<label>ground oven</label>
+	<description>A pit in the ground lined with stone, used to trap heat for cooking food.</description>    
+	<thingClass>Building_WorkTable</thingClass>
+	<category>Building</category>
+	<graphicData>
+		<texPath>Things/Building/GroundOven/GroundOven</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<shaderType>CutoutComplex</shaderType>
+		<drawRotated>false</drawRotated>
+		<allowFlip>false</allowFlip>
+		<damageData>
+			<rect>(0.2,0,0.6,0.1)</rect>
+		</damageData>
+	</graphicData>
+    <constructEffect>ConstructDirt</constructEffect>
+	<altitudeLayer>Building</altitudeLayer>
+	<passability>PassThroughOnly</passability>
+	<pathCost>50</pathCost>
+	<tickerType>Normal</tickerType>
+	<drawerType>RealtimeOnly</drawerType>
+	<statBases>
+		<MaxHitPoints>80</MaxHitPoints>
+		<WorkToBuild>420</WorkToBuild>
+		<Flammability>0</Flammability>
+		<WorkTableWorkSpeedFactor>0.5</WorkTableWorkSpeedFactor>
+	</statBases>
+	<selectable>true</selectable>
+	<terrainAffordanceNeeded>Diggable</terrainAffordanceNeeded>
+	<soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+	<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+	<resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+	<comps>
+		<li Class="CompProperties_Refuelable">
+			<fuelConsumptionRate>180.0</fuelConsumptionRate>
+			<fuelCapacity>50.0</fuelCapacity>
+			<fuelFilter>
+				<thingDefs>
+					<li>WoodLog</li>
+				</thingDefs>
+			</fuelFilter>
+			<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+		</li> 
+		<li Class="CompProperties_HeatPusher">
+			<compClass>CompHeatPusherPowered</compClass>
+			<heatPerSecond>1</heatPerSecond>
+		</li>
+	</comps>
+	<designationCategory>Production</designationCategory>
+	<hasInteractionCell>True</hasInteractionCell>
+	<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+	<recipes>
+		<li>CookMealSimple</li>
+		<li>CookMealSimpleBulk</li>
+		<li>Make_Pemmican</li>
+		<li>BurnApparel</li>
+		<li>BurnWeapon</li>
+		<li>BurnDrugs</li>
+	</recipes>
+	<inspectorTabs>
+		<li>ITab_Bills</li>
+	</inspectorTabs>
+	<building>
+		<isMealSource>true</isMealSource>
+		<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+		<heatPerTickWhileWorking>0.10</heatPerTickWhileWorking>
+	</building>
+	<researchPrerequisites>
+		<li>OniCultureFurniture</li>
+	</researchPrerequisites>
+</ThingDef>
+
+<ThingDef ParentName="BuildingBase">
+	<defName>OniFermentingWineBarrel</defName>
+	<label>Oni fermenting wine barrel</label>
+	<description>A specialized barrel for fermenting demon breath wort into wine. Strangely, Oni smelly jelly is used as a interior coating and is involved with the fermenting process.</description>
+	<thingClass>OniFermenting.Building_FermentingOniWineBarrel</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+	<graphicData>
+		<texPath>Things/Building/OniFermentingWineBarrel/OniFermentingWineBarrel</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<damageData>
+			<rect>(0.05,0.1,0.9,0.9)</rect>
+		</damageData>
+		<shadowData>
+			<volume>(0.75, 0.35, 0.33)</volume>
+		</shadowData>
+	</graphicData>
+	<minifiedDef>MinifiedThing</minifiedDef>
+	<altitudeLayer>Building</altitudeLayer>
+	<passability>PassThroughOnly</passability>
+	<fillPercent>0.45</fillPercent>
+	<pathCost>42</pathCost>
+	<thingCategories>
+		<li>BuildingsProduction</li>
+	</thingCategories>
+	<statBases>
+		<WorkToBuild>600</WorkToBuild>
+		<Mass>10</Mass>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Flammability>1.0</Flammability>
+	</statBases>
+	<costList>
+		<Steel>5</Steel>
+		<WoodLog>30</WoodLog>
+		<OniSmellyJelly>5</OniSmellyJelly>
+	</costList>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+	<comps>
+		<li Class="CompProperties_TemperatureRuinable">
+			<minSafeTemperature>-1</minSafeTemperature>
+			<maxSafeTemperature>32</maxSafeTemperature>
+			<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+		</li>
+		<li Class="CompProperties_Forbiddable"/>
+	</comps>
+	<tickerType>Rare</tickerType>
+	<rotatable>true</rotatable>
+	<designationCategory>Production</designationCategory>
+	<constructEffect>ConstructWood</constructEffect>
+    <building>
+		<buildingTags>
+			<li>Production</li>
+		</buildingTags>
+		<destroySound>BuildingDestroyed_Wood_Small</destroySound>
+    </building>
+	<researchPrerequisites>
+		<li>Brewing</li>
+		<li>OniCultureFurniture</li>
+	</researchPrerequisites>
+</ThingDef>
+
+</Defs>

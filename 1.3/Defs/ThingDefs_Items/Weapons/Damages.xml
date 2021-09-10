@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<DamageDef>
+	<defName>OniDart</defName>
+	<label>Oni Dart</label>
+	<workerClass>DamageWorker_AddInjury</workerClass>
+	<additionalHediffs>
+		<li>
+			<hediff>YokaiNarcoticDrugged</hediff>
+			<severityPerDamageDealt>0.02</severityPerDamageDealt>
+			<victimSeverityScaling>ToxicSensitivity</victimSeverityScaling>
+		</li>
+	</additionalHediffs>
+	<externalViolence>true</externalViolence>
+	<deathMessage>{0} has been darted to death.</deathMessage>
+	<hediff>Stab</hediff>
+	<hediffSkin>Stab</hediffSkin>
+	<hediffSolid>Crack</hediffSolid>
+	<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+	<impactSoundType>Slice</impactSoundType>
+	<armorCategory>Sharp</armorCategory>
+	<isRanged>true</isRanged>
+	<makesAnimalsFlee>true</makesAnimalsFlee>
+</DamageDef>
+
+<DamageDef Name="Oni_Kunai">
+	<defName>Onithrowin</defName>
+	<label>Oni war dagger</label>
+	<workerClass>DamageWorker_AddInjury</workerClass>
+	<externalViolence>true</externalViolence>
+	<deathMessage>{0} has been killed by a thrown kunai.</deathMessage>
+	<hediff>Cut</hediff>
+	<hediffSkin>Cut</hediffSkin>
+	<hediffSolid>Crack</hediffSolid>
+	<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+	<impactSoundType>Bullet</impactSoundType>
+	<armorCategory>Sharp</armorCategory>
+	<overkillPctToDestroyPart>0~0.9</overkillPctToDestroyPart>
+	<isRanged>true</isRanged>
+	<makesAnimalsFlee>true</makesAnimalsFlee>
+</DamageDef>
+
+<DamageDef ParentName="Bomb">
+	<defName>YokaiNarcoticExplode</defName>
+	<label>yokai narcotic bomb</label>
+	<workerClass>DamageWorker_AddInjury</workerClass>
+	<additionalHediffs>
+		<li>
+			<hediff>YokaiNarcoticDrugged</hediff>
+			<severityPerDamageDealt>0.025</severityPerDamageDealt>
+			<victimSeverityScaling>ToxicSensitivity</victimSeverityScaling>
+		</li>
+	</additionalHediffs>
+    <makesBlood>false</makesBlood>
+	<externalViolence>true</externalViolence>
+	<isExplosive>true</isExplosive>
+	<deathMessage>{0} has died in an explosion.</deathMessage>
+	<hediff>Burn</hediff>
+	<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+	<impactSoundType>Blunt</impactSoundType>
+	<armorCategory>Heat</armorCategory>
+	<minDamageToFragment>3</minDamageToFragment>
+	<defaultDamage>10</defaultDamage>
+	<defaultStoppingPower>0.5</defaultStoppingPower>
+	<defaultArmorPenetration>0.10</defaultArmorPenetration>
+    <buildingDamageFactor>0</buildingDamageFactor>
+	<plantDamageFactor>4</plantDamageFactor>
+	<explosionAffectOutsidePartsOnly>true</explosionAffectOutsidePartsOnly>
+    <explosionCellFleck>BlastExtinguisher</explosionCellFleck>
+    <explosionColorEdge>(1, 1, 1, 0.05)</explosionColorEdge>
+    <soundExplosion>Explosion_Stun</soundExplosion>
+	<combatLogRules>Damage_Bomb</combatLogRules>
+</DamageDef>
+
+</Defs>

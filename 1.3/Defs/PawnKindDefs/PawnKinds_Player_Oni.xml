@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<PawnKindDef Abstract="True" Name="BasePlayerOni">
+	<race>AOni</race>
+	<combatPower>30</combatPower>
+	<isFighter>false</isFighter>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+	<forceNormalGearQuality>true</forceNormalGearQuality>
+    <initialWillRange>0~0</initialWillRange>
+</PawnKindDef>
+
+<PawnKindDef ParentName="BasePlayerOni">
+	<defName>OniTribal</defName>
+	<label>member</label>
+	<defaultFactionType>OniTPlayerColony</defaultFactionType>
+	<backstoryCategories>
+		<li>OniBackstory</li>
+	</backstoryCategories>
+	<chemicalAddictionChance>0.05</chemicalAddictionChance>
+	<apparelTags>
+		<li>Neolithic</li>
+	</apparelTags>
+	<apparelRequired>
+		<li>Apparel_OniWrap</li>
+	</apparelRequired>
+    <apparelMoney>200~200</apparelMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.02</techHediffsChance>
+    <initialResistanceRange>9~15</initialResistanceRange>
+</PawnKindDef>
+
+<PawnKindDef ParentName="BasePlayerOni">
+	<defName>OniColonist</defName>
+	<label>colonist</label>
+	<defaultFactionType>OniPlayerColony</defaultFactionType>
+	<chemicalAddictionChance>0.05</chemicalAddictionChance>
+	<backstoryCategories>
+		<li>OniBackstory</li>
+		<li>OniSlave</li>
+	</backstoryCategories>
+	<apparelTags>
+		<li>IndustrialBasic</li>
+	</apparelTags>
+	<apparelRequired>
+		<li>Apparel_OniWrap</li>
+	</apparelRequired>
+	<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+	<apparelMoney>350~600</apparelMoney>
+	<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+	<techHediffsChance>0.03</techHediffsChance>
+	<techHediffsMoney>50~800</techHediffsMoney>
+	<techHediffsTags>
+		<li>Poor</li>
+		<li>Simple</li>
+	</techHediffsTags>
+	<initialResistanceRange>13~21</initialResistanceRange>
+</PawnKindDef>
+
+<PawnKindDef ParentName="BasePlayerOni">
+	<defName>Ancestral_Oni</defName>
+	<race>Alien_AncestralAOni</race>
+	<label>member</label>
+	<defaultFactionType>OniTPlayerColony</defaultFactionType>
+	<backstoryFiltersOverride>
+		<li>
+			<categories>
+				<li>AncestralOniBackstoryStarter</li>
+			</categories>
+		</li>
+	</backstoryFiltersOverride>
+    <initialResistanceRange>9~15</initialResistanceRange>
+</PawnKindDef>
+
+</Defs>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<HairDef>
+	<defName>OniCross</defName>
+	<label>Oni Cross</label>
+	<hairGender>Female</hairGender>
+	<texPath>Things/Oni/Hair/oni_cross</texPath>
+	<hairTags>
+		<li>Oni</li>
+	</hairTags>
+</HairDef>
+
+<HairDef>
+	<defName>OniLong</defName>
+	<label>Oni Long</label>
+	<hairGender>Female</hairGender>
+	<texPath>Things/Oni/Hair/oni_long</texPath>
+	<hairTags>
+		<li>Oni</li>
+	</hairTags>
+</HairDef>
+
+<HairDef>
+	<defName>OniMidcut</defName>
+	<label>Oni Midcut</label>
+	<hairGender>Female</hairGender>
+	<texPath>Things/Oni/Hair/oni_midcut</texPath>
+	<hairTags>
+		<li>Oni</li>
+	</hairTags>
+</HairDef>
+
+<HairDef>
+	<defName>OniTail</defName>
+	<label>Oni Tail</label>
+	<hairGender>Female</hairGender>
+	<texPath>Things/Oni/Hair/oni_tail</texPath>
+	<hairTags>
+		<li>Oni</li>
+	</hairTags>
+</HairDef>
+
+<HairDef>
+	<defName>OniMale</defName>
+	<label>Oni Male</label>
+	<hairGender>Male</hairGender>
+	<texPath>Things/Oni/Hair/oni_male</texPath>
+	<hairTags>
+		<li>Oni</li>
+	</hairTags>
+</HairDef>
+
+<HairDef>
+	<defName>OniMaleLong</defName>
+	<label>Oni Male Long</label>	
+	<hairGender>Male</hairGender>
+	<texPath>Things/Oni/Hair/oni_male_long</texPath>
+	<hairTags>
+		<li>Oni</li>
+	</hairTags>
+</HairDef>
+
+<!--	Empty placeholder in the case we ever use custom hairs for Ancestral Oni.
+		One reason using with hair as part of default head texture is issues with
+		Show Hair mod and pawns with body size larger than 1.0					-->
+
+<HairDef>
+	<defName>OniLong_Ancestral</defName>
+	<label>Oni Long (Ancestral)</label>
+	<hairGender>Female</hairGender>
+	<texPath>Things/Pawn/AncestralOni/Hair/ancestral_oni_long</texPath>
+	<hairTags>
+		<li>AncestralOni</li>
+	</hairTags>
+</HairDef>
+
+<HairDef>
+	<defName>OniMale_Ancestral</defName>
+	<label>Oni Male (Ancestral)</label>
+	<hairGender>Male</hairGender>
+	<texPath>Things/Pawn/AncestralOni/Hair/ancestral_oni_male</texPath>
+	<hairTags>
+		<li>AncestralOni</li>
+	</hairTags>
+</HairDef>
+
+</Defs>
