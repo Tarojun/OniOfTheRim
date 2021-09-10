@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="PatchOperationInsert">
+	<xpath>Defs/TraderKindDef/stockGenerators/li[@Class="StockGenerator_SingleDef" and thingDef="Neutroamine"]</xpath>
+	<value>
+		<li Class="StockGenerator_SingleDef">
+			<thingDef>Oniamine</thingDef>
+			<countRange>
+				<min>10</min>
+				<max>75</max>
+			</countRange>
+		</li>
+	</value>
+</Operation>
+
+</Patch>

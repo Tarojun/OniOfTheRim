@@ -51,7 +51,7 @@
 				<useGenderedBodies>false</useGenderedBodies>
 				<bodyAddons>
 					<li>
-						<path>Things/Oni/Horn/OniHorn</path>
+						<path>Things/Oni/Horn/Old/OniHorn</path>
 						<bodyPart>Head</bodyPart>
 						<inFrontOfBody>true</inFrontOfBody>
 						<useSkinColor>true</useSkinColor>
@@ -293,6 +293,7 @@
 		<ComfyTemperatureMin>2</ComfyTemperatureMin>
 		<ComfyTemperatureMax>30</ComfyTemperatureMax>
 		<LeatherAmount>30</LeatherAmount>
+		<RoyalFavorValue>4</RoyalFavorValue>
 		<SocialImpact>1.2</SocialImpact>
 		<AnimalGatherSpeed>1.2</AnimalGatherSpeed>
 		<AnimalGatherYield>1.1</AnimalGatherYield>

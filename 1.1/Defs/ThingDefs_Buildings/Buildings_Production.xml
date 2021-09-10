@@ -17,6 +17,7 @@
 			<rect>(0.2,0,0.6,0.1)</rect>
 		</damageData>
 	</graphicData>
+    <constructEffect>ConstructDirt</constructEffect>
 	<altitudeLayer>Building</altitudeLayer>
 	<passability>PassThroughOnly</passability>
 	<pathCost>50</pathCost>
@@ -24,22 +25,18 @@
 	<drawerType>RealtimeOnly</drawerType>
 	<statBases>
 		<MaxHitPoints>80</MaxHitPoints>
-		<WorkToBuild>150</WorkToBuild>
+		<WorkToBuild>420</WorkToBuild>
 		<Flammability>0</Flammability>
 		<WorkTableWorkSpeedFactor>0.5</WorkTableWorkSpeedFactor>
 	</statBases>
 	<selectable>true</selectable>
-	<stuffCategories>
-		<li>Stony</li>
-	</stuffCategories>
-	<costStuffCount>10</costStuffCount>
 	<terrainAffordanceNeeded>Diggable</terrainAffordanceNeeded>
 	<soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
 	<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 	<resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
 	<comps>
 		<li Class="CompProperties_Refuelable">
-			<fuelConsumptionRate>160.0</fuelConsumptionRate>
+			<fuelConsumptionRate>180.0</fuelConsumptionRate>
 			<fuelCapacity>50.0</fuelCapacity>
 			<fuelFilter>
 				<thingDefs>
@@ -47,6 +44,7 @@
 				</thingDefs>
 			</fuelFilter>
 			<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
 		</li> 
 		<li Class="CompProperties_HeatPusher">
 			<compClass>CompHeatPusherPowered</compClass>

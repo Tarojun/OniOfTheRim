@@ -855,6 +855,7 @@
 	<spawnCategories>
 		<li>OniBackstory</li>
 		<li>AncestralOniBackstory</li>
+		<li>OniBlackTalon</li>
 	</spawnCategories>
 	<skillGains>
 		<li>

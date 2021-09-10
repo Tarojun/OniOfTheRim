@@ -380,6 +380,7 @@
 		<ComfyTemperatureMin>-30</ComfyTemperatureMin>
 		<ComfyTemperatureMax>50</ComfyTemperatureMax>
 		<LeatherAmount>30</LeatherAmount>
+		<RoyalFavorValue>5</RoyalFavorValue>
 		<SocialImpact>0.75</SocialImpact>
 		<NegotiationAbility>0.75</NegotiationAbility>
 		<TradePriceImprovement>0.75</TradePriceImprovement>

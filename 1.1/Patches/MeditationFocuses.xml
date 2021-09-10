@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="PatchOperationSequence">
+	<success>Always</success>
+	<operations>
+		<li Class="PatchOperationTest">
+			<xpath>/Defs/MeditationFocusDef[defName="Flame"]/incompatibleBackstoriesAny</xpath>
+			<success>Invert</success>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>/Defs/MeditationFocusDef[defName="Flame"]</xpath>
+			<value>
+				<incompatibleBackstoriesAny />
+			</value>
+		</li>
+	</operations>
+</Operation>
+
+<Operation Class="PatchOperationSequence">
+	<success>Always</success>
+	<operations>
+		<li Class="PatchOperationTest">
+			<xpath>/Defs/MeditationFocusDef[defName="Morbid"]/requiredBackstoriesAny</xpath>
+			<success>Invert</success>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>/Defs/MeditationFocusDef[defName="Morbid"]</xpath>
+			<value>
+				<requiredBackstoriesAny />
+			</value>
+		</li>
+	</operations>
+</Operation>
+
+<Operation Class="PatchOperationSequence">
+	<success>Always</success>
+	<operations>
+		<li Class="PatchOperationAdd">
+			<xpath>/Defs/MeditationFocusDef[defName="Flame"]/incompatibleBackstoriesAny</xpath>
+			<value>
+				<li>
+					<categoryName>OniBackstory</categoryName>
+					<slot>Childhood</slot>
+				</li>
+				<li>
+					<categoryName>OniSlave</categoryName>
+					<slot>Childhood</slot>
+				</li>
+				<li>
+					<categoryName>AncestralOniBackstory</categoryName>
+					<slot>Childhood</slot>
+				</li>
+				<li>
+					<categoryName>AncestralOniBackstoryStarter</categoryName>
+					<slot>Childhood</slot>
+				</li>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/MeditationFocusDef[defName="Natural"]/requiredBackstoriesAny</xpath>
+			<value>
+				<li>
+					<categoryName>OniBackstory</categoryName>
+					<slot>Childhood</slot>
+				</li>
+				<li>
+					<categoryName>AncestralOniBackstory</categoryName>
+					<slot>Childhood</slot>
+				</li>
+				<li>
+					<categoryName>AncestralOniBackstoryStarter</categoryName>
+					<slot>Childhood</slot>
+				</li>
+			</value>
+		</li>
+		<li Class="PatchOperationAdd">
+			<xpath>Defs/MeditationFocusDef[defName="Morbid"]/requiredBackstoriesAny</xpath>
+			<value>
+				<li>
+					<categoryName>OniBlackTalon</categoryName>
+					<slot>Childhood</slot>
+				</li>
+				<li>
+					<categoryName>OniBlackTalon</categoryName>
+					<slot>Adulthood</slot>
+				</li>
+			</value>
+		</li>
+	</operations>
+</Operation>
+
+</Patch>

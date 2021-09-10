@@ -178,7 +178,7 @@
     <workSkill>Cooking</workSkill>
 	<workSpeedStat>CookSpeed</workSpeedStat>
 	<allowMixingIngredients>true</allowMixingIngredients>
-	<workAmount>1000</workAmount>
+	<workAmount>500</workAmount>
 	<targetCountAdjustment>5</targetCountAdjustment>
 	<ingredients>
 		<li>

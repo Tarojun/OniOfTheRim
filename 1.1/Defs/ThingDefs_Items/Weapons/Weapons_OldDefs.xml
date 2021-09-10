@@ -3,7 +3,7 @@
 
 <ThingDef ParentName="BaseWeaponNeolithic">
 	<defName>Oni_Blowgun_Gun</defName>
-	<label>Oni fukiya</label>
+	<label>Oni fukiya (old)</label>
 	<description>A simple weapon consisting of a narrow, long tube for firing light projectiles or darts. While the dart itself is not so lethal, it has narcotic poison on the tip.</description>
 	<graphicData>
 		<texPath>Things/Item/Weapon/Blowgun</texPath>
@@ -16,6 +16,7 @@
 		<WoodLog>20</WoodLog>
 	</costList>
 	<generateCommonality>0</generateCommonality>
+	<generateAllowChance>0</generateAllowChance>
 	<statBases>
 		<WorkToMake>2500</WorkToMake>
 		<Mass>0.5</Mass>
@@ -42,7 +43,7 @@
 		</skillRequirements>
 		<researchPrerequisite Inherit="False" />
 	</recipeMaker>
-    <tradeability>Sellable</tradeability>
+    <tradeability>None</tradeability>
 	<verbs>
 		<li>
 			<verbClass>Verb_Shoot</verbClass>
@@ -63,9 +64,7 @@
 			<cooldownTime>2</cooldownTime>
 		</li>
 	</tools>
-	<tradeTags>
-		<li>OniWeapons</li>
-	</tradeTags>
+	<tradeTags Inherit="False"></tradeTags>
 </ThingDef>
 
 <!-- ======================================================== -->
@@ -73,7 +72,7 @@
 <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
 	<techLevel>Medieval</techLevel>
 	<defName>Oni_WarDagger_Gun</defName>
-	<label>Oni war kunai</label>
+	<label>Oni war kunai (old)</label>
 	<description>Oni war kunai are fearsome. In the trained hands, these can be a devastating tool both in melee and ranged combat.</description>
 	<graphicData>
 		<texPath>Things/Item/Weapon/ThrowingClub</texPath>
@@ -112,8 +111,9 @@
 			<disallowedThingDefs Inherit="False"></disallowedThingDefs>
 		</defaultIngredientFilter>
 	</recipeMaker>
-    <tradeability>Sellable</tradeability>
+    <tradeability>None</tradeability>
 	<generateCommonality>0</generateCommonality>
+	<generateAllowChance>0</generateAllowChance>
 	<weaponTags Inherit="False" />
 	<verbs>
 		<li>
@@ -151,9 +151,7 @@
 			<cooldownTime>1.8</cooldownTime>
 		</li>
 	</tools>
-	<tradeTags>
-		<li>OniWeapons</li>
-	</tradeTags>
+	<tradeTags Inherit="False"></tradeTags>
 </ThingDef>
 
 </Defs>

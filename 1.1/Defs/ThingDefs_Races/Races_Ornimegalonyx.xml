@@ -55,8 +55,8 @@
 			<capacities>
 				<li>Scratch</li>
 			</capacities>
-			<power>7</power>
-			<cooldownTime>0.85</cooldownTime>
+			<power>7.4</power>
+			<cooldownTime>0.8</cooldownTime>
 			<linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
 		</li>
 		<li>
@@ -64,14 +64,14 @@
 			<capacities>
 				<li>Scratch</li>
 			</capacities>
-			<power>9</power>
-			<cooldownTime>0.85</cooldownTime>
+			<power>9.4</power>
+			<cooldownTime>0.8</cooldownTime>
 			<linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
 			<surpriseAttack>
 				<extraMeleeDamages>
 					<li>
 						<def>Stun</def>
-						<amount>9</amount>
+						<amount>13</amount>
 					</li>
 				</extraMeleeDamages>
 			</surpriseAttack>

@@ -9,6 +9,9 @@
 		<li>
 			<label>Natures blessing</label>
 			<description>Some Oni exude an aura of calm that makes them more approachable by people and animals alike.</description>
+			<allowedMeditationFocusTypes>
+				<li>Natural</li>
+			</allowedMeditationFocusTypes>
 			<socialFightChanceFactor>0.05</socialFightChanceFactor>
 			<marketValueFactorOffset>0.20</marketValueFactorOffset>
 			<statOffsets>
