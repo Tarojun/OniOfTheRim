@@ -57,7 +57,7 @@ Drawback on "expiring":
 	</tradeTags>
 </ThingDef>
 
-<HediffDef>
+<HediffDef Name="RedSomaHediff_Base" Abstract="True">
 	<defName>OniBodyHigh</defName>
 	<label>soma of body</label>
 	<description>Red soma of body combat drug in the bloodstream. It supercharges combat-related abilities.</description>
@@ -70,6 +70,9 @@ Drawback on "expiring":
 			<severityPerDay>-2</severityPerDay>
 		</li>
 	</comps>
+</HediffDef>
+
+<HediffDef Name="RedSomaHediff_Normal" ParentName="RedSomaHediff_Base">
 	<stages>
 		<li>
 			<label>drawback</label>
@@ -100,6 +103,43 @@ Drawback on "expiring":
 				<li>
 					<capacity>Sight</capacity>
 					<offset>0.15</offset>
+				</li>
+			</capMods>
+		</li>
+	</stages>
+</HediffDef>
+
+<HediffDef Name="RedSomaHediff_Nerfed" ParentName="RedSomaHediff_Base" Abstract="True">
+	<stages>
+		<li>
+			<label>drawback</label>
+			<restFallFactorOffset>0.3</restFallFactorOffset>
+			<hungerRateFactorOffset>0.3</hungerRateFactorOffset>
+			<statOffsets>
+				<WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+			</statOffsets>
+		</li>
+		<li>
+			<minSeverity>0.34</minSeverity>
+			<label>active</label>
+			<painFactor>0.9</painFactor>
+			<statOffsets>
+				<MeleeHitChance>3</MeleeHitChance>
+				<MeleeDodgeChance>3</MeleeDodgeChance>
+				<AimingDelayFactor>-0.05</AimingDelayFactor>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.10</offset>
+				</li>
+				<li>
+					<capacity>Manipulation</capacity>
+					<offset>0.10</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>0.10</offset>
 				</li>
 			</capMods>
 		</li>

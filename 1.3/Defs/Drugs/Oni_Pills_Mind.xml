@@ -54,7 +54,7 @@ x110% Pain
 	</tradeTags>
 </ThingDef>
 
-<HediffDef>
+<HediffDef Name="BlueSomaHediff_Base" Abstract="True">
 	<defName>OniMindHigh</defName>
 	<label>soma of mind</label>
 	<description>Blue soma of mind combat drug in the bloodstream. It supercharges combat-related abilities.</description>
@@ -67,6 +67,9 @@ x110% Pain
 			<severityPerDay>-3</severityPerDay>
 		</li>
 	</comps>
+</HediffDef>
+
+<HediffDef Name="BlueSomaHediff_Normal" ParentName="BlueSomaHediff_Base">
 	<stages>
 		<li>
 			<painFactor>1.1</painFactor>
@@ -90,6 +93,36 @@ x110% Pain
 				<li>
 					<capacity>Breathing</capacity>
 					<offset>0.2</offset>
+				</li>
+			</capMods>
+		</li>
+	</stages>
+</HediffDef>
+
+<HediffDef Name="BlueSomaHediff_Nerfed" ParentName="BlueSomaHediff_Base" Abstract="True">
+	<stages>
+		<li>
+			<painFactor>1.1</painFactor>
+			<statOffsets>
+				<GlobalLearningFactor>0.2</GlobalLearningFactor>
+				<PsychicSensitivity>0.25</PsychicSensitivity>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Hearing</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Breathing</capacity>
+					<offset>0.1</offset>
 				</li>
 			</capMods>
 		</li>

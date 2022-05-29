@@ -67,7 +67,7 @@ Long term use without easing off this drug can become dangerous at massive toler
 	<generateAllowChance>0.33</generateAllowChance>
 </ThingDef>
 
-<HediffDef>
+<HediffDef Name="OniDustHediff_Base" Abstract="True">
 	<defName>OniHigh</defName>
 	<label>High on Oni Dust</label>
 	<description>Oni Dust active in the bloodstream. It supercharges combat-related abilities by a massive amount.</description>
@@ -81,6 +81,9 @@ Long term use without easing off this drug can become dangerous at massive toler
 			<severityPerDay>-0.5</severityPerDay>
 		</li>
 	</comps>
+</HediffDef>
+
+<HediffDef Name="OniDustHediff_Normal" ParentName="OniDustHediff_Base">
 	<stages>
 		<li>
 			<painFactor>0.33</painFactor>
@@ -128,6 +131,60 @@ Long term use without easing off this drug can become dangerous at massive toler
 				<li>
 					<capacity>Eating</capacity>
 					<offset>0.33</offset>
+				</li>
+			</capMods>
+		</li>
+	</stages>
+</HediffDef>
+
+<HediffDef Name="OniDustHediff_Nerfed" ParentName="OniDustHediff_Base" Abstract="True">
+	<stages>
+		<li>
+			<painFactor>0.66</painFactor>
+			<hungerRateFactor>1.33</hungerRateFactor>
+			<statOffsets>
+				<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.15</ArmorRating_Heat>
+				<MeleeWeapon_CooldownMultiplier>-0.10</MeleeWeapon_CooldownMultiplier>
+				<AimingDelayFactor>-0.10</AimingDelayFactor>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<offset>0.33</offset>
+				</li>
+				<li>	
+					<capacity>Moving</capacity>
+					<offset>0.33</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>0.33</offset>
+				</li>
+				<li>
+					<capacity>Manipulation</capacity>
+					<offset>0.33</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.16</offset>
+				</li>
+				<li>
+					<capacity>BloodPumping</capacity>
+					<offset>0.16</offset>
+				</li>
+				<li>
+					<capacity>Metabolism</capacity>
+					<offset>0.16</offset>
+				</li>
+				<li>
+					<capacity>Breathing</capacity>
+					<offset>0.16</offset>
+				</li>
+				<li>
+					<capacity>Eating</capacity>
+					<offset>0.16</offset>
 				</li>
 			</capMods>
 		</li>

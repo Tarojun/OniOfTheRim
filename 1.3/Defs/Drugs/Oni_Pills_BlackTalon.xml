@@ -64,7 +64,7 @@ Drawback on "expiring":
 	</tradeTags>
 </ThingDef>
 
-<HediffDef>
+<HediffDef Name="BlackTalonSomaHediff_Base" Abstract="True">
 	<defName>OniBlackTalonHigh</defName>
 	<label>Black Talon soma</label>
 	<description>Black Talon soma combat drug in the bloodstream. It supercharges combat-related abilities.</description>
@@ -77,6 +77,9 @@ Drawback on "expiring":
 			<severityPerDay>-1.5</severityPerDay>
 		</li>
 	</comps>
+</HediffDef>
+
+<HediffDef Name="BlackTalonSomaHediff_Normal" ParentName="BlackTalonSomaHediff_Base">
 	<stages>
 		<li>
 			<label>drawback</label>
@@ -115,6 +118,51 @@ Drawback on "expiring":
 				<li>
 					<capacity>Manipulation</capacity>
 					<offset>0.25</offset>
+				</li>
+			</capMods>
+		</li>
+	</stages>
+</HediffDef>
+
+<HediffDef Name="BlackTalonSomaHediff_Nerfed" ParentName="BlackTalonSomaHediff_Base" Abstract="True">
+	<stages>
+		<li>
+			<label>drawback</label>
+			<restFallFactorOffset>0.3</restFallFactorOffset>
+			<hungerRateFactorOffset>0.3</hungerRateFactorOffset>
+			<statOffsets>
+				<WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+			</statOffsets>
+		</li>
+		<li>
+			<minSeverity>0.25</minSeverity>
+			<label>active</label>
+			<painFactor>0.7</painFactor>
+			<statOffsets>
+				<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.15</ArmorRating_Heat>
+				<MeleeHitChance>5</MeleeHitChance>
+				<MeleeDodgeChance>5</MeleeDodgeChance>
+				<AimingDelayFactor>-0.1</AimingDelayFactor>
+				<MentalBreakThreshold>-0.05</MentalBreakThreshold>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<offset>0.15</offset>
+				</li>
+				<li>	
+					<capacity>Moving</capacity>
+					<offset>0.15</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>0.15</offset>
+				</li>
+				<li>
+					<capacity>Manipulation</capacity>
+					<offset>0.15</offset>
 				</li>
 			</capMods>
 		</li>

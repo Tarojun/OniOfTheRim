@@ -58,7 +58,7 @@ Drawback on "expiring":
 	</tradeTags>
 </ThingDef>
 
-<HediffDef>
+<HediffDef Name="GreenSomaHediff_Base" Abstract="True">
 	<defName>OniHealthHigh</defName>
 	<label>soma of health</label>
 	<description>Green soma of health combat drug in the bloodstream. It supercharges combat-related abilities.</description>
@@ -71,6 +71,9 @@ Drawback on "expiring":
 			<severityPerDay>-2</severityPerDay>
 		</li>
 	</comps>
+</HediffDef>
+
+<HediffDef Name="GreenSomaHediff_Normal" ParentName="GreenSomaHediff_Base">
 	<stages>
 		<li>
 			<label>drawback</label>
@@ -109,6 +112,54 @@ Drawback on "expiring":
 				<li>
 					<capacity>Breathing</capacity>
 					<offset>0.2</offset>
+				</li>
+			</capMods>
+			<makeImmuneTo>
+				<li>WoundInfection</li>
+			</makeImmuneTo>
+		</li>
+	</stages>
+</HediffDef>
+
+<HediffDef Name="GreenSomaHediff_Nerfed" ParentName="GreenSomaHediff_Base" Abstract="True">
+	<stages>
+		<li>
+			<label>drawback</label>
+			<restFallFactorOffset>0.3</restFallFactorOffset>
+			<hungerRateFactorOffset>0.3</hungerRateFactorOffset>
+			<statOffsets>
+				<WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+			</statOffsets>
+			<makeImmuneTo>
+				<li>WoundInfection</li>
+			</makeImmuneTo>
+		</li>
+		<li>
+			<minSeverity>0.34</minSeverity>
+			<label>active</label>
+			<painFactor>0.85</painFactor>
+			<statOffsets>
+				<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.10</ArmorRating_Heat>
+				<ToxicSensitivity>-0.25</ToxicSensitivity>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>BloodPumping</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Metabolism</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Breathing</capacity>
+					<offset>0.1</offset>
 				</li>
 			</capMods>
 			<makeImmuneTo>
