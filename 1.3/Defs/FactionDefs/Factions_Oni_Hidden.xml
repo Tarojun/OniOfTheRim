@@ -124,6 +124,8 @@
 			<li>Plasteel</li>
 		</thingDefs>
 	</apparelStuffFilter-->
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>71</configurationListOrderPriority>
 </FactionDef>
 
 <FactionDef ParentName="TribeBase">
@@ -362,11 +364,11 @@
 				<Ancestral_Oni_Guardian>1.5</Ancestral_Oni_Guardian>
 			</options>
 		</li>
-      <!--li MayRequire="Ludeon.RimWorld.Ideology">
+      <li MayRequire="Ludeon.RimWorld.Ideology">
         <kindDef>Miners</kindDef>
         <commonality>1</commonality>
         <options>
-          <Tribal_Miner>1</Tribal_Miner>
+          <Oni_Miner>1</Oni_Miner>
         </options>
       </li>
       <li MayRequire="Ludeon.RimWorld.Ideology">
@@ -380,16 +382,16 @@
         <kindDef>Loggers</kindDef>
         <commonality>1</commonality>
         <options>
-          <Tribal_Logger>1</Tribal_Logger>
+          <Oni_Logger>1</Oni_Logger>
         </options>
       </li>
       <li MayRequire="Ludeon.RimWorld.Ideology">
         <kindDef>Farmers</kindDef>
         <commonality>1</commonality>
         <options>
-          <Tribal_Farmer>1</Tribal_Farmer>
+          <Oni_Farmer>1</Oni_Farmer>
         </options>
-      </li-->
+      </li>
     </pawnGroupMakers>
 </FactionDef>
 
