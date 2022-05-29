@@ -42,46 +42,36 @@ namespace OniFermenting
 				JobFailReason.Is(WorkGiver_FillFermentingOniWineBarrel.TemperatureTrans, null);
 				return false;
 			}
-			if (!t.IsForbidden(pawn))
-			{
-				LocalTargetInfo target = t;
-				if (pawn.CanReserve(target, 1, -1, null, forced))
-				{
-					if (pawn.Map.designationManager.DesignationOn(t, DesignationDefOf.Deconstruct) != null)
-					{
-						return false;
-					}
-					if (this.FindDemonBreathWort(pawn, building_FermentingOniWineBarrel) == null)
-					{
-						JobFailReason.Is(WorkGiver_FillFermentingOniWineBarrel.NoDemonBreathWortTrans, null);
-						return false;
-					}
-					return !t.IsBurning();
-				}
-			}
-			return false;
+            if (t.IsForbidden(pawn) || !pawn.CanReserve(t, 1, -1, null, forced))
+            {
+                return false;
+            }
+            if (pawn.Map.designationManager.DesignationOn(t, DesignationDefOf.Deconstruct) != null)
+            {
+                return false;
+            }
+            if (this.FindDemonBreathWort(pawn, building_FermentingOniWineBarrel) == null)
+            {
+                JobFailReason.Is(WorkGiver_FillFermentingOniWineBarrel.NoDemonBreathWortTrans, null);
+                return false;
+            }
+            return !t.IsBurning();
 		}
 
 		public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
 		{
             Building_FermentingOniWineBarrel oniwinebarrel = (Building_FermentingOniWineBarrel)t;
 			Thing t2 = this.FindDemonBreathWort(pawn, oniwinebarrel);
-			return new Job(JobDefOf.FillFermentingOniWineBarrel, t, t2);
+			return JobMaker.MakeJob(JobDefOf.FillFermentingOniWineBarrel, t, t2);
 		}
 
 		private Thing FindDemonBreathWort(Pawn pawn, Building_FermentingOniWineBarrel oniwinebarrel)
-		{
-			Predicate<Thing> predicate = (Thing x) => !x.IsForbidden(pawn) && pawn.CanReserve(x, 1, -1, null, false);
-			IntVec3 position = pawn.Position;
-			Map map = pawn.Map;
-			ThingRequest thingReq = ThingRequest.ForDef(ThingDefOf.DemonBreathWort);
-			PathEndMode peMode = PathEndMode.ClosestTouch;
-			TraverseParms traverseParams = TraverseParms.For(pawn, Danger.Deadly, TraverseMode.ByPawn, false);
-			Predicate<Thing> validator = predicate;
-			return GenClosest.ClosestThingReachable(position, map, thingReq, peMode, traverseParams, 9999f, validator, null, 0, -1, false, RegionType.Set_Passable, false);
-		}
-
-		private static string TemperatureTrans;
+        {
+            Predicate<Thing> validator = (Thing x) => !x.IsForbidden(pawn) && pawn.CanReserve(x, 1, -1, null, false);
+            return GenClosest.ClosestThingReachable(pawn.Position, pawn.Map, ThingRequest.ForDef(ThingDefOf.DemonBreathWort), PathEndMode.ClosestTouch, TraverseParms.For(pawn, Danger.Deadly, TraverseMode.ByPawn, false, false, false), 9999f, validator, null, 0, -1, false, RegionType.Set_Passable, false);
+        }
+        
+        private static string TemperatureTrans;
 
 		private static string NoDemonBreathWortTrans;
 	}

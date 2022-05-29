@@ -10,22 +10,22 @@ namespace OniFermenting
     [StaticConstructorOnStartup]
     public class Building_FermentingOniWineBarrel : Building
     {
-        public float Progress
-        {
-            get
-            {
-                return this.progressInt;
-            }
-            set
-            {
-                if (value == this.progressInt)
-                {
-                    return;
-                }
-                this.progressInt = value;
-                this.barFilledCachedMat = null;
-            }
-        }
+		public float Progress
+		{
+			get
+			{
+				return this.progressInt;
+			}
+			set
+			{
+				if (value == this.progressInt)
+				{
+					return;
+				}
+				this.progressInt = value;
+				this.barFilledCachedMat = null;
+			}
+		}
 
         private Material BarFilledMat
         {
@@ -68,22 +68,22 @@ namespace OniFermenting
         }
 
         private float CurrentTempProgressSpeedFactor
-        {
-            get
-            {
-                CompProperties_TemperatureRuinable compProperties = this.def.GetCompProperties<CompProperties_TemperatureRuinable>();
-                float ambientTemperature = base.AmbientTemperature;
-                if (ambientTemperature < compProperties.minSafeTemperature)
-                {
-                    return 0.1f;
-                }
-                if (ambientTemperature < 7f)
-                {
-                    return GenMath.LerpDouble(compProperties.minSafeTemperature, 7f, 0.1f, 1f, ambientTemperature);
-                }
-                return 1f;
-            }
-        }
+		{
+			get
+			{
+				CompProperties_TemperatureRuinable compProperties = this.def.GetCompProperties<CompProperties_TemperatureRuinable>();
+				float ambientTemperature = base.AmbientTemperature;
+				if (ambientTemperature < compProperties.minSafeTemperature)
+				{
+					return 0.1f;
+				}
+				if (ambientTemperature < 7f)
+				{
+					return GenMath.LerpDouble(compProperties.minSafeTemperature, 7f, 0.1f, 1f, ambientTemperature);
+				}
+				return 1f;
+			}
+		}
 
         private float ProgressPerTickAtCurrentTemp
         {
@@ -122,7 +122,7 @@ namespace OniFermenting
             base.GetComp<CompTemperatureRuinable>().Reset();
             if (this.Fermented)
             {
-                Log.Warning("Tried to add Oni smelly jelly to a Oni wine barrel full of wine. Colonists should take the wine first.", false);
+                Log.Warning("Tried to add Oni smelly jelly to a Oni wine barrel full of wine. Colonists should take the wine first.");
                 return;
             }
             int num = Mathf.Min(count, 25 - this.demonbreathwortCount);
@@ -186,7 +186,7 @@ namespace OniFermenting
                 }
                 else
                 {
-                    stringBuilder.AppendLine("FermentationProgress".Translate(this.Progress.ToStringPercent(), this.EstimatedTicksLeft.ToStringTicksToPeriod()));
+                    stringBuilder.AppendLine("FermentationProgress".Translate(this.Progress.ToStringPercent(), this.EstimatedTicksLeft.ToStringTicksToPeriod(true, false, true, true)));
                     if (this.CurrentTempProgressSpeedFactor != 1f)
                     {
                         stringBuilder.AppendLine("FermentationBarrelOutOfIdealTemperature".Translate(this.CurrentTempProgressSpeedFactor.ToStringPercent()));
@@ -194,14 +194,7 @@ namespace OniFermenting
                 }
             }
             stringBuilder.AppendLine("Temperature".Translate() + ": " + base.AmbientTemperature.ToStringTemperature("F0"));
-            stringBuilder.AppendLine(string.Concat(new string[]
-            {
-                "IdealFermentingTemperature".Translate(),
-                ": ",
-                7f.ToStringTemperature("F0"),
-                " ~ ",
-                comp.Props.maxSafeTemperature.ToStringTemperature("F0")
-            }));
+            stringBuilder.AppendLine("IdealFermentingTemperature".Translate() + ": " + 7f.ToStringTemperature("F0") + " ~ " + comp.Props.maxSafeTemperature.ToStringTemperature("F0"));
             return stringBuilder.ToString().TrimEndNewlines();
         }
 
@@ -209,7 +202,7 @@ namespace OniFermenting
         {
             if (!this.Fermented)
             {
-                Log.Warning("Tried to get wine but it's not yet fermented.", false);
+                Log.Warning("Tried to get wine but it's not yet fermented.");
                 return null;
             }
             Thing thing = ThingMaker.MakeThing(ThingDefOf.AOniWine, null);

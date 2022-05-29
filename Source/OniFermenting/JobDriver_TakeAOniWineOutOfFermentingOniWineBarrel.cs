@@ -26,12 +26,9 @@ namespace OniFermenting
         }
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
-        {
-            Pawn pawn = this.pawn;
-            LocalTargetInfo target = this.OniWineBarrel;
-            Job job = this.job;
-            return pawn.Reserve(target, job, 1, -1, null, errorOnFailed);
-        }
+		{
+			return this.pawn.Reserve(this.OniWineBarrel, this.job, 1, -1, null, errorOnFailed);
+		}
 
         protected override IEnumerable<Toil> MakeNewToils()
         {
@@ -44,19 +41,16 @@ namespace OniFermenting
                 initAction = delegate ()
                 {
                     Thing thing = this.OniWineBarrel.TakeOutAOniWine();
-                    GenPlace.TryPlaceThing(thing, this.pawn.Position, base.Map, ThingPlaceMode.Near, null, null);
+                    GenPlace.TryPlaceThing(thing, this.pawn.Position, base.Map, ThingPlaceMode.Near, null, null, default);
                     StoragePriority currentPriority = StoreUtility.CurrentStoragePriorityOf(thing);
-                    IntVec3 c;
-                    if (StoreUtility.TryFindBestBetterStoreCellFor(thing, this.pawn, base.Map, currentPriority, this.pawn.Faction, out c, true))
+                    if (StoreUtility.TryFindBestBetterStoreCellFor(thing, this.pawn, base.Map, currentPriority, this.pawn.Faction, out IntVec3 c, true))
                     {
                         this.job.SetTarget(TargetIndex.C, c);
                         this.job.SetTarget(TargetIndex.B, thing);
                         this.job.count = thing.stackCount;
+                        return;
                     }
-                    else
-                    {
-                        base.EndJobWith(JobCondition.Incompletable);
-                    }
+                    base.EndJobWith(JobCondition.Incompletable);
                 },
                 defaultCompleteMode = ToilCompleteMode.Instant
             };
@@ -64,9 +58,9 @@ namespace OniFermenting
             yield return Toils_Reserve.Reserve(TargetIndex.C, 1, -1, null);
             yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.ClosestTouch);
             yield return Toils_Haul.StartCarryThing(TargetIndex.B, false, false, false);
-            Toil carryToCell = Toils_Haul.CarryHauledThingToCell(TargetIndex.C);
+            Toil carryToCell = Toils_Haul.CarryHauledThingToCell(TargetIndex.C, PathEndMode.ClosestTouch);
             yield return carryToCell;
-            yield return Toils_Haul.PlaceHauledThingInCell(TargetIndex.C, carryToCell, true);
+            yield return Toils_Haul.PlaceHauledThingInCell(TargetIndex.C, carryToCell, true, false);
             yield break;
         }
 
