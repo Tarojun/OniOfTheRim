@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="XmlExtensions.OptionalPatch">
+	<modId>morishep.tarojun.onioftherim</modId>
+	<key>DisableExistingRevenantTalon</key>
+	<defaultValue>false</defaultValue>
+	<caseTrue>
+		<Operation Class="PatchOperationRemove">
+			<xpath>Defs/FactionDef[defName="OniSpacer"]/pawnGroupMakers</xpath>
+		</Operation>
+	</caseTrue>
+</Operation>
+
+</Patch>

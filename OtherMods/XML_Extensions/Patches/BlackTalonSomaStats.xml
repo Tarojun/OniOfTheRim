@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="XmlExtensions.UseSetting">
+    <modId>morishep.tarojun.onioftherim</modId>
+    <key>BlackTalonSomaStats</key>
+    <defaultValue>0</defaultValue>
+    <apply>
+		<Operation Class="XmlExtensions.IfStatement">
+			<condition Class="XmlExtensions.Boolean.Comparision">
+				<value1>{BlackTalonSomaStats}</value1>
+				<value2>1</value2>
+				<nonNumeric>true</nonNumeric>
+				<relation>eq</relation>
+			</condition>
+			<caseTrue>
+				<Operation Class="PatchOperationSequence">
+					<operations>
+						<li Class="PatchOperationAttributeSet">
+							<xpath>Defs/HediffDef[@Name="BlackTalonSomaHediff_Normal"]</xpath>
+							<attribute>Abstract</attribute>
+							<value>True</value>
+						</li>
+						<li Class="PatchOperationAttributeRemove">
+							<xpath>Defs/HediffDef[@Name="BlackTalonSomaHediff_Nerfed"]</xpath>
+							<attribute>Abstract</attribute>
+						</li>
+					</operations>
+				</Operation>
+			</caseTrue>
+		</Operation>
+		<Operation Class="XmlExtensions.IfStatement">
+			<condition Class="XmlExtensions.Boolean.Comparision">
+				<value1>{BlackTalonSomaStats}</value1>
+				<value2>2</value2>
+				<nonNumeric>true</nonNumeric>
+				<relation>eq</relation>
+			</condition>
+			<caseTrue>
+				<Operation Class="PatchOperationSequence">
+					<operations>
+						<li Class="PatchOperationAttributeSet">
+							<xpath>Defs/HediffDef[@Name="BlackTalonSomaHediff_Normal"]</xpath>
+							<attribute>Abstract</attribute>
+							<value>True</value>
+						</li>
+						<li Class="PatchOperationAttributeRemove">
+							<xpath>Defs/HediffDef[@Name="BlackTalonSomaHediff_Base"]</xpath>
+							<attribute>Abstract</attribute>
+						</li>
+						<li Class="PatchOperationReplace">
+							<xpath>Defs/ThingDef[defName="OniPillBlackTalon"]/comps/li[@Class="CompProperties_Drug"]/isCombatEnhancingDrug</xpath>
+							<value>
+								<isCombatEnhancingDrug>false</isCombatEnhancingDrug>
+							</value>
+						</li>
+					</operations>
+				</Operation>
+			</caseTrue>
+		</Operation>
+    </apply>
+</Operation>
+
+</Patch>

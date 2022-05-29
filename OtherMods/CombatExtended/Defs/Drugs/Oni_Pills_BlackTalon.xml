@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="OniCombatDrugBase">
+	<defName>OniPillBlackTalon</defName>
+	<label>Black Talon soma</label>
+	<description>A powerful Oni combat drug primarily reserved for the Black Talon ranks. Unlike other Oni combat drugs, it has a slightly longer duration and a severe addiction problem if misused.
+
+Stat boosts:
+x40% Pain
++15% Sharp and Blunt armor
++25% Heat armor
++3 Melee hit chance
++20% Melee critical chance
++20% Melee parry chance
++33% Melee dodge chance
+-20% Melee cooldown
+-20% Aiming time
+-10% Mental break threshold
+-50% Suppressability
++25% Consciousness
++25% Moving
++25% Sight
++25% Manipulation
+
+Drawback on "expiring":
+x130% Tiredness
+x130% Hunger
+-10% Global work speed</description>
+	<graphicData>
+		<texPath>Things/Item/Drug/PillBlack</texPath>
+		<graphicClass>Graphic_StackCount</graphicClass>
+	</graphicData>
+	<stackLimit>75</stackLimit>
+	<rotatable>false</rotatable>
+	<statBases>
+		<MarketValue>100</MarketValue>
+		<Mass>0.05</Mass>
+	</statBases>
+	<techLevel>Neolithic</techLevel>
+	<ingestible>
+		<joyKind>Chemical</joyKind>
+		<joy>0.75</joy>
+		<drugCategory>Hard</drugCategory>
+		<outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+				<hediffDef>OniBlackTalonHigh</hediffDef>
+				<severity>1.50</severity>
+			</li>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+				<hediffDef>OniPillTolerance</hediffDef>
+				<severity>0.25</severity>
+			</li>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+				<hediffDef>OniPillBlackTalonTolerance</hediffDef>
+				<severity>0.2</severity>
+			</li>
+		</outcomeDoers>
+	</ingestible>
+	<comps>
+		<li Class="CompProperties_Drug">
+			<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+			<listOrder>1020</listOrder>
+		</li>
+	</comps>
+	<tradeTags>
+		<li>ExoticMisc</li>
+		<li>OniCombatDrugs</li>
+	</tradeTags>
+</ThingDef>
+
+<HediffDef Name="BlackTalonSomaHediff_Base" Abstract="True">
+	<defName>OniBlackTalonHigh</defName>
+	<label>Black Talon soma</label>
+	<description>Black Talon soma combat drug in the bloodstream. It supercharges combat-related abilities.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defaultLabelColor>(1,1,0.5)</defaultLabelColor>
+	<maxSeverity>1.0</maxSeverity>
+	<isBad>false</isBad>
+	<comps>
+		<li Class="HediffCompProperties_SeverityPerDay">
+			<severityPerDay>-1.5</severityPerDay>
+		</li>
+	</comps>
+</HediffDef>
+
+<HediffDef Name="BlackTalonSomaHediff_Normal" ParentName="BlackTalonSomaHediff_Base">
+	<stages>
+		<li>
+			<label>drawback</label>
+			<restFallFactorOffset>0.3</restFallFactorOffset>
+			<hungerRateFactorOffset>0.3</hungerRateFactorOffset>
+			<statOffsets>
+				<WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+			</statOffsets>
+		</li>
+		<li>
+			<minSeverity>0.25</minSeverity>
+			<label>active</label>
+			<painFactor>0.4</painFactor>
+			<statOffsets>
+				<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.25</ArmorRating_Heat>
+				<MeleeHitChance>3</MeleeHitChance>
+				<MeleeCritChance>0.2</MeleeCritChance>
+				<MeleeParryChance>0.2</MeleeParryChance>
+				<MeleeDodgeChance>0.33</MeleeDodgeChance>
+				<MeleeWeapon_CooldownMultiplier>-0.2</MeleeWeapon_CooldownMultiplier>
+				<AimingDelayFactor>-0.2</AimingDelayFactor>
+				<MentalBreakThreshold>-0.1</MentalBreakThreshold>
+				<Suppressability>-0.5</Suppressability>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<offset>0.25</offset>
+				</li>
+				<li>	
+					<capacity>Moving</capacity>
+					<offset>0.25</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>0.25</offset>
+				</li>
+				<li>
+					<capacity>Manipulation</capacity>
+					<offset>0.25</offset>
+				</li>
+			</capMods>
+		</li>
+	</stages>
+</HediffDef>
+
+<HediffDef Name="BlackTalonSomaHediff_Nerfed" ParentName="BlackTalonSomaHediff_Base" Abstract="True">
+	<stages>
+		<li>
+			<label>drawback</label>
+			<restFallFactorOffset>0.3</restFallFactorOffset>
+			<hungerRateFactorOffset>0.3</hungerRateFactorOffset>
+			<statOffsets>
+				<WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+			</statOffsets>
+		</li>
+		<li>
+			<minSeverity>0.25</minSeverity>
+			<label>active</label>
+			<painFactor>0.4</painFactor>
+			<statOffsets>
+				<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.15</ArmorRating_Heat>
+				<MeleeHitChance>2</MeleeHitChance>
+				<MeleeCritChance>0.1</MeleeCritChance>
+				<MeleeParryChance>0.1</MeleeParryChance>
+				<MeleeDodgeChance>0.16</MeleeDodgeChance>
+				<MeleeWeapon_CooldownMultiplier>-0.1</MeleeWeapon_CooldownMultiplier>
+				<AimingDelayFactor>-0.1</AimingDelayFactor>
+				<MentalBreakThreshold>-0.05</MentalBreakThreshold>
+				<Suppressability>-0.5</Suppressability>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<offset>0.15</offset>
+				</li>
+				<li>	
+					<capacity>Moving</capacity>
+					<offset>0.15</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>0.15</offset>
+				</li>
+				<li>
+					<capacity>Manipulation</capacity>
+					<offset>0.15</offset>
+				</li>
+			</capMods>
+		</li>
+	</stages>
+</HediffDef>
+
+<ThoughtDef>
+	<defName>OniPillBlackTalonHigh</defName>
+	<workerClass>ThoughtWorker_Hediff</workerClass>
+	<hediff>OniBlackTalonHigh</hediff>
+	<validWhileDespawned>true</validWhileDespawned>
+	<stages>
+		<li>
+			<label>Single minded</label>
+			<description>There is no time for doubts, fears and anxieties. I heed only the duty I am given for the task at hand and nothing else.</description>
+			<baseMoodEffect>40</baseMoodEffect>
+		</li>
+	</stages>
+</ThoughtDef>
+
+<HediffDef ParentName="DrugToleranceBase">
+	<defName>OniPillBlackTalonTolerance</defName>
+	<label>Black Talon soma tolerance</label>
+	<description>A built-up tolerance specific to the Black Talon soma combat drug. The more severe this tolerance is, the more the user gets tired and hungry over time.</description>
+	<comps>
+		<li Class="HediffCompProperties_SeverityPerDay">
+			<severityPerDay>-0.15</severityPerDay>
+		</li>
+	</comps>
+	<stages Inherit="False">
+		<li>
+			<minSeverity>0</minSeverity>
+			<becomeVisible>false</becomeVisible>
+			<label>small</label>
+		</li>
+		<li>
+			<minSeverity>0.25</minSeverity>
+			<label>small</label>
+			<restFallFactorOffset>0.1</restFallFactorOffset>
+			<hungerRateFactorOffset>0.1</hungerRateFactorOffset>
+			<statOffsets>
+				<GlobalLearningFactor>-0.1</GlobalLearningFactor>
+				<WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+			</statOffsets>
+		</li>
+		<li>
+			<minSeverity>0.50</minSeverity>
+			<label>large</label>
+			<restFallFactorOffset>0.2</restFallFactorOffset>
+			<hungerRateFactorOffset>0.2</hungerRateFactorOffset>
+			<statOffsets>
+				<GlobalLearningFactor>-0.05</GlobalLearningFactor>
+				<WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>-0.05</offset>
+				 </li>
+				 <li>
+					<capacity>Manipulation</capacity>
+					<offset>-0.05</offset>
+				 </li>
+			</capMods>
+		</li>
+		<li>
+			<minSeverity>0.80</minSeverity>
+			<label>massive</label>
+			<restFallFactorOffset>0.5</restFallFactorOffset>
+			<hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+			<statOffsets>
+				<GlobalLearningFactor>-0.05</GlobalLearningFactor>
+				<WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
+			</statOffsets>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>-0.1</offset>
+				 </li>
+				 <li>
+					<capacity>Manipulation</capacity>
+					<offset>-0.1</offset>
+				 </li>
+				<li>
+					<capacity>Breathing</capacity>
+					<offset>-0.05</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>-0.05</offset>
+				</li>
+				<li>
+					<capacity>BloodPumping</capacity>
+					<offset>-0.05</offset>
+				</li>
+			</capMods>
+		</li>
+	</stages>
+	<hediffGivers>
+		<li Class="HediffGiver_RandomDrugEffect">
+			<hediff>ChemicalDamageModerate</hediff>
+			<minSeverity>0.70</minSeverity>
+			<baseMtbDays>120</baseMtbDays>
+			<partsToAffect>
+				<li>Brain</li>
+			</partsToAffect>
+		</li>
+	</hediffGivers>
+</HediffDef>
+
+<RecipeDef>
+	<defName>Craft_OniPillBlackTalon</defName>
+	<jobString>Making Black Talon soma</jobString>
+	<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+	<workSkill>Intellectual</workSkill>
+	<effectWorking>Cook</effectWorking>
+	<soundWorking>Recipe_CookMeal</soundWorking>
+	<workAmount>1200</workAmount>
+	<targetCountAdjustment>1</targetCountAdjustment>
+	<researchPrerequisite>OniBlackTalonDrug</researchPrerequisite>
+	<recipeUsers>
+		<li>CraftingSpot</li>
+		<li>DrugLab</li>
+	</recipeUsers>
+	<label>Make 2 Black Talon soma</label>
+	<description>Make Black Talon soma from oniamine and the unstable Oni Dust as the base. Requires the process to be made in an Oni's hand.</description>
+	<skillRequirements>
+		<Crafting>3</Crafting>
+		<Intellectual>3</Intellectual>
+	</skillRequirements>
+	<ingredients>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>Oni_Dust</li>
+				</thingDefs>
+			</filter>
+			<count>2</count>
+		</li>
+		<li>
+			<filter>
+				<thingDefs>
+					<li>Oniamine</li>
+				</thingDefs>
+			</filter>
+			<count>5</count>
+		</li>		
+		<li>
+			<filter>
+				<thingDefs>
+					<li>DemonBreathLeaves</li>
+				</thingDefs>
+			</filter>
+			<count>3</count>
+		</li>
+	</ingredients>
+	<products>
+		<OniPillBlackTalon>2</OniPillBlackTalon>
+	</products>
+</RecipeDef>
+
+</Defs>

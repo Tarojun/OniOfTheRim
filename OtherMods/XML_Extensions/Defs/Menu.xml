@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<XmlExtensions.SettingsMenuDef>
+		<defName>OniOfTheRim_Menu</defName>
+		<modId>morishep.tarojun.onioftherim</modId>
+		<label>Oni of the Rim</label>
+		<settings>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Oni combat drugs</text>
+				<tKey>OniOfTheRim_OniCombatDrugs</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine" />
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Oni dust</text>
+				<tKey>OniOfTheRim_OniDustStats</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.RadioButtons">
+				<key>OniDustStats</key>
+				<defaultValue>0</defaultValue>
+				<buttons>
+					<li>
+						<label>Normal</label>
+						<tKey>OniOfTheRim_OniDustStats_Normal</tKey>
+						<tooltip>Oni dust boosts at their normal values.</tooltip>
+						<tKeyTip>OniOfTheRim_OniDustStats_NormalTip</tKeyTip>
+						<value>0</value>
+					</li>
+					<li>
+						<label>Nerfed</label>
+						<tKey>OniOfTheRim_OniDustStats_Nerfed</tKey>
+						<tooltip>Oni dust boosted stats are reduced.</tooltip>
+						<tKeyTip>OniOfTheRim_OniDustStats_NerfedTip</tKeyTip>
+						<value>1</value>
+					</li>
+					<li>
+						<label>Recreation only</label>
+						<tKey>OniOfTheRim_OniDustStats_RecreationOnly</tKey>
+						<tooltip>Oni dust provides no stats and are now purely a dangerously addictive recreation drug.</tooltip>
+						<tKeyTip>OniOfTheRim_OniDustStats_RecreationOnlyTip</tKeyTip>
+						<value>2</value>
+					</li>
+				</buttons>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine" />
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Black Talon soma</text>
+				<tKey>OniOfTheRim_BlackTalonSomaStats</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.RadioButtons">
+				<key>BlackTalonSomaStats</key>
+				<defaultValue>0</defaultValue>
+				<buttons>
+					<li>
+						<label>Normal</label>
+						<tKey>OniOfTheRim_BlackTalonSomaStats_Normal</tKey>
+						<tooltip>Black Talon soma boosts at their stated values.</tooltip>
+						<tKeyTip>OniOfTheRim_BlackTalonSomaStats_NormalTip</tKeyTip>
+						<value>0</value>
+					</li>
+					<li>
+						<label>Nerfed</label>
+						<tKey>OniOfTheRim_BlackTalonSomaStats_Nerfed</tKey>
+						<tooltip>Black Talon soma boosted stats are reduced.</tooltip>
+						<tKeyTip>OniOfTheRim_BlackTalonSomaStats_NerfedTip</tKeyTip>
+						<value>1</value>
+					</li>
+					<li>
+						<label>Recreation only</label>
+						<tKey>OniOfTheRim_BlackTalonSomaStats_RecreationOnly</tKey>
+						<tooltip>Black Talon soma provide no stats and are now purely a strong recreation drug.</tooltip>
+						<tKeyTip>OniOfTheRim_BlackTalonSomaStats_RecreationOnlyTip</tKeyTip>
+						<value>2</value>
+					</li>
+				</buttons>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine" />
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Red soma of body</text>
+				<tKey>OniOfTheRim_RedSomaStats</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.RadioButtons">
+				<key>RedSomaStats</key>
+				<defaultValue>0</defaultValue>
+				<buttons>
+					<li>
+						<label>Normal</label>
+						<tKey>OniOfTheRim_RedSomaStats_Normal</tKey>
+						<tooltip>Red soma of body boosts at their stated values.</tooltip>
+						<tKeyTip>OniOfTheRim_RedSomaStats_NormalTip</tKeyTip>
+						<value>0</value>
+					</li>
+					<li>
+						<label>Nerfed</label>
+						<tKey>OniOfTheRim_RedSomaStats_Nerfed</tKey>
+						<tooltip>Red soma of body boosted stats are reduced.</tooltip>
+						<tKeyTip>OniOfTheRim_RedSomaStats_NerfedTip</tKeyTip>
+						<value>1</value>
+					</li>
+					<li>
+						<label>Recreation only</label>
+						<tKey>OniOfTheRim_RedSomaStats_RecreationOnly</tKey>
+						<tooltip>Red soma of body provide no stats and are now purely a recreation drug.</tooltip>
+						<tKeyTip>OniOfTheRim_RedSomaStats_RecreationOnlyTip</tKeyTip>
+						<value>2</value>
+					</li>
+				</buttons>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine" />
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Green soma of health</text>
+				<tKey>OniOfTheRim_GreenSomaStats</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.RadioButtons">
+				<key>GreenSomaStats</key>
+				<defaultValue>0</defaultValue>
+				<buttons>
+					<li>
+						<label>Normal</label>
+						<tKey>OniOfTheRim_GreenSomaStats_Normal</tKey>
+						<tooltip>Green soma of health boosts at their stated values.</tooltip>
+						<tKeyTip>OniOfTheRim_GreenSomaStats_NormalTip</tKeyTip>
+						<value>0</value>
+					</li>
+					<li>
+						<label>Nerfed</label>
+						<tKey>OniOfTheRim_GreenSomaStats_Nerfed</tKey>
+						<tooltip>Green soma of health boosted stats are reduced.</tooltip>
+						<tKeyTip>OniOfTheRim_GreenSomaStats_NerfedTip</tKeyTip>
+						<value>1</value>
+					</li>
+					<li>
+						<label>Recreation only</label>
+						<tKey>OniOfTheRim_GreenSomaStats_RecreationOnly</tKey>
+						<tooltip>Green soma of health provide no stats and are now purely a recreation drug.</tooltip>
+						<tKeyTip>OniOfTheRim_GreenSomaStats_RecreationOnlyTip</tKeyTip>
+						<value>2</value>
+					</li>
+				</buttons>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine" />
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Blue soma of mind</text>
+				<tKey>OniOfTheRim_BlueSomaStats</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.RadioButtons">
+				<key>BlueSomaStats</key>
+				<defaultValue>0</defaultValue>
+				<buttons>
+					<li>
+						<label>Normal</label>
+						<tKey>OniOfTheRim_BlueSomaStats_Normal</tKey>
+						<tooltip>Blue soma of mind boosts at their stated values.</tooltip>
+						<tKeyTip>OniOfTheRim_BlueSomaStats_NormalTip</tKeyTip>
+						<value>0</value>
+					</li>
+					<li>
+						<label>Nerfed</label>
+						<tKey>OniOfTheRim_BlueSomaStats_Nerfed</tKey>
+						<tooltip>Blue soma of mind boosted stats are reduced.</tooltip>
+						<tKeyTip>OniOfTheRim_BlueSomaStats_NerfedTip</tKeyTip>
+						<value>1</value>
+					</li>
+					<li>
+						<label>Recreation only</label>
+						<tKey>OniOfTheRim_BlueSomaStats_RecreationOnly</tKey>
+						<tooltip>Blue soma of mind provide no stats and are now purely a recreation drug.</tooltip>
+						<tKeyTip>OniOfTheRim_BlueSomaStats_RecreationOnlyTip</tKeyTip>
+						<value>2</value>
+					</li>
+				</buttons>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine" />
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<key>RemoveWildMegaOwls</key>
+				<defaultValue>false</defaultValue>
+				<label>Remove wild Mega Owls</label>
+				<tKey>OniOfTheRim_RemoveWildMegaOwls</tKey>
+				<tooltip>Removes new spawning of mega owls in the wild. Does not prevent from showing up in manhunter pack attacks.</tooltip>
+				<tKeyTip>OniOfTheRim_RemoveWildMegaOwlsTip</tKeyTip>
+			</li>
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<key>DisableExistingRevenantTalon</key>
+				<defaultValue>false</defaultValue>
+				<label>Disable Revenant Talon faction raids</label>
+				<tKey>OniOfTheRim_DisableExistingRevenantTalon</tKey>
+				<tooltip>For on-going games that have the Revenant Talon faction. This removes the raid options from the Revenant Talon faction, therefore unable to generate a raid to throw at you.</tooltip>
+				<tKeyTip>OniOfTheRim_DisableExistingRevenantTalonTip</tKeyTip>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine" />
+			<li Class="XmlExtensions.Setting.ResetSettings">
+				<label>Reset settings</label>
+				<tKey>OniOfTheRim_ResetSettings</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine" />
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Restarting game is required to apply any changes.</text>
+				<tKey>OniOfTheRim_ResetToApplyReminder</tKey>
+			</li>
+		</settings>
+	</XmlExtensions.SettingsMenuDef>
+
+</Defs>
